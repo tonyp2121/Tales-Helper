@@ -28,8 +28,9 @@
             <string>opacity = 0
 opacityDone = false
 game = oGameData.id
-draw_set_colour(c_white);
+draw_set_colour(c_white)
 input = ""
+inputRecieved = false
 
 beginTextLocationX = room_width/2
 beginTextLocationY = room_height/2-room_height/8
@@ -65,6 +66,7 @@ if string_length(input) &gt;= 2{
 if keyboard_check_pressed(vk_enter){
     if real(input) &gt;= 2 and real(input) &lt;= 6{
         game.numOfPlayers = real(input)
+        inputRecieved = true;
     }
     else{
     input = ""
@@ -105,9 +107,17 @@ draw_text_ext(beginTextLocationX,beginTextLocationY,
 #How many players are there?",50,1200)
 
 depth = 1
+if(inputRecieved == false){
 opacity += 1/2/room_speed
 if opacity &gt; 1{
-    opacity = 1}
+    opacity = 1}}
+else{
+opacity -= 1/2/room_speed
+if opacity &lt; 0 {
+    opacity = 0
+    instance_create(x,y,oColorPicker)
+    instance_destroy()}
+}
 draw_sprite(sBeginButtonBackground, 0, beginInputLocationX, beginInputLocationY+20)
 draw_sprite(sBeginNumberBorder, 0, beginInputLocationX,beginInputLocationY+20)
 draw_text_ext(beginInputLocationX,beginInputLocationY,input,50,1200)

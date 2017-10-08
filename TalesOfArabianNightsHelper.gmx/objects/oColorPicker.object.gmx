@@ -25,16 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
-// playerOwner will start at 0
-// ie. Player 1 will be player 0, Player 2 will be 1, etc 
-//    (just makes arrays easier if its in standard implementation)
-// 
-// playerColor will be w,g,bl,bk,y,r for white, green, blue, black, yellow, red respectively
-//
-
-playerOwner = -1
-playerColor = ""
+            <string>game = oGameData.id
+maxPlayers = game.numOfPlayers
 </string>
           </argument>
         </arguments>

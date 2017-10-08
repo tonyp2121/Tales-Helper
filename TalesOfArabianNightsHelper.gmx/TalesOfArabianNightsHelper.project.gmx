@@ -29,6 +29,7 @@
     <object>objects\oPlayer</object>
     <object>objects\oBeginning</object>
     <object>objects\oGameData</object>
+    <object>objects\oColorPicker</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rBackground</room>
