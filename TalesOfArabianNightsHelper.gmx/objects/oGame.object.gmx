@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>window_set_fullscreen(true)
-numOfPlayers = 0
+
 
 //-------------------------------
 // Things I need to focus on
@@ -75,10 +75,6 @@ numOfPlayers = 0
     game_end()
 }
 
-if keyboard_check_pressed(ord('R'))
-{
-    game_restart()
-}
 </string>
           </argument>
         </arguments>
