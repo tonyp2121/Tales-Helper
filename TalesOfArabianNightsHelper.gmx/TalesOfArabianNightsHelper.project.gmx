@@ -18,6 +18,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\getInput.gml</script>
+    <script>scripts\array.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fMainText</font>
