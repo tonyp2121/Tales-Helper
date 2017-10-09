@@ -29,6 +29,8 @@
 currentPlayer = -1
 //white = 0 / black = 1 / green = 2 / yellow = 3 / red = 4 / blue = 5
 var colorPicked
+var playerName
+
 </string>
           </argument>
         </arguments>

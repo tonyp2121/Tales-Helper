@@ -20,6 +20,7 @@
   <scripts name="scripts">
     <script>scripts\getInput.gml</script>
     <script>scripts\array.gml</script>
+    <script>scripts\setNames.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fMainText</font>
