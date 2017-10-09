@@ -27,11 +27,11 @@
   <objects name="objects">
     <object>objects\oGame</object>
     <object>objects\oCard</object>
-    <object>objects\oPlayer</object>
     <object>objects\oBeginning</object>
     <object>objects\oGameData</object>
     <object>objects\oColorPicker</object>
     <object>objects\oButton</object>
+    <object>objects\oMain</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rBackground</room>
