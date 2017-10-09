@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>numOfPlayers = 0
 currentPlayer = -1
-
+var colorPicked
 </string>
           </argument>
         </arguments>

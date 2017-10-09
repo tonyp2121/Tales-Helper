@@ -30,9 +30,12 @@ maxPlayers = game.numOfPlayers
 //white = 0 / black = 1 / green = 2 / yellow = 3 / red = 4 / blue = 5
 for(i = 0; i &lt; 6; i+=1){
 colorPicked[i] = false}
+for(i = 0; i &lt; maxPlayers; i+=1){
+game.colorPicked[i] = -1}
 countOfPlayers = 0
 fadeIn = true
 fadeOut = false
+unClickable = false
 opacity = 0
 
 buttonX[0] = 3*room_width/8
@@ -70,15 +73,20 @@ buttonY[5] = buttonY[3]
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (countOfPlayers &gt;= maxPlayers){instance_destroy()}
-if (fadeIn){
+            <string>if (countOfPlayers &gt;= maxPlayers){
+for (i = 0; i &lt; 6; i+= 1)
+{
+button[i].destroy = true;
+}
+instance_destroy()}
+if (fadeIn &amp;&amp; countOfPlayers &lt; maxPlayers){
     for(i = 0; i &lt;6; i+=1){
-    button = instance_create(buttonX[i], buttonY[i], oButton)
-    button.myColor = i
+    button[i] = instance_create(buttonX[i], buttonY[i], oButton)
+    button[i].myColor = i
     }
     fadeIn = false
-    
 }
+
 </string>
           </argument>
         </arguments>
@@ -108,10 +116,21 @@ draw_set_valign(fa_center)
 
 draw_text_ext(room_width/2,1/4*room_height,
 "What color is player " + string(countOfPlayers+1),50,1200)
-
+if (fadeOut){
+opacity -= 1/2/room_speed
+if (opacity &lt;= 0){
+    opacity = 0
+    fadeOut = false
+    fadeIn = true
+    countOfPlayers += 1
+    unClickable = false
+}
+}
+else{
 opacity += 1/2/room_speed
 if opacity &gt; 1{
     opacity = 1}
+}
 </string>
           </argument>
         </arguments>

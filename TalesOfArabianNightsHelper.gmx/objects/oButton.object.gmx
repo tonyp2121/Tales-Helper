@@ -27,8 +27,10 @@
             <kind>1</kind>
             <string>myColor = -1
 colorPicker = oColorPicker.id
+game = oGameData.id
 image_speed = 0
 dontDoAnything = false
+destroy = false
 </string>
           </argument>
         </arguments>
@@ -51,22 +53,28 @@ dontDoAnything = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha = colorPicker.opacity
+            <string>if (destroy) {instance_destroy()}
+if(instance_exists(oColorPicker)){
+image_alpha = colorPicker.opacity
 
-if (myColor = -1 || dontDoAnything = true){ if (colorPicker.opacity = 0) instance_destroy()}
+if (myColor = -1 || colorPicker.unClickable = true){ if (colorPicker.opacity &lt;= 0) instance_destroy()}
 else{
     if colorPicker.colorPicked[myColor] = false {
         image_index = myColor * 2
         if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
             colorPicker.colorPicked[myColor] = true
+            game.colorPicked[colorPicker.countOfPlayers] = myColor
             colorPicker.fadeOut = true
-            dontDoAnything = true    
+            colorPicker.unClickable = true    
         }
     }
     else{
         image_index = myColor * 2 + 1
     }
 }
+}
+else
+instance_destroy()
 </string>
           </argument>
         </arguments>
