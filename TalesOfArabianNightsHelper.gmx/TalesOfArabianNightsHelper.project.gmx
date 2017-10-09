@@ -8,9 +8,10 @@
   <sprites name="sprites">
     <sprite>sprites\sButton</sprite>
     <sprite>sprites\sBeginBorder</sprite>
-    <sprite>sprites\sTextBackground</sprite>
+    <sprite>sprites\sBeginTextBackground</sprite>
     <sprite>sprites\sBeginNumberBorder</sprite>
     <sprite>sprites\sBeginButtonBackground</sprite>
+    <sprite>sprites\sColor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -30,6 +31,7 @@
     <object>objects\oBeginning</object>
     <object>objects\oGameData</object>
     <object>objects\oColorPicker</object>
+    <object>objects\oButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rBackground</room>

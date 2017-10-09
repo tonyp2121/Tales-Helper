@@ -20,6 +20,6 @@
   <width>1191</width>
   <height>245</height>
   <frames>
-    <frame index="0">images\sTextBackground_0.png</frame>
+    <frame index="0">images\sBeginTextBackground_0.png</frame>
   </frames>
 </sprite>
