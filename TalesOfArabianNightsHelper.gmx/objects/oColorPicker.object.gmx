@@ -78,6 +78,7 @@ for (i = 0; i &lt; 6; i+= 1)
 {
 button[i].destroy = true;
 }
+instance_create(x,y, oMain)
 instance_destroy()}
 if (fadeIn &amp;&amp; countOfPlayers &lt; maxPlayers){
     for(i = 0; i &lt;6; i+=1){
