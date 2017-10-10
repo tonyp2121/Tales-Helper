@@ -12,6 +12,7 @@
     <sprite>sprites\sBeginNumberBorder</sprite>
     <sprite>sprites\sBeginButtonBackground</sprite>
     <sprite>sprites\sColor</sprite>
+    <sprite>sprites\sNameUnderline</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -31,7 +32,7 @@
     <object>objects\oBeginning</object>
     <object>objects\oGameData</object>
     <object>objects\oColorPicker</object>
-    <object>objects\oButton</object>
+    <object>objects\oColorButton</object>
     <object>objects\oMain</object>
   </objects>
   <rooms name="rooms">

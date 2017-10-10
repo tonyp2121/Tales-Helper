@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>game = oGameData.id
 setNames()
+opacity = 0
+start = true
+game.currentPlayer = 0
 </string>
           </argument>
         </arguments>
@@ -49,35 +52,26 @@ setNames()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xpos = room_width/2
-ypos = room_width/8
-draw_set_alpha(1)
+            <string>if (start){
+opacity += 1/2/room_speed
+if opacity &gt; 1{start = false; opacity = 1}
+}
+
+xNamePos = room_width/64
+yNamePos = room_height - room_height/64
+draw_set_alpha(opacity)
 
 draw_set_font(fMainText)
-draw_set_halign(fa_center)
-draw_set_valign(fa_center)
+draw_set_halign(fa_left)
+draw_set_valign(fa_bottom)
 
-for (i = 0; i &lt; game.numOfPlayers; i += 1){
-    if (game.colorPicked[i] = 0){
-    draw_text(xpos, ypos, "Player " + string(i + 1) + " is white and " + game.playerName[i])
-    }
-    if (game.colorPicked[i] = 1){
-    draw_text(xpos, ypos, "Player " + string(i + 1) + " is black and" + game.playerName[i])
-    }
-    if (game.colorPicked[i] = 2){
-    draw_text(xpos, ypos, "Player " + string(i + 1) + " is green and " + game.playerName[i])
-    }
-    if (game.colorPicked[i] = 3){
-    draw_text(xpos, ypos, "Player " + string(i + 1) + " is yellow and " + game.playerName[i])
-    }
-    if (game.colorPicked[i] = 4){
-    draw_text(xpos, ypos, "Player " + string(i + 1) + " is red and " + game.playerName[i])
-    }
-    if (game.colorPicked[i] = 5){
-    draw_text(xpos, ypos, "Player " + string(i + 1) + " is blue and " + game.playerName[i])
-    }
-    ypos += room_height/8
-}
+draw_text(xNamePos, yNamePos, game.playerName[game.currentPlayer])
+draw_sprite(sNameUnderline, game.colorPicked[game.currentPlayer], xNamePos, yNamePos);
+
+
+
+draw_text(xNamePos, yNamePos, game.playerName[game.currentPlayer])
+draw_sprite(sNameUnderline, game.colorPicked[game.currentPlayer], xNamePos, yNamePos);
 </string>
           </argument>
         </arguments>

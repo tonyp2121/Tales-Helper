@@ -82,7 +82,7 @@ instance_create(x,y, oMain)
 instance_destroy()}
 if (fadeIn &amp;&amp; countOfPlayers &lt; maxPlayers){
     for(i = 0; i &lt;6; i+=1){
-    button[i] = instance_create(buttonX[i], buttonY[i], oButton)
+    button[i] = instance_create(buttonX[i], buttonY[i], oColorButton)
     button[i].myColor = i
     }
     fadeIn = false
