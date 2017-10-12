@@ -30,6 +30,14 @@ setNames()
 opacity = 0
 start = true
 game.currentPlayer = 0
+
+for (i = 0; i &lt; game.numOfPlayers; i+=1){
+game.destinyCount[i] = 0
+game.storyCount[i] = 0
+
+
+game.wealth[i] = 2
+}
 </string>
           </argument>
         </arguments>
