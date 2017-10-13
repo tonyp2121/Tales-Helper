@@ -13,6 +13,9 @@
     <sprite>sprites\sBeginButtonBackground</sprite>
     <sprite>sprites\sColor</sprite>
     <sprite>sprites\sNameUnderline</sprite>
+    <sprite>sprites\sStoryCount</sprite>
+    <sprite>sprites\sDestinyCount</sprite>
+    <sprite>sprites\sAddSubButton</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -34,6 +37,7 @@
     <object>objects\oColorPicker</object>
     <object>objects\oColorButton</object>
     <object>objects\oMain</object>
+    <object>objects\oAddSubButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rBackground</room>
