@@ -67,6 +67,13 @@ if opacity &gt; 1{start = false; opacity = 1}
 
 xNamePos = room_width/64
 yNamePos = room_height - room_height/64
+
+xDestinyPos = room_width - room_width/6
+yDestinyPos = room_height - room_height/10
+
+xStoryPos = room_width - room_width/14
+yStoryPos = room_height - room_height/10
+
 draw_set_alpha(opacity)
 
 draw_set_font(fMainText)
@@ -79,7 +86,16 @@ draw_sprite(sNameUnderline, game.colorPicked[game.currentPlayer], xNamePos, yNam
 
 
 draw_text(xNamePos, yNamePos, game.playerName[game.currentPlayer])
-draw_sprite(sNameUnderline, game.colorPicked[game.currentPlayer], xNamePos, yNamePos);
+draw_sprite(sNameUnderline, game.colorPicked[game.currentPlayer], xNamePos, yNamePos)
+
+draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
+
+draw_sprite(sDestinyCount, 0, xDestinyPos, yDestinyPos)
+draw_text(xDestinyPos, yDestinyPos, game.destinyCount[game.currentPlayer])
+draw_sprite(sStoryCount, 0, xStoryPos, yStoryPos)
+draw_text(xStoryPos, yStoryPos, game.storyCount[game.currentPlayer])
+
 </string>
           </argument>
         </arguments>
