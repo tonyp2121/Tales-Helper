@@ -53,6 +53,25 @@ main = oMain.id
             <kind>1</kind>
             <string>image_index = function
 image_alpha = main.opacity
+
+if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+    if(function = 0){
+        if (owner = "story" &amp;&amp; game.storyCount[game.currentPlayer] &lt; 20){
+        game.storyCount[game.currentPlayer] += 1
+        }
+        if (owner = "destiny" &amp;&amp;  game.destinyCount[game.currentPlayer] &lt; 20){
+         game.destinyCount[game.currentPlayer] += 1
+        }
+    }
+    else if (function = 1){
+        if (owner = "story" &amp;&amp; game.storyCount[game.currentPlayer] &gt; 0){
+        game.storyCount[game.currentPlayer] -= 1
+        }
+        if (owner = "destiny" &amp;&amp; game.destinyCount[game.currentPlayer] &gt; 0){
+        game.destinyCount[game.currentPlayer] -= 1
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
