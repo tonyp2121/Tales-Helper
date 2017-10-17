@@ -31,6 +31,10 @@ opacity = 0
 start = true
 game.currentPlayer = 0
 
+tokenSelecter = false
+picker = false
+unclickable = false
+
 addButtonSeperation = room_width/20
 
 xDestinyButtonPos = room_width - room_width/5.2

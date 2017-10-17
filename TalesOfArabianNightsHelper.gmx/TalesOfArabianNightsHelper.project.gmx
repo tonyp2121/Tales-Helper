@@ -39,6 +39,7 @@
     <object>objects\oColorButton</object>
     <object>objects\oMain</object>
     <object>objects\oAddSubButton</object>
+    <object>objects\oToken</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rBackground</room>
