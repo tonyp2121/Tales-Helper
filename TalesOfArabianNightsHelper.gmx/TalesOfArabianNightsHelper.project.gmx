@@ -16,6 +16,7 @@
     <sprite>sprites\sStoryCount</sprite>
     <sprite>sprites\sDestinyCount</sprite>
     <sprite>sprites\sAddSubButton</sprite>
+    <sprite>sprites\sTokens</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
