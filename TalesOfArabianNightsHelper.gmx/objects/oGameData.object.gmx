@@ -34,6 +34,7 @@ var destinyCount
 var storyCount
 // 0 - beggar / 1 - penniless / 2 - poor / 3 - Respectable / 4 - Rich / 5 - Princely / 6 - Fabulous
 var wealth
+var token
 </string>
           </argument>
         </arguments>

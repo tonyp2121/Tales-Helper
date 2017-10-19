@@ -25,50 +25,82 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game = oGameData.id
+            <string>// Begin code
+
+game = oGameData.id
 setNames()
 opacity = 0
-start = true
-game.currentPlayer = 0
 
-tokenSelecter = false
-picker = false
-unclickable = false
-
-addButtonSeperation = room_width/20
-
-xDestinyButtonPos = room_width - room_width/5.2
-yDestinyButtonPos = room_height - room_height/5
-
-xStoryButtonPos = room_width - room_width/10.5
-yStoryButtonPos = yDestinyButtonPos
-
-button = instance_create(xDestinyButtonPos, yDestinyButtonPos, oAddSubButton)
-button.function = 0
-button.owner = "destiny"
-
-button = instance_create(xDestinyButtonPos + addButtonSeperation, yDestinyButtonPos, oAddSubButton)
-button.function = 1
-button.owner = "destiny"
-
-button = instance_create(xStoryButtonPos, yStoryButtonPos, oAddSubButton)
-button.function = 0
-button.owner = "story"
-
-button = instance_create(xStoryButtonPos + addButtonSeperation, yStoryButtonPos, oAddSubButton)
-button.function = 1
-button.owner = "story"
-
+// code for initial condition on all players
 
 for (i = 0; i &lt; game.numOfPlayers; i+=1){
-game.destinyCount[i] = 0
-game.storyCount[i] = 0
-
-
-game.wealth[i] = 2
+    game.destinyCount[i] = 0
+    game.storyCount[i] = 0
+    game.wealth[i] = 2
+    for (j = 0; j &lt; 18; j+=1){
+        game.token[i, j] = false
+        
+    }
 }
 
 
+// for initial fade in
+
+start = true
+game.currentPlayer = 0
+
+// token code
+
+tokenSpawn = false
+tokenInitialX = room_width*.85/3
+tokenInitialY = room_height*17/18
+var tokenID
+picker = false
+
+
+// general dont do something if its unclickable
+
+unclickable = false
+
+// add/subtract button spawns
+
+spawnAddSubtractButtons()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!tokenSpawn){
+    tokenSpawn = true
+    placeTokenX = tokenInitialX
+    placeTokenY = tokenInitialY
+    for(i = 0; i &lt; 18; i+=1){
+        if(game.token[game.currentPlayer, i]){
+            tokenID = instance_create(placeTokenX, placeTokenY, oToken)
+            tokenID.function = i + 1
+            placeTokenX += room_width/8
+        }
+    }
+    tokenID = instance_create(placeTokenX, placeTokenY, oToken)
+    tokenID = 0
+}
 </string>
           </argument>
         </arguments>
