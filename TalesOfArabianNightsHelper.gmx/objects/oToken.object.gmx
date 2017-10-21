@@ -32,6 +32,7 @@ givenDepth = -100
 opacityLocation = 0
 currentPlayer = game.currentPlayer
 opacity = 1
+image_alpha = 0
 </string>
           </argument>
         </arguments>
@@ -55,7 +56,7 @@ opacity = 1
           <argument>
             <kind>1</kind>
             <string>image_index = function
-image_alpha = 1
+image_alpha = opacityLocation.opacity
 depth = givenDepth
 
 if (opacity == 0 and currentPlayer =! game.currentPlayer){instance_destroy()}
@@ -75,6 +76,7 @@ if (function == 0 &amp;&amp; !main.unclickable) {
         token = instance_create(buttonSpawnX, buttonSpawnY, oToken)
         token.function = i + 1
         token.givenDepth = -300
+        token.opacityLocation = self.id
         buttonSpawnX += buttonIncrementX
         if ( i % 6 == 5){
         buttonSpawnX = buttonInitialX

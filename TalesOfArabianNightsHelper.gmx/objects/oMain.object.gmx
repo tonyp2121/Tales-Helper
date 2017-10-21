@@ -99,7 +99,8 @@ spawnAddSubtractButtons()
         }
     }
     tokenID = instance_create(placeTokenX, placeTokenY, oToken)
-    tokenID = 0
+    tokenID.opacityLocation = self.id
+    tokenID.function = 0
 }
 </string>
           </argument>
