@@ -28,9 +28,10 @@
             <string>game = oGameData.id
 main = oMain.id
 function = 0
-depth = -100
+givenDepth = -100
 opacityLocation = 0
 currentPlayer = game.currentPlayer
+opacity = 1
 </string>
           </argument>
         </arguments>
@@ -54,19 +55,63 @@ currentPlayer = game.currentPlayer
           <argument>
             <kind>1</kind>
             <string>image_index = function
-image_alpha = opacityLocation
+image_alpha = 1
+depth = givenDepth
 
 if (opacity == 0 and currentPlayer =! game.currentPlayer){instance_destroy()}
-if (function = 0 &amp;&amp; !main.unclickable) {
+if (function == 0 &amp;&amp; !main.unclickable) {
     // if clicked on it should change main value of some name to make a picker thing
+   
+    if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
     main.unclickable = true;
     main.picker = true;
+    buttonInitialX = room_width/7
+    buttonInitialY = room_height/7
+    buttonSpawnX = buttonInitialX
+    buttonSpawnY = buttonInitialY
+    buttonIncrementX = room_width/7
+    buttonIncrementY = room_height/4
     for (i = 0; i &lt; 18; i+= 1){
-        
+        token = instance_create(buttonSpawnX, buttonSpawnY, oToken)
+        token.function = i + 1
+        token.givenDepth = -300
+        buttonSpawnX += buttonIncrementX
+        if ( i % 6 == 5){
+        buttonSpawnX = buttonInitialX
+        buttonSpawnY += buttonIncrementY
+        }
+    }
     }
 }
 if(function != 0  &amp;&amp; main.picker){
     // when picker is up let you select the current token
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self()
+
+if(main.picker &amp;&amp; function == 0){
+    draw_sprite_ext(sFadeInBackground, 0, room_width/2, room_height/2, 1, 1, 0, -1, 1) 
 }
 </string>
           </argument>
