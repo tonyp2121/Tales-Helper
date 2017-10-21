@@ -29,6 +29,7 @@
 main = oMain.id
 function = 0
 depth = -100
+opacityLocation = 0
 currentPlayer = game.currentPlayer
 </string>
           </argument>
@@ -53,14 +54,16 @@ currentPlayer = game.currentPlayer
           <argument>
             <kind>1</kind>
             <string>image_index = function
-opacity = opacityLocation
+image_alpha = opacityLocation
 
 if (opacity == 0 and currentPlayer =! game.currentPlayer){instance_destroy()}
 if (function = 0 &amp;&amp; !main.unclickable) {
     // if clicked on it should change main value of some name to make a picker thing
     main.unclickable = true;
     main.picker = true;
-    
+    for (i = 0; i &lt; 18; i+= 1){
+        
+    }
 }
 if(function != 0  &amp;&amp; main.picker){
     // when picker is up let you select the current token
