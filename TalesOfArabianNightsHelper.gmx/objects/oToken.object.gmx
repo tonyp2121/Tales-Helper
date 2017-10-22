@@ -31,8 +31,9 @@ function = 0
 givenDepth = -100
 opacityLocation = 0
 currentPlayer = game.currentPlayer
-opacity = 1
+opacity = 0
 image_alpha = 0
+temp = -1
 </string>
           </argument>
         </arguments>
@@ -56,10 +57,9 @@ image_alpha = 0
           <argument>
             <kind>1</kind>
             <string>image_index = function
-image_alpha = opacityLocation.opacity
 depth = givenDepth
 
-if (opacity == 0 and currentPlayer =! game.currentPlayer){instance_destroy()}
+if ((opacity == 0 or opacityLocation.opacity == 0) and currentPlayer =! game.currentPlayer){instance_destroy()}
 if (function == 0 &amp;&amp; !main.unclickable) {
     // if clicked on it should change main value of some name to make a picker thing
    
@@ -73,10 +73,10 @@ if (function == 0 &amp;&amp; !main.unclickable) {
     buttonIncrementX = room_width/7
     buttonIncrementY = room_height/4
     for (i = 0; i &lt; 18; i+= 1){
-        token = instance_create(buttonSpawnX, buttonSpawnY, oToken)
-        token.function = i + 1
-        token.givenDepth = -300
-        token.opacityLocation = self.id
+        token[i] = instance_create(buttonSpawnX, buttonSpawnY, oToken)
+        token[i].function = i + 1
+        token[i].givenDepth = -300
+        token[i].opacityLocation = self.id
         buttonSpawnX += buttonIncrementX
         if ( i % 6 == 5){
         buttonSpawnX = buttonInitialX
@@ -85,8 +85,22 @@ if (function == 0 &amp;&amp; !main.unclickable) {
     }
     }
 }
+if (opacity &lt; 0 &amp;&amp; function == 0) {
+        opacity = 0
+        
+        for (i = 0; i &lt; 18; i+= 1){
+        instance_destroy(token[i])
+        }
+        instance_destroy(self.id)
+    }
 if(function != 0  &amp;&amp; main.picker){
     // when picker is up let you select the current token
+    if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+    main.picker = false
+    game.token[game.currentPlayer,function - 1] = true
+    main.unclickable = false
+    main.tokenSpawn = false
+    }
 }
 </string>
           </argument>
@@ -110,10 +124,21 @@ if(function != 0  &amp;&amp; main.picker){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>image_alpha = opacityLocation.opacity
+image_index = function
+draw_self()
 
 if(main.picker &amp;&amp; function == 0){
-    draw_sprite_ext(sFadeInBackground, 0, room_width/2, room_height/2, 1, 1, 0, -1, 1) 
+    image_alpha = opacity
+    opacity += 1/room_speed;
+    if (opacity &gt; 1) {opacity = 1}
+    draw_sprite_ext(sFadeInBackground, 0, room_width/2, room_height/2, 1, 1, 0, -1, opacity) 
+}
+if(!main.picker &amp;&amp; function == 0 &amp;&amp; opacity &gt; 0){
+    image_alpha = opacity
+    opacity -= 1/room_speed
+    draw_sprite_ext(sFadeInBackground, 0, room_width/2, room_height/2, 1, 1, 0, -1, opacity) 
+    
 }
 </string>
           </argument>

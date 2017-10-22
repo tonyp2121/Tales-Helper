@@ -87,17 +87,30 @@ spawnAddSubtractButtons()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!tokenSpawn){
+            <string>
+// should probably keep this at the bottom since the 
+// "exit" command dont want to skip anything too important
+if (!tokenSpawn){
     tokenSpawn = true
     placeTokenX = tokenInitialX
     placeTokenY = tokenInitialY
+    while(instance_exists(oToken)){
+        for(i = 19; i &lt; instance_number(oToken); i+=1){placeTokenX += room_width/16}
+        ID = instance_nearest(placeTokenX,placeTokenY,oToken)
+        if(ID.opacity &gt; 0){tokenSpawn = false 
+         exit}
+        instance_destroy(ID)
+    }
+    placeTokenX = tokenInitialX
     for(i = 0; i &lt; 18; i+=1){
         if(game.token[game.currentPlayer, i]){
             tokenID = instance_create(placeTokenX, placeTokenY, oToken)
+            tokenID.opacityLocation = self.id
             tokenID.function = i + 1
-            placeTokenX += room_width/8
+            placeTokenX += room_width/16
         }
     }
+    
     tokenID = instance_create(placeTokenX, placeTokenY, oToken)
     tokenID.opacityLocation = self.id
     tokenID.function = 0
