@@ -101,12 +101,19 @@ if (!tokenSpawn){
          exit}
         instance_destroy(ID)
     }
+    while(instance_exists(oExitButton)){
+        ID = instance_nearest(placeTokenX,placeTokenY,oExitButton)
+        instance_destroy(ID)
+    }
     placeTokenX = tokenInitialX
     for(i = 0; i &lt; 18; i+=1){
         if(game.token[game.currentPlayer, i]){
             tokenID = instance_create(placeTokenX, placeTokenY, oToken)
             tokenID.opacityLocation = self.id
             tokenID.function = i + 1
+            exitID = instance_create(placeTokenX + 50, placeTokenY - 50, oExitButton)
+            exitID.function = "token" 
+            exitID.owner = tokenID
             placeTokenX += room_width/16
         }
     }
