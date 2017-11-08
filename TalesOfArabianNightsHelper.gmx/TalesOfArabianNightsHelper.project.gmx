@@ -19,6 +19,7 @@
     <sprite>sprites\sTokens</sprite>
     <sprite>sprites\sFadeInBackground</sprite>
     <sprite>sprites\sXbutton</sprite>
+    <sprite>sprites\sStatus</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -44,6 +45,7 @@
     <object>objects\oAddSubButton</object>
     <object>objects\oToken</object>
     <object>objects\oExitButton</object>
+    <object>objects\oStatus</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rBackground</room>
