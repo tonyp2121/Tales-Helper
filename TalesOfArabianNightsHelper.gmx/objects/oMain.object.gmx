@@ -39,6 +39,7 @@ for (i = 0; i &lt; game.numOfPlayers; i+=1){
     game.wealth[i] = 2
     for (j = 0; j &lt; 18; j+=1){
         game.token[i, j] = false
+        
     }
 }
 
@@ -58,11 +59,11 @@ picker = false
 
 // status code
 
-statusPicker = false
 statusSpawn = false
-statusInitialX = room_width*4/5
-statusInitialY = room_height*2/18
+statusInitialX = room_width*.85/3
+statusInitialY = room_height*17/18
 var statusID
+statusPicker = false
 
 // general dont do something if its unclickable
 
@@ -93,8 +94,7 @@ spawnAddSubtractButtons()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(unclickable) {exit} // do I want this at the top? I think so
-
+            <string>if (unclickable){exit}
 // should probably keep this at the bottom since the 
 // "exit" command dont want to skip anything too important
 if (!tokenSpawn){
