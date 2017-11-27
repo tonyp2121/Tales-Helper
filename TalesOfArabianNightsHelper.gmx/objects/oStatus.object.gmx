@@ -92,11 +92,11 @@ if (opacity &lt; 0 &amp;&amp; function == 0) {
         }
         instance_destroy(self.id)
     }
-if(function != 0  &amp;&amp; main.picker){
+if(function != 0  &amp;&amp; main.statusPicker){
     // when picker is up let you select the current token
     if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
     main.statusPicker = false
-    game.token[game.currentPlayer,function - 1] = true
+    game.status[game.currentPlayer,statusType - 1] = true
     main.unclickable = false
     main.statusSpawn = false
     }

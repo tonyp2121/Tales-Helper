@@ -31,20 +31,20 @@
 //-------------------------------
 // Things I need to focus on
 //-------------------------------
-//   Keeping track of each players speacialties
-//   Keeping track of each players Wealth/Destiny/Story and the benefits those give
-//   Keep track of any and all player statuses and display what the status do on each 
+//   Keeping track of each players speacialties -- done
+//   Keeping track of each players Wealth/Destiny/Story and the benefits those give -- almost done
+//   Keep track of any and all player statuses and display what the status do on each  -- halfway there woah oh livin on a prayer
 //       players turn
-//   Have some sort of animation for switching characters maybe a card flipping animation
-//   When you click on a card it goes to the center of the screen and everything else gets 
-//       darkened away
-//   Maybe have a basic rulebook 
-//   Have the ability to enter text (for player names maybe just so its easier to tell how
+//   Have some sort of animation for switching characters maybe a card flipping animation -- holy shit probably not a fade in/out is easier
+//   When you click on a card it goes to the center of the screen and everything else gets -- dunno why I wanted this this doesnt seem to do anything
+//       darkened away 
+//   Maybe have a basic rulebook -- nahhhh lmao  
+//   Have the ability to enter text (for player names maybe just so its easier to tell how -- nahhh lmao use colors for this
 //       many players there are and also to know what entry your supposed to read)
-//   Have a look up table where you enter the thing under the card, the time of day selected
+//   Have a look up table where you enter the thing under the card, the time of day selected -- yeah still do this
 //       then calculate where in the book the entry should be.
-//   Make a good looking text entering box
-//   Have a dice roll button (Actually might not be necessary, must look through rules and
+//   Make a good looking text entering box -- fuck that
+//   Have a dice roll button (Actually might not be necessary, must look through rules and -- not necessary people can roll their own dice
 //       see what its used for, have a dice roll animation or at least a phase out and then
 //       a question mark appears on it instead)
 //------------------------------------

@@ -94,6 +94,7 @@ spawnAddSubtractButtons()
           <argument>
             <kind>1</kind>
             <string>if(unclickable) {exit} // do I want this at the top? I think so
+
 // should probably keep this at the bottom since the 
 // "exit" command dont want to skip anything too important
 if (!tokenSpawn){
