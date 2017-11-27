@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>game = oGameData.id
 main = oMain.id
-function = 0
+function = 0 // function is token type
 givenDepth = -100
 opacityLocation = 0
 currentPlayer = game.currentPlayer
