@@ -39,8 +39,11 @@ for (i = 0; i &lt; game.numOfPlayers; i+=1){
     game.wealth[i] = 2
     for (j = 0; j &lt; 18; j+=1){
         game.token[i, j] = false
-        
     }
+    for (j = 0; j &lt; 28; j+=1){
+        game.status[i, j] = false
+    }
+    
 }
 
 
@@ -60,8 +63,8 @@ picker = false
 // status code
 
 statusSpawn = false
-statusInitialX = room_width*.85/3
-statusInitialY = room_height*17/18
+statusInitialX = room_width*2.67/3
+statusInitialY = room_height*1.3/18
 var statusID
 statusPicker = false
 
@@ -128,6 +131,41 @@ if (!tokenSpawn){
     tokenID = instance_create(placeTokenX, placeTokenY, oToken)
     tokenID.opacityLocation = self.id
     tokenID.function = 0
+}
+// status
+if (!statusSpawn){
+    statusSpawn = true
+    placeStatusX = statusInitialX
+    placeStatusY = statusInitialY
+    while(instance_exists(oStatus)){
+        for(i = 29; i &lt; instance_number(oStatus); i+=1){placeStatusY += room_height/8}
+        ID = instance_nearest(placeStatusX,placeStatusY,oStatus)
+        if(ID.opacity &gt; 0){statusSpawn = false 
+         exit}
+        instance_destroy(ID)
+    }
+    while(instance_exists(oExitButton)){
+        ID = instance_nearest(placeStatusX,placeStatusY,oExitButton)
+        instance_destroy(ID)
+    }
+    placeStatusX = statusInitialX
+    placeStatusY = statusInitialY
+    
+    for(i = 0; i &lt; 28; i+=1){
+        if(game.status[game.currentPlayer, i]){
+            statusID = instance_create(placeStatusX, placeStatusY, oStatus)
+            statusID.opacityLocation = self.id
+            statusID.function = i + 1
+            exitID = instance_create(placeStatusX + 170, placeStatusY - 52, oExitButton)
+            exitID.function = "status" 
+            exitID.owner = statusID
+            placeStatusY += room_height/16
+        }
+    }
+    
+    statusID = instance_create(placeStatusX, placeStatusY, oStatus)
+    statusID.opacityLocation = self.id
+    statusID.function = 0
 }
 </string>
           </argument>
