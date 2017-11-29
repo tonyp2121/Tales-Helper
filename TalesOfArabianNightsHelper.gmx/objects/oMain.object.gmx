@@ -134,12 +134,18 @@ if (!tokenSpawn){
 }
 // status
 if (!statusSpawn){
+    statusCount = 0
     statusSpawn = true
     placeStatusX = statusInitialX
     placeStatusY = statusInitialY
-    incrementY = room_height/8
+    incrementStatusY = room_height/8
+    incrementStatusX = room_width/5.3
     while(instance_exists(oStatus)){
-        for(i = 29; i &lt; instance_number(oStatus); i+=1){placeStatusY +=incrementY}
+        for(i = 29; i &lt; instance_number(oStatus); i+=1){statusCount+= 1
+                                                        placeStatusY +=incrementStatusY
+                                                        if (statusCount % 6 == 0){
+                                                            placeStatusY = statusInitialY
+                                                            placeStatusX -= incrementStatusX}}
         ID = instance_nearest(placeStatusX,placeStatusY,oStatus)
         if(ID.opacity &gt; 0){statusSpawn = false 
          exit}
@@ -151,7 +157,7 @@ if (!statusSpawn){
     }
     placeStatusX = statusInitialX
     placeStatusY = statusInitialY
-    
+    statusCount = 0
     for(i = 0; i &lt; 28; i+=1){
         if(game.status[game.currentPlayer, i]){
             statusID = instance_create(placeStatusX, placeStatusY, oStatus)
@@ -160,7 +166,12 @@ if (!statusSpawn){
             exitID = instance_create(placeStatusX + 170, placeStatusY - 52, oExitButton)
             exitID.function = "status" 
             exitID.owner = statusID
-            placeStatusY += incrementY
+            placeStatusY += incrementStatusY
+            statusCount += 1
+            if (statusCount % 6 == 0){
+            placeStatusY = statusInitialY
+            placeStatusX -= incrementStatusX
+            }
         }
     }
     
