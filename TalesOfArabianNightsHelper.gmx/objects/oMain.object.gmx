@@ -113,7 +113,8 @@ if (!tokenSpawn){
     }
     while(instance_exists(oExitButton)){
         ID = instance_nearest(placeTokenX,placeTokenY,oExitButton)
-        instance_destroy(ID)
+        if(ID.function == "token"){instance_destroy(ID)}
+        else{break}
     }
     placeTokenX = tokenInitialX
     for(i = 0; i &lt; 18; i+=1){
@@ -153,7 +154,8 @@ if (!statusSpawn){
     }
     while(instance_exists(oExitButton)){
         ID = instance_nearest(placeStatusX,placeStatusY,oExitButton)
-        instance_destroy(ID)
+        if(ID.function == "status"){instance_destroy(ID)}
+        else{break}
     }
     placeStatusX = statusInitialX
     placeStatusY = statusInitialY

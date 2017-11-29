@@ -76,10 +76,11 @@ if (statusType == 0 &amp;&amp; !main.unclickable) {
     for (i = 0; i &lt; 28; i+= 1){
         status[i] = instance_create(buttonSpawnX, buttonSpawnY, oStatus)
         status[i].statusType = i + 1
-        status[i].givenDepth = -300
+        status[i].givenDepth = -104
         status[i].opacityLocation = self.id
         status[i].xscale = .5
         status[i].yscale = .5
+        status[i].givenDepth = -1000
         buttonSpawnX += buttonIncrementX
         if ( i % 7 == 6){
         buttonSpawnX = buttonInitialX
@@ -129,6 +130,7 @@ if(statusType != 0  &amp;&amp; main.statusPicker){
             <kind>1</kind>
             <string>image_alpha = opacityLocation.opacity
 image_index = statusType
+depth = givenDepth
 image_xscale = xscale
 image_yscale = yscale
 draw_self()
