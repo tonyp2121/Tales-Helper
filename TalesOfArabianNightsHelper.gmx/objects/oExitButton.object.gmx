@@ -65,6 +65,19 @@ if (function = "token"){
         instance_destroy()
     }
 }
+
+if (function = "status"){
+    if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+        with (owner){
+            game.status[game.currentPlayer,statusType - 1] = false
+            main.statusSpawn = false
+            main.statuspicker = false
+            main.unclickable = false
+            instance_destroy()
+        }
+        instance_destroy()
+    }
+}
 </string>
           </argument>
         </arguments>
