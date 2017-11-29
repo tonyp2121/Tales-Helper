@@ -138,7 +138,6 @@ if(!main.picker &amp;&amp; function == 0 &amp;&amp; opacity &gt; 0){
     image_alpha = opacity
     opacity -= 1/room_speed
     draw_sprite_ext(sFadeInBackground, 0, room_width/2, room_height/2, 1, 1, 0, -1, opacity) 
-    
 }
 </string>
           </argument>

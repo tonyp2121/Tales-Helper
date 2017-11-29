@@ -59,7 +59,7 @@ image_alpha = 0
 depth = givenDepth
 
 if ((opacity == 0 or opacityLocation.opacity == 0) and currentPlayer =! game.currentPlayer){instance_destroy()}
-if (function == 0 &amp;&amp; !main.unclickable) {
+if (statusType == 0 &amp;&amp; !main.unclickable) {
     // if clicked on it should change main value of some name to make a picker thing
    
     if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
@@ -71,11 +71,11 @@ if (function == 0 &amp;&amp; !main.unclickable) {
     buttonSpawnY = buttonInitialY
     buttonIncrementX = room_width/7
     buttonIncrementY = room_height/4
-    for (i = 0; i &lt; 18; i+= 1){
-        token[i] = instance_create(buttonSpawnX, buttonSpawnY, oToken)
-        token[i].function = i + 1
-        token[i].givenDepth = -300
-        token[i].opacityLocation = self.id
+    for (i = 0; i &lt; 28; i+= 1){
+        status[i] = instance_create(buttonSpawnX, buttonSpawnY, oStatus)
+        status[i].statusType = i + 1
+        status[i].givenDepth = -300
+        status[i].opacityLocation = self.id
         buttonSpawnX += buttonIncrementX
         if ( i % 6 == 5){
         buttonSpawnX = buttonInitialX
@@ -84,16 +84,16 @@ if (function == 0 &amp;&amp; !main.unclickable) {
     }
     }
 }
-if (opacity &lt; 0 &amp;&amp; function == 0) {
+if (opacity &lt; 0 &amp;&amp; statusType == 0) {
         opacity = 0
         
         for (i = 0; i &lt; 18; i+= 1){
-        instance_destroy(token[i])
+        instance_destroy(status[i])
         }
         instance_destroy(self.id)
     }
-if(function != 0  &amp;&amp; main.statusPicker){
-    // when picker is up let you select the current token
+if(statusType != 0  &amp;&amp; main.statusPicker){
+    // when picker is up let you select the current status
     if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
     main.statusPicker = false
     game.status[game.currentPlayer,statusType - 1] = true
@@ -127,6 +127,17 @@ if(function != 0  &amp;&amp; main.statusPicker){
 image_index = statusType
 draw_self()
 
+if(main.statusPicker &amp;&amp; statusType == 0){
+    image_alpha = opacity
+    opacity += 1/room_speed;
+    if (opacity &gt; 1) {opacity = 1}
+    draw_sprite_ext(sFadeInBackground, 0, room_width/2, room_height/2, 1, 1, 0, -1, opacity) 
+}
+if(!main.statusPicker &amp;&amp; statusType == 0 &amp;&amp; opacity &gt; 0){
+    image_alpha = opacity
+    opacity -= 1/room_speed
+    draw_sprite_ext(sFadeInBackground, 0, room_width/2, room_height/2, 1, 1, 0, -1, opacity) 
+}
 </string>
           </argument>
         </arguments>
