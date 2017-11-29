@@ -32,6 +32,8 @@ givenDepth = -100
 opacityLocation = 0
 currentPlayer = game.currentPlayer
 opacity = 0
+xscale = 1
+yscale = 1
 image_alpha = 0
 </string>
           </argument>
@@ -65,19 +67,21 @@ if (statusType == 0 &amp;&amp; !main.unclickable) {
     if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
     main.unclickable = true;
     main.statusPicker = true;
-    buttonInitialX = room_width/7
-    buttonInitialY = room_height/7
+    buttonInitialX = room_width/15
+    buttonInitialY = room_height/9
     buttonSpawnX = buttonInitialX
     buttonSpawnY = buttonInitialY
-    buttonIncrementX = room_width/7
-    buttonIncrementY = room_height/4
+    buttonIncrementX = room_width/9
+    buttonIncrementY = room_height/5
     for (i = 0; i &lt; 28; i+= 1){
         status[i] = instance_create(buttonSpawnX, buttonSpawnY, oStatus)
         status[i].statusType = i + 1
         status[i].givenDepth = -300
         status[i].opacityLocation = self.id
+        status[i].xscale = .5
+        status[i].yscale = .5
         buttonSpawnX += buttonIncrementX
-        if ( i % 6 == 5){
+        if ( i % 7 == 6){
         buttonSpawnX = buttonInitialX
         buttonSpawnY += buttonIncrementY
         }
@@ -125,6 +129,8 @@ if(statusType != 0  &amp;&amp; main.statusPicker){
             <kind>1</kind>
             <string>image_alpha = opacityLocation.opacity
 image_index = statusType
+image_xscale = xscale
+image_yscale = yscale
 draw_self()
 
 if(main.statusPicker &amp;&amp; statusType == 0){

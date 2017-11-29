@@ -137,8 +137,9 @@ if (!statusSpawn){
     statusSpawn = true
     placeStatusX = statusInitialX
     placeStatusY = statusInitialY
+    incrementY = room_height/8
     while(instance_exists(oStatus)){
-        for(i = 29; i &lt; instance_number(oStatus); i+=1){placeStatusY += room_height/8}
+        for(i = 29; i &lt; instance_number(oStatus); i+=1){placeStatusY +=incrementY}
         ID = instance_nearest(placeStatusX,placeStatusY,oStatus)
         if(ID.opacity &gt; 0){statusSpawn = false 
          exit}
@@ -159,7 +160,7 @@ if (!statusSpawn){
             exitID = instance_create(placeStatusX + 170, placeStatusY - 52, oExitButton)
             exitID.function = "status" 
             exitID.owner = statusID
-            placeStatusY += room_height/16
+            placeStatusY += incrementY
         }
     }
     
