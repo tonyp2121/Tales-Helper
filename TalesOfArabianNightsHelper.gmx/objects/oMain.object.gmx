@@ -155,7 +155,7 @@ if (!statusSpawn){
         if(game.status[game.currentPlayer, i]){
             statusID = instance_create(placeStatusX, placeStatusY, oStatus)
             statusID.opacityLocation = self.id
-            statusID.function = i + 1
+            statusID.statusType = i + 1
             exitID = instance_create(placeStatusX + 170, placeStatusY - 52, oExitButton)
             exitID.function = "status" 
             exitID.owner = statusID
