@@ -203,8 +203,10 @@ if (!statusSpawn){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (start){
-opacity += 1/2/room_speed
+            <string>opacityChangingSpeed = 1/2/room_speed
+
+if(start){
+opacity += opacityChangingSpeed
 if opacity &gt; 1{start = false; opacity = 1}
 }
 
@@ -216,6 +218,10 @@ yDestinyPos = room_height - room_height/10
 
 xStoryPos = room_width - room_width/14
 yStoryPos = room_height - room_height/10
+
+xWealthPos = room_width - room_width/3.7
+yWealthPos = room_height - room_height/7.7
+yWealthPosDiff = room_height/15
 
 draw_set_alpha(opacity)
 
@@ -236,8 +242,18 @@ draw_set_valign(fa_middle)
 
 draw_sprite(sDestinyCount, 0, xDestinyPos, yDestinyPos)
 draw_text(xDestinyPos, yDestinyPos, game.destinyCount[game.currentPlayer])
+
 draw_sprite(sStoryCount, 0, xStoryPos, yStoryPos)
 draw_text(xStoryPos, yStoryPos, game.storyCount[game.currentPlayer])
+
+draw_text(xWealthPos, yWealthPos, "Wealth")
+if(game.wealth[game.currentPlayer] = 0){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Beggar")}
+else if(game.wealth[game.currentPlayer] = 1){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Penniless")}
+else if(game.wealth[game.currentPlayer] = 2){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Poor")}
+else if(game.wealth[game.currentPlayer] = 3){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Respectable")}
+else if(game.wealth[game.currentPlayer] = 4){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Rich")}
+else if(game.wealth[game.currentPlayer] = 5){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Princely")}
+else if(game.wealth[game.currentPlayer] = 6){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Fabulous")}
 
 </string>
           </argument>

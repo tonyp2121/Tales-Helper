@@ -54,6 +54,8 @@ main = oMain.id
             <string>image_index = function
 image_alpha = main.opacity
 
+//function 0 = add function 1 = subtract
+
 if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
     if(function = 0){
         if (owner = "story" &amp;&amp; game.storyCount[game.currentPlayer] &lt; 20){
@@ -62,6 +64,9 @@ if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mou
         if (owner = "destiny" &amp;&amp;  game.destinyCount[game.currentPlayer] &lt; 20){
          game.destinyCount[game.currentPlayer] += 1
         }
+        if (owner = "wealth" &amp;&amp;  game.wealth[game.currentPlayer] &lt; 6){
+         game.wealth[game.currentPlayer] += 1
+        }
     }
     else if (function = 1){
         if (owner = "story" &amp;&amp; game.storyCount[game.currentPlayer] &gt; 0){
@@ -69,6 +74,9 @@ if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mou
         }
         if (owner = "destiny" &amp;&amp; game.destinyCount[game.currentPlayer] &gt; 0){
         game.destinyCount[game.currentPlayer] -= 1
+        }
+        if (owner = "wealth" &amp;&amp;  game.wealth[game.currentPlayer] &gt; 0){
+         game.wealth[game.currentPlayer] -= 1
         }
     }
 }
