@@ -219,9 +219,14 @@ yDestinyPos = room_height - room_height/10
 xStoryPos = room_width - room_width/14
 yStoryPos = room_height - room_height/10
 
-xWealthPos = room_width - room_width/3.7
-yWealthPos = room_height - room_height/7.7
-yWealthPosDiff = room_height/15
+xWealthPos = room_width - room_width/3.5
+yWealthPos = room_height - room_height/7.1
+yWealthPosDiff = room_height/16
+xWealthScale = .75
+yWealthScale = xWealthScale
+xWealthMovementPosDiff = room_height/36
+landColor = $b79a86
+seaColor = $739cdd
 
 draw_set_alpha(opacity)
 
@@ -231,8 +236,6 @@ draw_set_valign(fa_bottom)
 
 draw_text(xNamePos, yNamePos, game.playerName[game.currentPlayer])
 draw_sprite(sNameUnderline, game.colorPicked[game.currentPlayer], xNamePos, yNamePos);
-
-
 
 draw_text(xNamePos, yNamePos, game.playerName[game.currentPlayer])
 draw_sprite(sNameUnderline, game.colorPicked[game.currentPlayer], xNamePos, yNamePos)
@@ -246,15 +249,60 @@ draw_text(xDestinyPos, yDestinyPos, game.destinyCount[game.currentPlayer])
 draw_sprite(sStoryCount, 0, xStoryPos, yStoryPos)
 draw_text(xStoryPos, yStoryPos, game.storyCount[game.currentPlayer])
 
-draw_text(xWealthPos, yWealthPos, "Wealth")
-if(game.wealth[game.currentPlayer] = 0){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Beggar")}
-else if(game.wealth[game.currentPlayer] = 1){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Penniless")}
-else if(game.wealth[game.currentPlayer] = 2){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Poor")}
-else if(game.wealth[game.currentPlayer] = 3){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Respectable")}
-else if(game.wealth[game.currentPlayer] = 4){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Rich")}
-else if(game.wealth[game.currentPlayer] = 5){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Princely")}
-else if(game.wealth[game.currentPlayer] = 6){draw_text(xWealthPos, yWealthPos + yWealthPosDiff, "Fabulous")}
 
+draw_text_transformed(xWealthPos, yWealthPos, "Wealth", xWealthScale, yWealthScale, 0)
+draw_sprite_ext(sNameUnderline, 0, xWealthPos - room_width/31.5, yWealthPos + room_height/40, .3, .7, 0, c_white, opacity)
+
+if(game.wealth[game.currentPlayer] = 0){
+    draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Beggar", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(landColor))
+    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(seaColor))
+    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    }
+else if(game.wealth[game.currentPlayer] = 1){
+    draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Penniless", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(landColor))
+    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(seaColor))
+    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    }
+else if(game.wealth[game.currentPlayer] = 2){
+    draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Poor", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(landColor))
+    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(seaColor))
+    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    }
+else if(game.wealth[game.currentPlayer] = 3){
+    draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Respectable", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(landColor))
+    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(seaColor))
+    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    }
+else if(game.wealth[game.currentPlayer] = 4){
+    draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Rich", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(landColor))
+    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(seaColor))
+    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    }
+else if(game.wealth[game.currentPlayer] = 5){
+    draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Princely", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(landColor))
+    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(seaColor))
+    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "5", xWealthScale, yWealthScale, 0)
+    }
+else if(game.wealth[game.currentPlayer] = 6){
+    draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Fabulous", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(landColor))
+    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    draw_set_color(bgr2rgb(seaColor))
+    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "6", xWealthScale, yWealthScale, 0)
+    }
+draw_set_color(c_white)
 </string>
           </argument>
         </arguments>
