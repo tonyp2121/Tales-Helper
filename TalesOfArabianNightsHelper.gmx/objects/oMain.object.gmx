@@ -80,6 +80,10 @@ instance_create(nextPlayerX, nextPlayerY, oNextPlayerButton)
 
 unclickable = false
 
+// status text code
+
+instance_create(x,y,oStatusText)
+
 // add/subtract button spawns
 
 spawnAddSubtractButtons()
@@ -153,7 +157,7 @@ if (!statusSpawn){
     while(instance_exists(oStatus)){
         for(i = 29; i &lt; instance_number(oStatus); i+=1){statusCount+= 1
                                                         placeStatusY +=incrementStatusY
-                                                        if (statusCount % 6 == 0){
+                                                        if (statusCount % 5 == 0){
                                                             placeStatusY = statusInitialY
                                                             placeStatusX -= incrementStatusX}}
         ID = instance_nearest(placeStatusX,placeStatusY,oStatus)
@@ -179,7 +183,7 @@ if (!statusSpawn){
             exitID.owner = statusID
             placeStatusY += incrementStatusY
             statusCount += 1
-            if (statusCount % 6 == 0){
+            if (statusCount % 5 == 0){
             placeStatusY = statusInitialY
             placeStatusX -= incrementStatusX
             }

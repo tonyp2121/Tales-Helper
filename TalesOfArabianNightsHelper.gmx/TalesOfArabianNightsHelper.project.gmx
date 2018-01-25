@@ -49,6 +49,7 @@
     <object>objects\oExitButton</object>
     <object>objects\oStatus</object>
     <object>objects\oNextPlayerButton</object>
+    <object>objects\oStatusText</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rBackground</room>
