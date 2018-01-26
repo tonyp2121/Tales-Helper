@@ -51,7 +51,8 @@ image_alpha = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>test = 3
+</string>
           </argument>
         </arguments>
       </action>
@@ -91,12 +92,27 @@ textBuffer = "              "
 draw_set_valign(fa_top)
 draw_set_halign(fa_left)
 
-/*
+
+
+
 draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
 textYinitial+=textYdifference
 draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
 textYinitial+=textYdifference
-*/
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
     
 // Accursed
 if(game.status[game.currentPlayer, 0]){
@@ -146,44 +162,74 @@ draw_text_transformed(textXinitial, textYinitial, textBuffer + "then 1 point fro
 textYinitial+=textYdifference2
 }
 
-// Crippled
+// Crippled 
 if(game.status[game.currentPlayer, 4]){
 draw_text_transformed(textXinitial, textYinitial, "Crippled - Your movement is reduced by 1. You cannot gain or use the Seduction or Appearance skills. In any", textXScale, textYScale, 0)
 textYinitial+=textYdifference
 draw_text_transformed(textXinitial, textYinitial, textBuffer + "encounter you double all Story Point awards.", textXScale, textYScale, 0)
 textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "To Get Rid of Crippled - If you gained Blessed or Respected, you lose this status", textXScale, textYScale, 0)
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Crippled - If you gained Blessed or Respected, you lose this status", textXScale, textYScale, 0)
 textYinitial+=textYdifference2
 }
 
 // Determined
 if(game.status[game.currentPlayer, 5]){
-
+draw_text_transformed(textXinitial, textYinitial, "Determined - Once per encounter, you may decide to reject the Award Paragraph you receive. If you do this, you ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "must go back to the Reaction Matrix and choose a different reaction.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Diseased
 if(game.status[game.currentPlayer, 6]){
-
+draw_text_transformed(textXinitial, textYinitial, "Diseased - Your movement is reduced by 1. If you pay 3 Destiny points while in the same space as another player, ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "you may give him this status – but you keep it as well.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Diseased - Give a Wealth level to a player in your space who has Scholarship.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Enslaved
 if(game.status[game.currentPlayer, 7]){
-
+draw_text_transformed(textXinitial, textYinitial, "Enslaved - Each turn, you designate another player to be your " + chr(34) + "master" + chr(34) + " Any Destiny points or Treasures received", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "during your turn go to him or her instead of you", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Enslaved - You may " + chr(34) + "buy your freedom" + chr(34) + " if you gain a Wealth level while Enslaved. Simply expend the", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "new Wealth level (no other player gets it) and lose this status. , textXScale, textYScale", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Ensorcelled
 if(game.status[game.currentPlayer, 8]){
-
+draw_text_transformed(textXinitial, textYinitial, "Ensorceled - Each turn, another player of your choice decides where to move your piece.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Ensorceled - At the end of your turn, you and the player who moved your piece roll 1 die each.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "If you roll higher, you lose this status. Otherwise you remain Ensorcelled.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Envious
 if(game.status[game.currentPlayer, 9]){
-
+draw_text_transformed(textXinitial, textYinitial, "Envious - You cannot win while Envious. In any encounter in which Rob is a possible reaction, you must choose it.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Envious - You may pay 3 Destiny points to exchange this status for the On Pilgrimage status.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "If you receive 2 Wealth levels or a Treasure in any one encounter, you lose this status", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Fated
 if(game.status[game.currentPlayer, 10]){
-
+draw_text_transformed(textXinitial, textYinitial, "Fated - Do not roll to determine who you will meet on an Encounter chart in the Book of Tales. Designate ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "another player to decide. That player may consult the Book of Tales before choosing.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Fated - If you gain a combined total of 4 or more Destiny and/or Story points, you lose this status.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Grief Stricken
