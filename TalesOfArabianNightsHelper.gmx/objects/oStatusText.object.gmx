@@ -111,6 +111,30 @@ draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
 textYinitial+=textYdifference
 draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
 textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
     
 // Accursed
 if(game.status[game.currentPlayer, 0]){
@@ -288,17 +312,38 @@ textYinitial+=textYdifference2
 
 // Married
 if(game.status[game.currentPlayer, 16]){
-
+draw_text_transformed(textXinitial, textYinitial, "Married - You gain 1 Story point when you get this status. The next city you enter (or the city you are now in) is", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "where you make your home. Leave your Origin marker there. After you have an encounter in another city, you ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "must return to your home before you may end your turn in any other cities. Each time you return home, you", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "gain 1 Story point and you may roll 2 dice, see the card for results on", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // On Pilgrimage
 if(game.status[game.currentPlayer, 17]){
-
+draw_text_transformed(textXinitial, textYinitial, "On Pilgrimage - You cannot win the game while On Pilgrimage", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of On Pilgrimage - Place your Destination marker in any city not within 3 spaces of Mecca. You must enter ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "and have at least 1 encounter in that city, then you must go to Mecca and have at least 1 encounter there.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "After that encounter, you lose this status, you gain D2/S1/Piety at 1 level higher then you now have it.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Outlaw
 if(game.status[game.currentPlayer, 18]){
-
+draw_text_transformed(textXinitial, textYinitial, "Outlaw - Mark the city nearest to the space you are in with your Origins marker (If 2 or more cities are equidistant", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "choose one). If you have an encounter in that city, you automatically receive the Imprisoned status.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "If you recieve the outlaw status twice move your piece to your origins and gain Imprisoned status", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Outlaw -If you become Imprisoned, you lose the Outlaw status. Don’t forget to remove your Origins marker.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Pursued
