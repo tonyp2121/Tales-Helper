@@ -93,10 +93,6 @@ draw_set_valign(fa_top)
 draw_set_halign(fa_left)
 
 
-
-
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
 draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
 textYinitial+=textYdifference
 draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
@@ -234,12 +230,28 @@ textYinitial+=textYdifference2
 
 // Grief Stricken
 if(game.status[game.currentPlayer, 11]){
-
+draw_text_transformed(textXinitial, textYinitial, "Grief Stricken - You may not use any Talent level skills during encounters; Master level skills may only be used at ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "Talent level. If you spend 2 Destiny points and have the Storytelling skills (regardless of level), you may", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "make another player in your space Grief Stricken as well.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To lose Grief Stricken - When your Story points total reaches 8 or more, you lose this status. If you become Grief Stricken ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "with 8 or more Story points, you must score 1 additional Story point to lose this status.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Imprisoned
 if(game.status[game.currentPlayer, 12]){
-
+draw_text_transformed(textXinitial, textYinitial, "Imprisoned - You may not move. Lose loot if you have it, refer to the card for your encounter with the jailer.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To Lose Imprisoned - When your Story point reaches 10 or more, you lose this status. If you become Imprisoned ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "with 10 or more Story points, you must score 1 additional Story point. If you give a Wealth level to a player in your ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "space who has Beguiling or Stealth &amp; Stealing, you lose this status.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Insane
