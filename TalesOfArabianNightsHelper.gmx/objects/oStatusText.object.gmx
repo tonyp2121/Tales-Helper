@@ -109,6 +109,8 @@ draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
 textYinitial+=textYdifference
 draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
 textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
     
 // Accursed
 if(game.status[game.currentPlayer, 0]){
@@ -256,17 +258,32 @@ textYinitial+=textYdifference2
 
 // Insane
 if(game.status[game.currentPlayer, 13]){
-
+draw_text_transformed(textXinitial, textYinitial, "Insane - Each time you have an encounter, designate another player to choose your reaction on the Reaction Matrix.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Insane - You lose this status if you gain a skill from an encounter.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Lost 
 if(game.status[game.currentPlayer, 14]){
-
+draw_text_transformed(textXinitial, textYinitial, "Lost - You may only move 1 space per turn.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "How to get rid of Lost - You make choose to not have a normal encounter on your turn, but rather a Badly Lost", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "encounter on Matrix G, in which various encounter paragraphs will specifically state that you may lose the", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "Lost status. Other encounters in the game will state that you lose Lost.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Love Struck
 if(game.status[game.currentPlayer, 15]){
-
+draw_text_transformed(textXinitial, textYinitial, "Love Struck - Your next turn your normal encounter is replaced by a special encounter look at the card for details", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To lose Love Struck - Immediately after the encounter you lose this status. If you are married you cannot be", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "Love Struck, instead you gain the Grief Stricken status", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Married
