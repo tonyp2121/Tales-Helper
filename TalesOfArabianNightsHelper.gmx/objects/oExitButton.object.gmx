@@ -52,7 +52,7 @@ depth = -102
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if(main.unclickable){exit}
 if (function = "token"){
     if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
         with (owner){

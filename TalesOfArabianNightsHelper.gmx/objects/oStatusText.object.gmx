@@ -80,25 +80,68 @@ image_alpha = 0
 // also we probably want a smaller font size, we may just do that by squashing/stretching 
 //      by the same factor
 
+textXinitial = room_width/100
+textYinitial = room_height/36
+textYdifference = room_height/26
+textYdifference2 = 1.5 * textYdifference
+textXScale = .5
+textYScale = textXScale
+textBuffer = "              "
 
+draw_set_valign(fa_top)
+draw_set_halign(fa_left)
+
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+
+
+    
 // Accursed
 if(game.status[game.currentPlayer, 0]){
-
+draw_text_transformed(textXinitial, textYinitial, "Accursed - Whenever you roll the die for any reason, ask any player what number he wants you to use (that player", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "              may consult the Book of Tales before he gives you a number)", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Accursed - After the player has given you a number, roll the die to determine if you lose the status. ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "              If the number you roll is more then one point away from the number that was give, you are no longer", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "              Accursed. If you are Blessed you lose this status", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Beast Form
 if(game.status[game.currentPlayer, 1]){
-
+draw_text_transformed(textXinitial, textYinitial, "Beast Form - You cannot choose Court on the Reaction Matrix; if you are ever forced to Court, you immediately", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "              get the Scorned status. You cannot gain or use the Seduction or Appearance skills while in Beast Form", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Beast Form - If you give a Wealth level to a player in your space who has Magic, you lose this status.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Beloved
 if(game.status[game.currentPlayer, 2]){
-
+draw_text_transformed(textXinitial, textYinitial, "Beloved - Decide whether to accept or reject his/her love: ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "If you accept: You receive 2 Destiny points and become Married.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "If you refuse: Roll one die and gain the following status:", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "1-2 = Scorned 3-4 = Pursued 5-6 = Determined", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Blessed
 if(game.status[game.currentPlayer, 3]){
-
+draw_text_transformed(textXinitial, textYinitial, "Blessed - Whenever you roll the die for any reason, you may choose what number to use (you may, examine the Book", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "of Tales before choosing a number). Does not affect Destiny Die.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Blessed - After saying what number you will use, roll the die. If the number you roll is more", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "then 1 point from the number you called, you lose this status. If you gain Accursed, you lose this status.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Crippled
@@ -221,6 +264,8 @@ if(game.status[game.currentPlayer, 27]){
 
 }
 
+draw_set_valign(fa_middle)
+draw_set_halign(fa_center)
 </string>
           </argument>
         </arguments>
