@@ -91,10 +91,12 @@ textBuffer = "              "
 draw_set_valign(fa_top)
 draw_set_halign(fa_left)
 
+/*
 draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
 textYinitial+=textYdifference
-
-
+draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+*/
     
 // Accursed
 if(game.status[game.currentPlayer, 0]){
@@ -146,7 +148,12 @@ textYinitial+=textYdifference2
 
 // Crippled
 if(game.status[game.currentPlayer, 4]){
-
+draw_text_transformed(textXinitial, textYinitial, "Crippled - Your movement is reduced by 1. You cannot gain or use the Seduction or Appearance skills. In any", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "encounter you double all Story Point awards.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To Get Rid of Crippled - If you gained Blessed or Respected, you lose this status", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Determined
