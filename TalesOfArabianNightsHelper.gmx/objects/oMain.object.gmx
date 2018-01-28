@@ -76,6 +76,14 @@ nextPlayer = false
 
 instance_create(nextPlayerX, nextPlayerY, oNextPlayerButton)
 
+// new encounter button code
+
+newEncounterX = room_width*2.67/3 
+newEncounterY = room_height*1.3/18 + 4 * room_height/8
+newEncounter = false
+
+instance_create(newEncounterX, newEncounterY, oNewEncounterButton)
+
 // general dont do something if its unclickable
 
 unclickable = false
