@@ -85,57 +85,13 @@ textXinitial = room_width/100
 textYinitial = room_height/36
 textYdifference = room_height/26
 textYdifference2 = 1.5 * textYdifference
-textXScale = .5
+textXScale = .4
 textYScale = textXScale
 textBuffer = "              "
 
 draw_set_valign(fa_top)
 draw_set_halign(fa_left)
 
-
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, "", textXScale, textYScale, 0)
-textYinitial+=textYdifference
-    
 // Accursed
 if(game.status[game.currentPlayer, 0]){
 draw_text_transformed(textXinitial, textYinitial, "Accursed - Whenever you roll the die for any reason, ask any player what number he wants you to use (that player", textXScale, textYScale, 0)
@@ -348,47 +304,92 @@ textYinitial+=textYdifference2
 
 // Pursued
 if(game.status[game.currentPlayer, 19]){
-
+draw_text_transformed(textXinitial, textYinitial, "Pursued - when you gain the Pursued status, you will be told the name of your pursuer. (If no name is given, it is ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "the same as the being which you encountered that lead to becoming Pursued). On any subsequent turn, before", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "you have an encounter, roll 1 die. On a roll of 1 or 2, instead of a regular encounter, you are found by ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "your Pursuer. You encounter him/her on the Pursuing line of Matrix H.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Respected
 if(game.status[game.currentPlayer, 20]){
-
+draw_text_transformed(textXinitial, textYinitial, "Respected - In any encounter in which a die roll is involved, you may roll a second time for an Award Paragraph after ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "it is read to you if you don’t like the first result. The 2nd roll stand.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Robe of Honor
 if(game.status[game.currentPlayer, 21]){
-
+draw_text_transformed(textXinitial, textYinitial, "Robe of Honor - Gain 1 Destiny point immediately. You also become Respected and gain Wisdom.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Scorned
 if(game.status[game.currentPlayer, 22]){
-
+draw_text_transformed(textXinitial, textYinitial, "Scorned - All Destiny points awarded after receiving this status are changed to Story points awards. You may receive ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "no new Wealth levels or skills.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Scorned - You may trade this status for the On Pilgrimage status at the cost of 1 Destiny point. If you", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "have no Destiny points, you immediately trade this status for On Pilgrimage.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Sex-Changed
 if(game.status[game.currentPlayer, 23]){
-
+draw_text_transformed(textXinitial, textYinitial, "Sex-Changed - Turn your Player token to the other side to indicate your new sex. You cannot win while Sex- Changed.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Sex-Changed - You must get the Sex-Changed status again to lose this status", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Sultan
 if(game.status[game.currentPlayer, 24]){
-
+draw_text_transformed(textXinitial, textYinitial, "Sultan - To become Sultan, you must have scored a combines total of 12 Destiny and Story points; otherwise, you receive the ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "Vizier status instead. Once you are Sultan, your wealth automatically becomes Fabulous. You can count each between (unless you wish to end your move on one of those spaces).", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "city as 1 space when moving, ignoring the terrain spaces in- ", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Under Geas
 if(game.status[game.currentPlayer, 25]){
-
+draw_text_transformed(textXinitial, textYinitial, "Under Geas - You cannot win the game while Under Geas.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To lose Under Geas - Gain 3 destiny points to complete your Geas or break the Geas by paying 4 destiny points.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Vizier
 if(game.status[game.currentPlayer, 26]){
-
+draw_text_transformed(textXinitial, textYinitial, "Vizier - Immediately receive D1/S1/Courtly Graces/Wisdom Place your Origins marker in the city nearest to where you ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "received your status (if 2 or more are equidistant, choose 1) Each time you have an encounter in another  ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "city, you must return to your origin city before you may end your turn in another city. If at any time  ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "you have Piety and Scholarship at Master level and have 12 Destiny and Story points, you may trade  ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "the Vizier status for the Sultan status.", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 // Wounded
 if(game.status[game.currentPlayer, 27]){
-
+draw_text_transformed(textXinitial, textYinitial, "Wounded - Lose the use of the following skills until you are no longer wounded: Stealth &amp; Stealing, Magic, Weapon Use, ", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "Seduction, Appearance.", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, "To get rid of Wounded - Skip your next turn (to heal) and lose either 1 Destiny or 1 Story point OR If you give a Wealth", textXScale, textYScale, 0)
+textYinitial+=textYdifference
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "level to a player in your space who has Scholarship, you lose this status", textXScale, textYScale, 0)
+textYinitial+=textYdifference2
 }
 
 draw_set_valign(fa_middle)
