@@ -157,7 +157,8 @@ if (!statusSpawn){
     while(instance_exists(oStatus)){
         for(i = 29; i &lt; instance_number(oStatus); i+=1){statusCount+= 1
                                                         placeStatusY +=incrementStatusY
-                                                        if (statusCount % 5 == 0){
+                                                        if (statusCount &gt; 4){
+                                                            break
                                                             placeStatusY = statusInitialY
                                                             placeStatusX -= incrementStatusX}}
         ID = instance_nearest(placeStatusX,placeStatusY,oStatus)
@@ -183,16 +184,17 @@ if (!statusSpawn){
             exitID.owner = statusID
             placeStatusY += incrementStatusY
             statusCount += 1
-            if (statusCount % 5 == 0){
+            if (statusCount &gt; 4){break;
             placeStatusY = statusInitialY
             placeStatusX -= incrementStatusX
             }
         }
     }
     
+    if(statusCount &lt; 4){
     statusID = instance_create(placeStatusX, placeStatusY, oStatus)
     statusID.opacityLocation = self.id
-    statusID.function = 0
+    statusID.function = 0}
 }
 </string>
           </argument>
