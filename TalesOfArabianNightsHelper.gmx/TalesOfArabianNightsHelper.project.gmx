@@ -29,10 +29,12 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\getInput.gml</script>
+    <script>scripts\getInputNumbersOnly.gml</script>
     <script>scripts\array.gml</script>
     <script>scripts\setNames.gml</script>
     <script>scripts\spawnAddSubtractButtons.gml</script>
     <script>scripts\bgr2rgb.gml</script>
+    <script>scripts\stringToInt.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fMainText</font>

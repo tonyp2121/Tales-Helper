@@ -25,6 +25,37 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>numOfPlayers = 0
+currentPlayer = -1
+//white = 0 / black = 1 / green = 2 / yellow = 3 / red = 4 / blue = 5
+var colorPicked
+var playerName
+var destinyCount
+var storyCount
+// 0 - beggar / 1 - penniless / 2 - poor / 3 - Respectable / 4 - Rich / 5 - Princely / 6 - Fabulous
+var wealth
+var token
+var status
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>
 // REACTION MATRIX BELOW
 // YOU LAST LEFT OFF ON 28
@@ -3683,37 +3714,6 @@ EncounterMatrixName[120, 9] = "F"
 EncounterMatrixName[120, 10] = "F"
 EncounterMatrixName[120, 11] = "F"
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>numOfPlayers = 0
-currentPlayer = -1
-//white = 0 / black = 1 / green = 2 / yellow = 3 / red = 4 / blue = 5
-var colorPicked
-var playerName
-var destinyCount
-var storyCount
-// 0 - beggar / 1 - penniless / 2 - poor / 3 - Respectable / 4 - Rich / 5 - Princely / 6 - Fabulous
-var wealth
-var token
-var status
 </string>
           </argument>
         </arguments>

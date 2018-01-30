@@ -29,8 +29,6 @@
 main = oMain.id
 
 image_alpha = 0
-
-
 </string>
           </argument>
         </arguments>
