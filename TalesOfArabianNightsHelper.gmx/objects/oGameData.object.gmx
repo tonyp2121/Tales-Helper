@@ -72,8 +72,8 @@ EncounterMatrix[0, 6] = "E"
 EncounterMatrix[0, 7] = "F"
 EncounterMatrix[0, 8] = "F"
 EncounterMatrix[0, 9] = "J"
-EncounterMatrix[0, 10] = "J"
-EncounterMatrix[0, 11] = "M"
+EncounterMatrix[0, 10]= "J"
+EncounterMatrix[0, 11]= "M"
 
 // 2
 
@@ -87,8 +87,8 @@ EncounterMatrix[1, 6] = "I"
 EncounterMatrix[1, 7] = "I"
 EncounterMatrix[1, 8] = "O"
 EncounterMatrix[1, 9] = "O"
-EncounterMatrix[1, 10] = "F"
-EncounterMatrix[1, 11] = "F"
+EncounterMatrix[1, 10]= "F"
+EncounterMatrix[1, 11]= "F"
 
 // 3
 
@@ -102,8 +102,8 @@ EncounterMatrix[2, 6] = "J"
 EncounterMatrix[2, 7] = "E"
 EncounterMatrix[2, 8] = "F"
 EncounterMatrix[2, 9] = "O"
-EncounterMatrix[2, 10] = "E"
-EncounterMatrix[2, 11] = "E"
+EncounterMatrix[2, 10]= "E"
+EncounterMatrix[2, 11]= "E"
 
 // 4
 
@@ -117,8 +117,8 @@ EncounterMatrix[3, 6] = "I"
 EncounterMatrix[3, 7] = "I"
 EncounterMatrix[3, 8] = "F"
 EncounterMatrix[3, 9] = "F"
-EncounterMatrix[3, 10] = "I"
-EncounterMatrix[3, 11] = "F"
+EncounterMatrix[3, 10]= "I"
+EncounterMatrix[3, 11]= "F"
 
 // 5
 
@@ -132,8 +132,8 @@ EncounterMatrix[4, 6] = "F"
 EncounterMatrix[4, 7] = "J"
 EncounterMatrix[4, 8] = "E"
 EncounterMatrix[4, 9] = "F"
-EncounterMatrix[4, 10] = "J"
-EncounterMatrix[4, 11] = "E"
+EncounterMatrix[4, 10]= "J"
+EncounterMatrix[4, 11]= "E"
 
 // 6
 
@@ -147,8 +147,8 @@ EncounterMatrix[5, 6] = "F"
 EncounterMatrix[5, 7] = "O"
 EncounterMatrix[5, 8] = "I"
 EncounterMatrix[5, 9] = "E"
-EncounterMatrix[5, 10] = "E"
-EncounterMatrix[5, 11] = "E"
+EncounterMatrix[5, 10]= "E"
+EncounterMatrix[5, 11]= "E"
 
 // 7
 
@@ -162,8 +162,8 @@ EncounterMatrix[6, 6] = "E"
 EncounterMatrix[6, 7] = "J"
 EncounterMatrix[6, 8] = "E"
 EncounterMatrix[6, 9] = "F"
-EncounterMatrix[6, 10] = "E"
-EncounterMatrix[6, 11] = "M"
+EncounterMatrix[6, 10]= "E"
+EncounterMatrix[6, 11]= "M"
 
 // 8
 
@@ -177,8 +177,8 @@ EncounterMatrix[7, 6] = "F"
 EncounterMatrix[7, 7] = "F"
 EncounterMatrix[7, 8] = "I"
 EncounterMatrix[7, 9] = "I"
-EncounterMatrix[7, 10] = "I"
-EncounterMatrix[7, 11] = "F"
+EncounterMatrix[7, 10]= "I"
+EncounterMatrix[7, 11]= "F"
 
 // 9
 
@@ -192,8 +192,8 @@ EncounterMatrix[8, 6] = "I"
 EncounterMatrix[8, 7] = "J"
 EncounterMatrix[8, 8] = "F"
 EncounterMatrix[8, 9] = "J"
-EncounterMatrix[8, 10] = "O"
-EncounterMatrix[8, 11] = "E"
+EncounterMatrix[8, 10]= "O"
+EncounterMatrix[8, 11]= "E"
 
 // 10
 
@@ -207,8 +207,8 @@ EncounterMatrix[9, 6] = "F"
 EncounterMatrix[9, 7] = "J"
 EncounterMatrix[9, 8] = "F"
 EncounterMatrix[9, 9] = "F"
-EncounterMatrix[9, 10] = "E"
-EncounterMatrix[9, 11] = "E"
+EncounterMatrix[9, 10]= "E"
+EncounterMatrix[9, 11]= "E"
 
 // 11
 
@@ -222,8 +222,8 @@ EncounterMatrix[10, 6] = "J"
 EncounterMatrix[10, 7] = "J"
 EncounterMatrix[10, 8] = "J"
 EncounterMatrix[10, 9] = "E"
-EncounterMatrix[10, 10] = "E"
-EncounterMatrix[10, 11] = "E"
+EncounterMatrix[10, 10]= "E"
+EncounterMatrix[10, 11]= "E"
 
 // 12
 
@@ -237,8 +237,8 @@ EncounterMatrix[11, 6] = "I"
 EncounterMatrix[11, 7] = "M"
 EncounterMatrix[11, 8] = "J"
 EncounterMatrix[11, 9] = "F"
-EncounterMatrix[11, 10] = "E"
-EncounterMatrix[11, 11] = "E"
+EncounterMatrix[11, 10]= "E"
+EncounterMatrix[11, 11]= "E"
 
 // 13
 
@@ -252,8 +252,8 @@ EncounterMatrix[12, 6] = "F"
 EncounterMatrix[12, 7] = "I"
 EncounterMatrix[12, 8] = "J"
 EncounterMatrix[12, 9] = "E"
-EncounterMatrix[12, 10] = "E"
-EncounterMatrix[12, 11] = "E"
+EncounterMatrix[12, 10]= "E"
+EncounterMatrix[12, 11]= "E"
 
 // 14
 
@@ -267,8 +267,8 @@ EncounterMatrix[13, 6] = "E"
 EncounterMatrix[13, 7] = "J"
 EncounterMatrix[13, 8] = "F"
 EncounterMatrix[13, 9] = "I"
-EncounterMatrix[13, 10] = "F"
-EncounterMatrix[13, 11] = "E"
+EncounterMatrix[13, 10]= "F"
+EncounterMatrix[13, 11]= "E"
 
 // 15
 
@@ -282,8 +282,8 @@ EncounterMatrix[14, 6] = "J"
 EncounterMatrix[14, 7] = "J"
 EncounterMatrix[14, 8] = "J"
 EncounterMatrix[14, 9] = "O"
-EncounterMatrix[14, 10] = "O"
-EncounterMatrix[14, 11] = "M"
+EncounterMatrix[14, 10]= "O"
+EncounterMatrix[14, 11]= "M"
 
 // 16
 
@@ -297,8 +297,8 @@ EncounterMatrix[15, 6] = "J"
 EncounterMatrix[15, 7] = "I"
 EncounterMatrix[15, 8] = "F"
 EncounterMatrix[15, 9] = "I"
-EncounterMatrix[15, 10] = "E"
-EncounterMatrix[15, 11] = "E"
+EncounterMatrix[15, 10]= "E"
+EncounterMatrix[15, 11]= "E"
 
 // 17
 
@@ -312,8 +312,8 @@ EncounterMatrix[16, 6] = "J"
 EncounterMatrix[16, 7] = "F"
 EncounterMatrix[16, 8] = "F"
 EncounterMatrix[16, 9] = "E"
-EncounterMatrix[16, 10] = "E"
-EncounterMatrix[16, 11] = "E"
+EncounterMatrix[16, 10]= "E"
+EncounterMatrix[16, 11]= "E"
 
 // 18
 
@@ -327,8 +327,8 @@ EncounterMatrix[17, 6] = "F"
 EncounterMatrix[17, 7] = "J"
 EncounterMatrix[17, 8] = "J"
 EncounterMatrix[17, 9] = "E"
-EncounterMatrix[17, 10] = "E"
-EncounterMatrix[17, 11] = "E"
+EncounterMatrix[17, 10]= "E"
+EncounterMatrix[17, 11]= "E"
 
 // 19
 
@@ -342,8 +342,8 @@ EncounterMatrix[18, 6] = "I"
 EncounterMatrix[18, 7] = "F"
 EncounterMatrix[18, 8] = "J"
 EncounterMatrix[18, 9] = "J"
-EncounterMatrix[18, 10] = "E"
-EncounterMatrix[18, 11] = "E"
+EncounterMatrix[18, 10]= "E"
+EncounterMatrix[18, 11]= "E"
 
 // 20
 
@@ -357,8 +357,8 @@ EncounterMatrix[19, 6] = "F"
 EncounterMatrix[19, 7] = "E"
 EncounterMatrix[19, 8] = "F"
 EncounterMatrix[19, 9] = "I"
-EncounterMatrix[19, 10] = "F"
-EncounterMatrix[19, 11] = "F"
+EncounterMatrix[19, 10]= "F"
+EncounterMatrix[19, 11]= "F"
 
 // 21
 
@@ -372,8 +372,8 @@ EncounterMatrix[20, 6] = "J"
 EncounterMatrix[20, 7] = "O"
 EncounterMatrix[20, 8] = "M"
 EncounterMatrix[20, 9] = "E"
-EncounterMatrix[20, 10] = "E"
-EncounterMatrix[20, 11] = "E"
+EncounterMatrix[20, 10]= "E"
+EncounterMatrix[20, 11]= "E"
 
 // 22
 
@@ -387,8 +387,8 @@ EncounterMatrix[21, 6] = "E"
 EncounterMatrix[21, 7] = "E"
 EncounterMatrix[21, 8] = "O"
 EncounterMatrix[21, 9] = "O"
-EncounterMatrix[21, 10] = "M"
-EncounterMatrix[21, 11] = "M"
+EncounterMatrix[21, 10]= "M"
+EncounterMatrix[21, 11]= "M"
 
 // 23
 
@@ -402,8 +402,8 @@ EncounterMatrix[22, 6] = "I"
 EncounterMatrix[22, 7] = "F"
 EncounterMatrix[22, 8] = "O"
 EncounterMatrix[22, 9] = "E"
-EncounterMatrix[22, 10] = "J"
-EncounterMatrix[22, 11] = "E"
+EncounterMatrix[22, 10]= "J"
+EncounterMatrix[22, 11]= "E"
 
 // 24
 
@@ -417,8 +417,8 @@ EncounterMatrix[23, 6] = "I"
 EncounterMatrix[23, 7] = "F"
 EncounterMatrix[23, 8] = "O"
 EncounterMatrix[23, 9] = "I"
-EncounterMatrix[23, 10] = "E"
-EncounterMatrix[23, 11] = "E"
+EncounterMatrix[23, 10]= "E"
+EncounterMatrix[23, 11]= "E"
 
 // 25
 
@@ -432,8 +432,8 @@ EncounterMatrix[24, 6] = "E"
 EncounterMatrix[24, 7] = "J"
 EncounterMatrix[24, 8] = "F"
 EncounterMatrix[24, 9] = "J"
-EncounterMatrix[24, 10] = "F"
-EncounterMatrix[24, 11] = "E"
+EncounterMatrix[24, 10]= "F"
+EncounterMatrix[24, 11]= "E"
 
 // 26
 
@@ -447,8 +447,8 @@ EncounterMatrix[25, 6] = "F"
 EncounterMatrix[25, 7] = "I"
 EncounterMatrix[25, 8] = "I"
 EncounterMatrix[25, 9] = "J"
-EncounterMatrix[25, 10] = "F"
-EncounterMatrix[25, 11] = "F"
+EncounterMatrix[25, 10]= "F"
+EncounterMatrix[25, 11]= "F"
 
 // 27
 
@@ -462,8 +462,8 @@ EncounterMatrix[26, 6] = "F"
 EncounterMatrix[26, 7] = "J"
 EncounterMatrix[26, 8] = "I"
 EncounterMatrix[26, 9] = "J"
-EncounterMatrix[26, 10] = "E"
-EncounterMatrix[26, 11] = "E"
+EncounterMatrix[26, 10]= "E"
+EncounterMatrix[26, 11]= "E"
 
 // 28
 
@@ -477,8 +477,8 @@ EncounterMatrix[27, 6] = "I"
 EncounterMatrix[27, 7] = "E"
 EncounterMatrix[27, 8] = "F"
 EncounterMatrix[27, 9] = "I"
-EncounterMatrix[27, 10] = "I"
-EncounterMatrix[27, 11] = "F"
+EncounterMatrix[27, 10]= "I"
+EncounterMatrix[27, 11]= "F"
 
 // 29
 
@@ -492,8 +492,8 @@ EncounterMatrix[28, 6] = "E"
 EncounterMatrix[28, 7] = "O"
 EncounterMatrix[28, 8] = "O"
 EncounterMatrix[28, 9] = "M"
-EncounterMatrix[28, 10] = "M"
-EncounterMatrix[28, 11] = "M"
+EncounterMatrix[28, 10]= "M"
+EncounterMatrix[28, 11]= "M"
 
 // 30
 
@@ -507,8 +507,8 @@ EncounterMatrix[29, 6] = "I"
 EncounterMatrix[29, 7] = "J"
 EncounterMatrix[29, 8] = "M"
 EncounterMatrix[29, 9] = "E"
-EncounterMatrix[29, 10] = "E"
-EncounterMatrix[29, 11] = "E"
+EncounterMatrix[29, 10]= "E"
+EncounterMatrix[29, 11]= "E"
 
 // 31
 
@@ -522,8 +522,8 @@ EncounterMatrix[30, 6] = "F"
 EncounterMatrix[30, 7] = "J"
 EncounterMatrix[30, 8] = "E"
 EncounterMatrix[30, 9] = "J"
-EncounterMatrix[30, 10] = "F"
-EncounterMatrix[30, 11] = "E"
+EncounterMatrix[30, 10]= "F"
+EncounterMatrix[30, 11]= "E"
 
 // 32
 
@@ -537,8 +537,8 @@ EncounterMatrix[31, 6] = "I"
 EncounterMatrix[31, 7] = "I"
 EncounterMatrix[31, 8] = "F"
 EncounterMatrix[31, 9] = "E"
-EncounterMatrix[31, 10] = "F"
-EncounterMatrix[31, 11] = "F"
+EncounterMatrix[31, 10]= "F"
+EncounterMatrix[31, 11]= "F"
 
 // 33
 
@@ -552,8 +552,8 @@ EncounterMatrix[32, 6] = "J"
 EncounterMatrix[32, 7] = "I"
 EncounterMatrix[32, 8] = "J"
 EncounterMatrix[32, 9] = "F"
-EncounterMatrix[32, 10] = "F"
-EncounterMatrix[32, 11] = "E"
+EncounterMatrix[32, 10]= "F"
+EncounterMatrix[32, 11]= "E"
 
 // 34
 
@@ -567,8 +567,8 @@ EncounterMatrix[33, 6] = "I"
 EncounterMatrix[33, 7] = "O"
 EncounterMatrix[33, 8] = "F"
 EncounterMatrix[33, 9] = "F"
-EncounterMatrix[33, 10] = "J"
-EncounterMatrix[33, 11] = "E"
+EncounterMatrix[33, 10]= "J"
+EncounterMatrix[33, 11]= "E"
 
 // 35
 
@@ -582,8 +582,8 @@ EncounterMatrix[34, 6] = "J"
 EncounterMatrix[34, 7] = "F"
 EncounterMatrix[34, 8] = "J"
 EncounterMatrix[34, 9] = "I"
-EncounterMatrix[34, 10] = "F"
-EncounterMatrix[34, 11] = "E"
+EncounterMatrix[34, 10]= "F"
+EncounterMatrix[34, 11]= "E"
 
 // 36
 
@@ -597,8 +597,8 @@ EncounterMatrix[35, 6] = "E"
 EncounterMatrix[35, 7] = "E"
 EncounterMatrix[35, 8] = "F"
 EncounterMatrix[35, 9] = "M"
-EncounterMatrix[35, 10] = "M"
-EncounterMatrix[35, 11] = "M"
+EncounterMatrix[35, 10]= "M"
+EncounterMatrix[35, 11]= "M"
 
 // 37
 
@@ -612,8 +612,8 @@ EncounterMatrix[36, 6] = "J"
 EncounterMatrix[36, 7] = "J"
 EncounterMatrix[36, 8] = "J"
 EncounterMatrix[36, 9] = "B"
-EncounterMatrix[36, 10] = "B"
-EncounterMatrix[36, 11] = "M"
+EncounterMatrix[36, 10]= "B"
+EncounterMatrix[36, 11]= "M"
 
 // 38
 
@@ -627,8 +627,8 @@ EncounterMatrix[37, 6] = "J"
 EncounterMatrix[37, 7] = "F"
 EncounterMatrix[37, 8] = "I"
 EncounterMatrix[37, 9] = "E"
-EncounterMatrix[37, 10] = "E"
-EncounterMatrix[37, 11] = "E"
+EncounterMatrix[37, 10]= "E"
+EncounterMatrix[37, 11]= "E"
 
 // 39
 
@@ -642,8 +642,8 @@ EncounterMatrix[38, 6] = "I"
 EncounterMatrix[38, 7] = "F"
 EncounterMatrix[38, 8] = "J"
 EncounterMatrix[38, 9] = "J"
-EncounterMatrix[38, 10] = "E"
-EncounterMatrix[38, 11] = "E"
+EncounterMatrix[38, 10]= "E"
+EncounterMatrix[38, 11]= "E"
 
 // 40
 
@@ -657,8 +657,8 @@ EncounterMatrix[39, 6] = "F"
 EncounterMatrix[39, 7] = "J"
 EncounterMatrix[39, 8] = "M"
 EncounterMatrix[39, 9] = "E"
-EncounterMatrix[39, 10] = "E"
-EncounterMatrix[39, 11] = "E"
+EncounterMatrix[39, 10]= "E"
+EncounterMatrix[39, 11]= "E"
 
 // 41
 
@@ -672,8 +672,8 @@ EncounterMatrix[40, 6] = "I"
 EncounterMatrix[40, 7] = "O"
 EncounterMatrix[40, 8] = "E"
 EncounterMatrix[40, 9] = "E"
-EncounterMatrix[40, 10] = "E"
-EncounterMatrix[40, 11] = "E"
+EncounterMatrix[40, 10]= "E"
+EncounterMatrix[40, 11]= "E"
 
 // 42
 
@@ -687,8 +687,8 @@ EncounterMatrix[41, 6] = "F"
 EncounterMatrix[41, 7] = "E"
 EncounterMatrix[41, 8] = "E"
 EncounterMatrix[41, 9] = "E"
-EncounterMatrix[41, 10] = "I"
-EncounterMatrix[41, 11] = "E"
+EncounterMatrix[41, 10]= "I"
+EncounterMatrix[41, 11]= "E"
 
 // 43
 
@@ -702,8 +702,8 @@ EncounterMatrix[42, 6] = "F"
 EncounterMatrix[42, 7] = "I"
 EncounterMatrix[42, 8] = "I"
 EncounterMatrix[42, 9] = "I"
-EncounterMatrix[42, 10] = "F"
-EncounterMatrix[42, 11] = "F"
+EncounterMatrix[42, 10]= "F"
+EncounterMatrix[42, 11]= "F"
 
 // 44
 
@@ -717,8 +717,8 @@ EncounterMatrix[43, 6] = "J"
 EncounterMatrix[43, 7] = "J"
 EncounterMatrix[43, 8] = "E"
 EncounterMatrix[43, 9] = "E"
-EncounterMatrix[43, 10] = "E"
-EncounterMatrix[43, 11] = "E"
+EncounterMatrix[43, 10]= "E"
+EncounterMatrix[43, 11]= "E"
 
 // 45
 
@@ -732,8 +732,8 @@ EncounterMatrix[44, 6] = "I"
 EncounterMatrix[44, 7] = "I"
 EncounterMatrix[44, 8] = "I"
 EncounterMatrix[44, 9] = "F"
-EncounterMatrix[44, 10] = "F"
-EncounterMatrix[44, 11] = "E"
+EncounterMatrix[44, 10]= "F"
+EncounterMatrix[44, 11]= "E"
 
 // 46
 
@@ -747,8 +747,8 @@ EncounterMatrix[45, 6] = "I"
 EncounterMatrix[45, 7] = "F"
 EncounterMatrix[45, 8] = "I"
 EncounterMatrix[45, 9] = "J"
-EncounterMatrix[45, 10] = "E"
-EncounterMatrix[45, 11] = "E"
+EncounterMatrix[45, 10]= "E"
+EncounterMatrix[45, 11]= "E"
 
 // 47
 
@@ -762,8 +762,8 @@ EncounterMatrix[46, 6] = "I"
 EncounterMatrix[46, 7] = "J"
 EncounterMatrix[46, 8] = "J"
 EncounterMatrix[46, 9] = "F"
-EncounterMatrix[46, 10] = "E"
-EncounterMatrix[46, 11] = "E"
+EncounterMatrix[46, 10]= "E"
+EncounterMatrix[46, 11]= "E"
 
 // 48
 
@@ -777,8 +777,8 @@ EncounterMatrix[47, 6] = "I"
 EncounterMatrix[47, 7] = "F"
 EncounterMatrix[47, 8] = "J"
 EncounterMatrix[47, 9] = "E"
-EncounterMatrix[47, 10] = "F"
-EncounterMatrix[47, 11] = "F"
+EncounterMatrix[47, 10]= "F"
+EncounterMatrix[47, 11]= "F"
 
 // 49
 
@@ -792,8 +792,8 @@ EncounterMatrix[48, 6] = "E"
 EncounterMatrix[48, 7] = "E"
 EncounterMatrix[48, 8] = "O"
 EncounterMatrix[48, 9] = "B"
-EncounterMatrix[48, 10] = "M"
-EncounterMatrix[48, 11] = "M"
+EncounterMatrix[48, 10]= "M"
+EncounterMatrix[48, 11]= "M"
 
 // 50
 
@@ -807,8 +807,8 @@ EncounterMatrix[49, 6] = "I"
 EncounterMatrix[49, 7] = "J"
 EncounterMatrix[49, 8] = "F"
 EncounterMatrix[49, 9] = "M"
-EncounterMatrix[49, 10] = "E"
-EncounterMatrix[49, 11] = "E"
+EncounterMatrix[49, 10]= "E"
+EncounterMatrix[49, 11]= "E"
 
 // 51
 
@@ -822,8 +822,8 @@ EncounterMatrix[50, 6] = "I"
 EncounterMatrix[50, 7] = "M"
 EncounterMatrix[50, 8] = "E"
 EncounterMatrix[50, 9] = "E"
-EncounterMatrix[50, 10] = "E"
-EncounterMatrix[50, 11] = "E"
+EncounterMatrix[50, 10]= "E"
+EncounterMatrix[50, 11]= "E"
 
 // 52
 
@@ -837,8 +837,8 @@ EncounterMatrix[51, 6] = "F"
 EncounterMatrix[51, 7] = "I"
 EncounterMatrix[51, 8] = "E"
 EncounterMatrix[51, 9] = "E"
-EncounterMatrix[51, 10] = "F"
-EncounterMatrix[51, 11] = "E"
+EncounterMatrix[51, 10]= "F"
+EncounterMatrix[51, 11]= "E"
 
 // 53
 
@@ -852,8 +852,8 @@ EncounterMatrix[52, 6] = "I"
 EncounterMatrix[52, 7] = "I"
 EncounterMatrix[52, 8] = "I"
 EncounterMatrix[52, 9] = "F"
-EncounterMatrix[52, 10] = "F"
-EncounterMatrix[52, 11] = "E"
+EncounterMatrix[52, 10]= "F"
+EncounterMatrix[52, 11]= "E"
 
 // 54
 
@@ -867,8 +867,8 @@ EncounterMatrix[53, 6] = "E"
 EncounterMatrix[53, 7] = "J"
 EncounterMatrix[53, 8] = "J"
 EncounterMatrix[53, 9] = "O"
-EncounterMatrix[53, 10] = "O"
-EncounterMatrix[53, 11] = "M"
+EncounterMatrix[53, 10]= "O"
+EncounterMatrix[53, 11]= "M"
 
 // 55
 
@@ -882,8 +882,8 @@ EncounterMatrix[54, 6] = "F"
 EncounterMatrix[54, 7] = "I"
 EncounterMatrix[54, 8] = "E"
 EncounterMatrix[54, 9] = "E"
-EncounterMatrix[54, 10] = "E"
-EncounterMatrix[54, 11] = "E"
+EncounterMatrix[54, 10]= "E"
+EncounterMatrix[54, 11]= "E"
 
 // 56
 
@@ -897,8 +897,8 @@ EncounterMatrix[55, 6] = "I"
 EncounterMatrix[55, 7] = "O"
 EncounterMatrix[55, 8] = "J"
 EncounterMatrix[55, 9] = "I"
-EncounterMatrix[55, 10] = "J"
-EncounterMatrix[55, 11] = "E"
+EncounterMatrix[55, 10]= "J"
+EncounterMatrix[55, 11]= "E"
 
 // 57
 
@@ -912,8 +912,8 @@ EncounterMatrix[56, 6] = "F"
 EncounterMatrix[56, 7] = "F"
 EncounterMatrix[56, 8] = "I"
 EncounterMatrix[56, 9] = "J"
-EncounterMatrix[56, 10] = "E"
-EncounterMatrix[56, 11] = "E"
+EncounterMatrix[56, 10]= "E"
+EncounterMatrix[56, 11]= "E"
 
 // 58
 
@@ -927,8 +927,8 @@ EncounterMatrix[57, 6] = "J"
 EncounterMatrix[57, 7] = "J"
 EncounterMatrix[57, 8] = "F"
 EncounterMatrix[57, 9] = "M"
-EncounterMatrix[57, 10] = "E"
-EncounterMatrix[57, 11] = "E"
+EncounterMatrix[57, 10]= "E"
+EncounterMatrix[57, 11]= "E"
 
 // 59
 
@@ -942,8 +942,8 @@ EncounterMatrix[58, 6] = "J"
 EncounterMatrix[58, 7] = "B"
 EncounterMatrix[58, 8] = "O"
 EncounterMatrix[58, 9] = "M"
-EncounterMatrix[58, 10] = "M"
-EncounterMatrix[58, 11] = "M"
+EncounterMatrix[58, 10]= "M"
+EncounterMatrix[58, 11]= "M"
 
 // 60
 
@@ -957,8 +957,8 @@ EncounterMatrix[59, 6] = "A"
 EncounterMatrix[59, 7] = "I"
 EncounterMatrix[59, 8] = "J"
 EncounterMatrix[59, 9] = "I"
-EncounterMatrix[59, 10] = "E"
-EncounterMatrix[59, 11] = "E"
+EncounterMatrix[59, 10]= "E"
+EncounterMatrix[59, 11]= "E"
 
 // 61
 
@@ -972,8 +972,8 @@ EncounterMatrix[60, 6] = "I"
 EncounterMatrix[60, 7] = "F"
 EncounterMatrix[60, 8] = "O"
 EncounterMatrix[60, 9] = "F"
-EncounterMatrix[60, 10] = "E"
-EncounterMatrix[60, 11] = "E"
+EncounterMatrix[60, 10]= "E"
+EncounterMatrix[60, 11]= "E"
 
 // 62
 
@@ -987,8 +987,8 @@ EncounterMatrix[61, 6] = "J"
 EncounterMatrix[61, 7] = "J"
 EncounterMatrix[61, 8] = "I"
 EncounterMatrix[61, 9] = "E"
-EncounterMatrix[61, 10] = "E"
-EncounterMatrix[61, 11] = "E"
+EncounterMatrix[61, 10]= "E"
+EncounterMatrix[61, 11]= "E"
 
 // 63
 
@@ -1002,8 +1002,8 @@ EncounterMatrix[62, 6] = "J"
 EncounterMatrix[62, 7] = "E"
 EncounterMatrix[62, 8] = "F"
 EncounterMatrix[62, 9] = "F"
-EncounterMatrix[62, 10] = "F"
-EncounterMatrix[62, 11] = "E"
+EncounterMatrix[62, 10]= "F"
+EncounterMatrix[62, 11]= "E"
 
 // 64
 
@@ -1017,8 +1017,8 @@ EncounterMatrix[63, 6] = "I"
 EncounterMatrix[63, 7] = "J"
 EncounterMatrix[63, 8] = "M"
 EncounterMatrix[63, 9] = "J"
-EncounterMatrix[63, 10] = "O"
-EncounterMatrix[63, 11] = "E"
+EncounterMatrix[63, 10]= "O"
+EncounterMatrix[63, 11]= "E"
 
 // 65
 
@@ -1032,233 +1032,233 @@ EncounterMatrix[64, 6] = "E"
 EncounterMatrix[64, 7] = "E"
 EncounterMatrix[64, 8] = "E"
 EncounterMatrix[64, 9] = "E"
-EncounterMatrix[64, 10] = "M"
-EncounterMatrix[64, 11] = "B"
+EncounterMatrix[64, 10]= "M"
+EncounterMatrix[64, 11]= "B"
 
 // 66
 
-EncounterMatrix[65, 0] = "F"
-EncounterMatrix[65, 1] = "F"
-EncounterMatrix[65, 2] = "F"
-EncounterMatrix[65, 3] = "F"
-EncounterMatrix[65, 4] = "F"
-EncounterMatrix[65, 5] = "F"
+EncounterMatrix[65, 0] = "D"
+EncounterMatrix[65, 1] = "L"
+EncounterMatrix[65, 2] = "I"
+EncounterMatrix[65, 3] = "I"
+EncounterMatrix[65, 4] = "A"
+EncounterMatrix[65, 5] = "I"
 EncounterMatrix[65, 6] = "F"
-EncounterMatrix[65, 7] = "F"
-EncounterMatrix[65, 8] = "F"
-EncounterMatrix[65, 9] = "F"
-EncounterMatrix[65, 10] = "F"
-EncounterMatrix[65, 11] = "F"
+EncounterMatrix[65, 7] = "E"
+EncounterMatrix[65, 8] = "I"
+EncounterMatrix[65, 9] = "I"
+EncounterMatrix[65, 10]= "F"
+EncounterMatrix[65, 11]= "E"
 
 // 67
 
-EncounterMatrix[66, 0] = "F"
+EncounterMatrix[66, 0] = "D"
 EncounterMatrix[66, 1] = "F"
-EncounterMatrix[66, 2] = "F"
-EncounterMatrix[66, 3] = "F"
-EncounterMatrix[66, 4] = "F"
-EncounterMatrix[66, 5] = "F"
-EncounterMatrix[66, 6] = "F"
-EncounterMatrix[66, 7] = "F"
+EncounterMatrix[66, 2] = "I"
+EncounterMatrix[66, 3] = "C"
+EncounterMatrix[66, 4] = "D"
+EncounterMatrix[66, 5] = "L"
+EncounterMatrix[66, 6] = "I"
+EncounterMatrix[66, 7] = "O"
 EncounterMatrix[66, 8] = "F"
-EncounterMatrix[66, 9] = "F"
-EncounterMatrix[66, 10] = "F"
-EncounterMatrix[66, 11] = "F"
+EncounterMatrix[66, 9] = "E"
+EncounterMatrix[66, 10]= "E"
+EncounterMatrix[66, 11]= "E"
 
 // 68
 
-EncounterMatrix[67, 0] = "F"
-EncounterMatrix[67, 1] = "F"
-EncounterMatrix[67, 2] = "F"
-EncounterMatrix[67, 3] = "F"
-EncounterMatrix[67, 4] = "F"
-EncounterMatrix[67, 5] = "F"
-EncounterMatrix[67, 6] = "F"
-EncounterMatrix[67, 7] = "F"
-EncounterMatrix[67, 8] = "F"
-EncounterMatrix[67, 9] = "F"
-EncounterMatrix[67, 10] = "F"
-EncounterMatrix[67, 11] = "F"
+EncounterMatrix[67, 0] = "D"
+EncounterMatrix[67, 1] = "C"
+EncounterMatrix[67, 2] = "A"
+EncounterMatrix[67, 3] = "A"
+EncounterMatrix[67, 4] = "I"
+EncounterMatrix[67, 5] = "I"
+EncounterMatrix[67, 6] = "A"
+EncounterMatrix[67, 7] = "L"
+EncounterMatrix[67, 8] = "L"
+EncounterMatrix[67, 9] = "M"
+EncounterMatrix[67, 10]= "M"
+EncounterMatrix[67, 11]= "O"
 
 // 69
 
-EncounterMatrix[68, 0] = "F"
-EncounterMatrix[68, 1] = "F"
-EncounterMatrix[68, 2] = "F"
+EncounterMatrix[68, 0] = "D"
+EncounterMatrix[68, 1] = "C"
+EncounterMatrix[68, 2] = "L"
 EncounterMatrix[68, 3] = "F"
-EncounterMatrix[68, 4] = "F"
+EncounterMatrix[68, 4] = "A"
 EncounterMatrix[68, 5] = "F"
-EncounterMatrix[68, 6] = "F"
-EncounterMatrix[68, 7] = "F"
+EncounterMatrix[68, 6] = "I"
+EncounterMatrix[68, 7] = "L"
 EncounterMatrix[68, 8] = "F"
-EncounterMatrix[68, 9] = "F"
-EncounterMatrix[68, 10] = "F"
-EncounterMatrix[68, 11] = "F"
+EncounterMatrix[68, 9] = "E"
+EncounterMatrix[68, 10]= "F"
+EncounterMatrix[68, 11]= "E"
 
 // 70
 
-EncounterMatrix[69, 0] = "F"
-EncounterMatrix[69, 1] = "F"
-EncounterMatrix[69, 2] = "F"
-EncounterMatrix[69, 3] = "F"
-EncounterMatrix[69, 4] = "F"
-EncounterMatrix[69, 5] = "F"
-EncounterMatrix[69, 6] = "F"
-EncounterMatrix[69, 7] = "F"
-EncounterMatrix[69, 8] = "F"
-EncounterMatrix[69, 9] = "F"
-EncounterMatrix[69, 10] = "F"
-EncounterMatrix[69, 11] = "F"
+EncounterMatrix[69, 0] = "J"
+EncounterMatrix[69, 1] = "I"
+EncounterMatrix[69, 2] = "J"
+EncounterMatrix[69, 3] = "J"
+EncounterMatrix[69, 4] = "J"
+EncounterMatrix[69, 5] = "E"
+EncounterMatrix[69, 6] = "E"
+EncounterMatrix[69, 7] = "E"
+EncounterMatrix[69, 8] = "E"
+EncounterMatrix[69, 9] = "E"
+EncounterMatrix[69, 10]= "M"
+EncounterMatrix[69, 11]= "B"
 
 // 71
 
-EncounterMatrix[70, 0] = "F"
-EncounterMatrix[70, 1] = "F"
-EncounterMatrix[70, 2] = "F"
-EncounterMatrix[70, 3] = "F"
+EncounterMatrix[70, 0] = "C"
+EncounterMatrix[70, 1] = "A"
+EncounterMatrix[70, 2] = "D"
+EncounterMatrix[70, 3] = "L"
 EncounterMatrix[70, 4] = "F"
-EncounterMatrix[70, 5] = "F"
-EncounterMatrix[70, 6] = "F"
-EncounterMatrix[70, 7] = "F"
-EncounterMatrix[70, 8] = "F"
-EncounterMatrix[70, 9] = "F"
-EncounterMatrix[70, 10] = "F"
-EncounterMatrix[70, 11] = "F"
+EncounterMatrix[70, 5] = "I"
+EncounterMatrix[70, 6] = "I"
+EncounterMatrix[70, 7] = "O"
+EncounterMatrix[70, 8] = "J"
+EncounterMatrix[70, 9] = "J"
+EncounterMatrix[70, 10]= "J"
+EncounterMatrix[70, 11]= "E"
 
 // 72
 
-EncounterMatrix[71, 0] = "F"
-EncounterMatrix[71, 1] = "F"
-EncounterMatrix[71, 2] = "F"
-EncounterMatrix[71, 3] = "F"
+EncounterMatrix[71, 0] = "C"
+EncounterMatrix[71, 1] = "D"
+EncounterMatrix[71, 2] = "L"
+EncounterMatrix[71, 3] = "A"
 EncounterMatrix[71, 4] = "F"
 EncounterMatrix[71, 5] = "F"
-EncounterMatrix[71, 6] = "F"
-EncounterMatrix[71, 7] = "F"
-EncounterMatrix[71, 8] = "F"
-EncounterMatrix[71, 9] = "F"
-EncounterMatrix[71, 10] = "F"
-EncounterMatrix[71, 11] = "F"
+EncounterMatrix[71, 6] = "I"
+EncounterMatrix[71, 7] = "J"
+EncounterMatrix[71, 8] = "J"
+EncounterMatrix[71, 9] = "E"
+EncounterMatrix[71, 10]= "O"
+EncounterMatrix[71, 11]= "F"
 
 // 73
 
-EncounterMatrix[72, 0] = "F"
-EncounterMatrix[72, 1] = "F"
-EncounterMatrix[72, 2] = "F"
-EncounterMatrix[72, 3] = "F"
+EncounterMatrix[72, 0] = "L"
+EncounterMatrix[72, 1] = "A"
+EncounterMatrix[72, 2] = "C"
+EncounterMatrix[72, 3] = "I"
 EncounterMatrix[72, 4] = "F"
 EncounterMatrix[72, 5] = "F"
-EncounterMatrix[72, 6] = "F"
-EncounterMatrix[72, 7] = "F"
-EncounterMatrix[72, 8] = "F"
+EncounterMatrix[72, 6] = "I"
+EncounterMatrix[72, 7] = "I"
+EncounterMatrix[72, 8] = "I"
 EncounterMatrix[72, 9] = "F"
-EncounterMatrix[72, 10] = "F"
-EncounterMatrix[72, 11] = "F"
+EncounterMatrix[72, 10]= "F"
+EncounterMatrix[72, 11]= "F"
 
 // 74
 
-EncounterMatrix[73, 0] = "F"
-EncounterMatrix[73, 1] = "F"
-EncounterMatrix[73, 2] = "F"
-EncounterMatrix[73, 3] = "F"
+EncounterMatrix[73, 0] = "D"
+EncounterMatrix[73, 1] = "D"
+EncounterMatrix[73, 2] = "L"
+EncounterMatrix[73, 3] = "A"
 EncounterMatrix[73, 4] = "F"
-EncounterMatrix[73, 5] = "F"
-EncounterMatrix[73, 6] = "F"
+EncounterMatrix[73, 5] = "I"
+EncounterMatrix[73, 6] = "I"
 EncounterMatrix[73, 7] = "F"
 EncounterMatrix[73, 8] = "F"
 EncounterMatrix[73, 9] = "F"
-EncounterMatrix[73, 10] = "F"
-EncounterMatrix[73, 11] = "F"
+EncounterMatrix[73, 10]= "B"
+EncounterMatrix[73, 11]= "J"
 
 // 75
 
 EncounterMatrix[74, 0] = "F"
-EncounterMatrix[74, 1] = "F"
+EncounterMatrix[74, 1] = "I"
 EncounterMatrix[74, 2] = "F"
 EncounterMatrix[74, 3] = "F"
-EncounterMatrix[74, 4] = "F"
-EncounterMatrix[74, 5] = "F"
-EncounterMatrix[74, 6] = "F"
-EncounterMatrix[74, 7] = "F"
-EncounterMatrix[74, 8] = "F"
-EncounterMatrix[74, 9] = "F"
-EncounterMatrix[74, 10] = "F"
-EncounterMatrix[74, 11] = "F"
+EncounterMatrix[74, 4] = "J"
+EncounterMatrix[74, 5] = "E"
+EncounterMatrix[74, 6] = "O"
+EncounterMatrix[74, 7] = "O"
+EncounterMatrix[74, 8] = "E"
+EncounterMatrix[74, 9] = "J"
+EncounterMatrix[74, 10]= "E"
+EncounterMatrix[74, 11]= "E"
 
 // 76
 
-EncounterMatrix[75, 0] = "F"
-EncounterMatrix[75, 1] = "F"
-EncounterMatrix[75, 2] = "F"
-EncounterMatrix[75, 3] = "F"
-EncounterMatrix[75, 4] = "F"
-EncounterMatrix[75, 5] = "F"
-EncounterMatrix[75, 6] = "F"
-EncounterMatrix[75, 7] = "F"
+EncounterMatrix[75, 0] = "D"
+EncounterMatrix[75, 1] = "A"
+EncounterMatrix[75, 2] = "C"
+EncounterMatrix[75, 3] = "L"
+EncounterMatrix[75, 4] = "I"
+EncounterMatrix[75, 5] = "O"
+EncounterMatrix[75, 6] = "J"
+EncounterMatrix[75, 7] = "M"
 EncounterMatrix[75, 8] = "F"
 EncounterMatrix[75, 9] = "F"
-EncounterMatrix[75, 10] = "F"
-EncounterMatrix[75, 11] = "F"
+EncounterMatrix[75, 10]= "F"
+EncounterMatrix[75, 11]= "E"
 
 // 77
 
-EncounterMatrix[76, 0] = "F"
-EncounterMatrix[76, 1] = "F"
-EncounterMatrix[76, 2] = "F"
-EncounterMatrix[76, 3] = "F"
-EncounterMatrix[76, 4] = "F"
-EncounterMatrix[76, 5] = "F"
-EncounterMatrix[76, 6] = "F"
-EncounterMatrix[76, 7] = "F"
-EncounterMatrix[76, 8] = "F"
-EncounterMatrix[76, 9] = "F"
-EncounterMatrix[76, 10] = "F"
-EncounterMatrix[76, 11] = "F"
+EncounterMatrix[76, 0] = "L"
+EncounterMatrix[76, 1] = "L"
+EncounterMatrix[76, 2] = "D"
+EncounterMatrix[76, 3] = "J"
+EncounterMatrix[76, 4] = "A"
+EncounterMatrix[76, 5] = "A"
+EncounterMatrix[76, 6] = "J"
+EncounterMatrix[76, 7] = "B"
+EncounterMatrix[76, 8] = "J"
+EncounterMatrix[76, 9] = "O"
+EncounterMatrix[76, 10]= "E"
+EncounterMatrix[76, 11]= "E"
 
 // 78
 
-EncounterMatrix[77, 0] = "F"
+EncounterMatrix[77, 0] = "D"
 EncounterMatrix[77, 1] = "F"
-EncounterMatrix[77, 2] = "F"
-EncounterMatrix[77, 3] = "F"
-EncounterMatrix[77, 4] = "F"
-EncounterMatrix[77, 5] = "F"
-EncounterMatrix[77, 6] = "F"
+EncounterMatrix[77, 2] = "L"
+EncounterMatrix[77, 3] = "I"
+EncounterMatrix[77, 4] = "I"
+EncounterMatrix[77, 5] = "O"
+EncounterMatrix[77, 6] = "E"
 EncounterMatrix[77, 7] = "F"
 EncounterMatrix[77, 8] = "F"
-EncounterMatrix[77, 9] = "F"
-EncounterMatrix[77, 10] = "F"
-EncounterMatrix[77, 11] = "F"
+EncounterMatrix[77, 9] = "I"
+EncounterMatrix[77, 10]= "J"
+EncounterMatrix[77, 11]= "F"
 
 // 79
 
-EncounterMatrix[78, 0] = "F"
-EncounterMatrix[78, 1] = "F"
-EncounterMatrix[78, 2] = "F"
-EncounterMatrix[78, 3] = "F"
-EncounterMatrix[78, 4] = "F"
-EncounterMatrix[78, 5] = "F"
+EncounterMatrix[78, 0] = "L"
+EncounterMatrix[78, 1] = "C"
+EncounterMatrix[78, 2] = "D"
+EncounterMatrix[78, 3] = "A"
+EncounterMatrix[78, 4] = "B"
+EncounterMatrix[78, 5] = "J"
 EncounterMatrix[78, 6] = "F"
-EncounterMatrix[78, 7] = "F"
+EncounterMatrix[78, 7] = "J"
 EncounterMatrix[78, 8] = "F"
-EncounterMatrix[78, 9] = "F"
-EncounterMatrix[78, 10] = "F"
-EncounterMatrix[78, 11] = "F"
+EncounterMatrix[78, 9] = "J"
+EncounterMatrix[78, 10]= "E"
+EncounterMatrix[78, 11]= "E"
 
 // 80
 
 EncounterMatrix[79, 0] = "F"
-EncounterMatrix[79, 1] = "F"
-EncounterMatrix[79, 2] = "F"
-EncounterMatrix[79, 3] = "F"
-EncounterMatrix[79, 4] = "F"
+EncounterMatrix[79, 1] = "I"
+EncounterMatrix[79, 2] = "I"
+EncounterMatrix[79, 3] = "I"
+EncounterMatrix[79, 4] = "I"
 EncounterMatrix[79, 5] = "F"
-EncounterMatrix[79, 6] = "F"
+EncounterMatrix[79, 6] = "O"
 EncounterMatrix[79, 7] = "F"
-EncounterMatrix[79, 8] = "F"
-EncounterMatrix[79, 9] = "F"
-EncounterMatrix[79, 10] = "F"
-EncounterMatrix[79, 11] = "F"
+EncounterMatrix[79, 8] = "E"
+EncounterMatrix[79, 9] = "E"
+EncounterMatrix[79, 10]= "E"
+EncounterMatrix[79, 11]= "E"
 
 // 81
 
@@ -1272,8 +1272,8 @@ EncounterMatrix[80, 6] = "F"
 EncounterMatrix[80, 7] = "F"
 EncounterMatrix[80, 8] = "F"
 EncounterMatrix[80, 9] = "F"
-EncounterMatrix[80, 10] = "F"
-EncounterMatrix[80, 11] = "F"
+EncounterMatrix[80, 10]= "F"
+EncounterMatrix[80, 11]= "F"
 
 // 82
 
@@ -1287,8 +1287,8 @@ EncounterMatrix[81, 6] = "F"
 EncounterMatrix[81, 7] = "F"
 EncounterMatrix[81, 8] = "F"
 EncounterMatrix[81, 9] = "F"
-EncounterMatrix[81, 10] = "F"
-EncounterMatrix[81, 11] = "F"
+EncounterMatrix[81, 10]= "F"
+EncounterMatrix[81, 11]= "F"
 
 // 83
 
@@ -1302,8 +1302,8 @@ EncounterMatrix[82, 6] = "F"
 EncounterMatrix[82, 7] = "F"
 EncounterMatrix[82, 8] = "F"
 EncounterMatrix[82, 9] = "F"
-EncounterMatrix[82, 10] = "F"
-EncounterMatrix[82, 11] = "F"
+EncounterMatrix[82, 10]= "F"
+EncounterMatrix[82, 11]= "F"
 
 // 84
 
@@ -1317,8 +1317,8 @@ EncounterMatrix[83, 6] = "F"
 EncounterMatrix[83, 7] = "F"
 EncounterMatrix[83, 8] = "F"
 EncounterMatrix[83, 9] = "F"
-EncounterMatrix[83, 10] = "F"
-EncounterMatrix[83, 11] = "F"
+EncounterMatrix[83, 10]= "F"
+EncounterMatrix[83, 11]= "F"
 
 // 85
 
@@ -1332,8 +1332,8 @@ EncounterMatrix[84, 6] = "F"
 EncounterMatrix[84, 7] = "F"
 EncounterMatrix[84, 8] = "F"
 EncounterMatrix[84, 9] = "F"
-EncounterMatrix[84, 10] = "F"
-EncounterMatrix[84, 11] = "F"
+EncounterMatrix[84, 10]= "F"
+EncounterMatrix[84, 11]= "F"
 
 // 86
 
@@ -1347,8 +1347,8 @@ EncounterMatrix[85, 6] = "F"
 EncounterMatrix[85, 7] = "F"
 EncounterMatrix[85, 8] = "F"
 EncounterMatrix[85, 9] = "F"
-EncounterMatrix[85, 10] = "F"
-EncounterMatrix[85, 11] = "F"
+EncounterMatrix[85, 10]= "F"
+EncounterMatrix[85, 11]= "F"
 
 // 87
 
@@ -1362,8 +1362,8 @@ EncounterMatrix[86, 6] = "F"
 EncounterMatrix[86, 7] = "F"
 EncounterMatrix[86, 8] = "F"
 EncounterMatrix[86, 9] = "F"
-EncounterMatrix[86, 10] = "F"
-EncounterMatrix[86, 11] = "F"
+EncounterMatrix[86, 10]= "F"
+EncounterMatrix[86, 11]= "F"
 
 // 88
 
@@ -1377,8 +1377,8 @@ EncounterMatrix[87, 6] = "F"
 EncounterMatrix[87, 7] = "F"
 EncounterMatrix[87, 8] = "F"
 EncounterMatrix[87, 9] = "F"
-EncounterMatrix[87, 10] = "F"
-EncounterMatrix[87, 11] = "F"
+EncounterMatrix[87, 10]= "F"
+EncounterMatrix[87, 11]= "F"
 
 // 89
 
@@ -1392,8 +1392,8 @@ EncounterMatrix[88, 6] = "F"
 EncounterMatrix[88, 7] = "F"
 EncounterMatrix[88, 8] = "F"
 EncounterMatrix[88, 9] = "F"
-EncounterMatrix[88, 10] = "F"
-EncounterMatrix[88, 11] = "F"
+EncounterMatrix[88, 10]= "F"
+EncounterMatrix[88, 11]= "F"
 
 // 90
 
@@ -1407,8 +1407,8 @@ EncounterMatrix[89, 6] = "F"
 EncounterMatrix[89, 7] = "F"
 EncounterMatrix[89, 8] = "F"
 EncounterMatrix[89, 9] = "F"
-EncounterMatrix[89, 10] = "F"
-EncounterMatrix[89, 11] = "F"
+EncounterMatrix[89, 10]= "F"
+EncounterMatrix[89, 11]= "F"
 
 // 91
 
@@ -1422,8 +1422,8 @@ EncounterMatrix[90, 6] = "F"
 EncounterMatrix[90, 7] = "F"
 EncounterMatrix[90, 8] = "F"
 EncounterMatrix[90, 9] = "F"
-EncounterMatrix[90, 10] = "F"
-EncounterMatrix[90, 11] = "F"
+EncounterMatrix[90, 10]= "F"
+EncounterMatrix[90, 11]= "F"
 
 // 92
 
@@ -1437,8 +1437,8 @@ EncounterMatrix[91, 6] = "F"
 EncounterMatrix[91, 7] = "F"
 EncounterMatrix[91, 8] = "F"
 EncounterMatrix[91, 9] = "F"
-EncounterMatrix[91, 10] = "F"
-EncounterMatrix[91, 11] = "F"
+EncounterMatrix[91, 10]= "F"
+EncounterMatrix[91, 11]= "F"
 
 // 93
 
@@ -1452,8 +1452,8 @@ EncounterMatrix[92, 6] = "F"
 EncounterMatrix[92, 7] = "F"
 EncounterMatrix[92, 8] = "F"
 EncounterMatrix[92, 9] = "F"
-EncounterMatrix[92, 10] = "F"
-EncounterMatrix[92, 11] = "F"
+EncounterMatrix[92, 10]= "F"
+EncounterMatrix[92, 11]= "F"
 
 // 94
 
@@ -1467,8 +1467,8 @@ EncounterMatrix[93, 6] = "F"
 EncounterMatrix[93, 7] = "F"
 EncounterMatrix[93, 8] = "F"
 EncounterMatrix[93, 9] = "F"
-EncounterMatrix[93, 10] = "F"
-EncounterMatrix[93, 11] = "F"
+EncounterMatrix[93, 10]= "F"
+EncounterMatrix[93, 11]= "F"
 
 // 95
 
@@ -1482,8 +1482,8 @@ EncounterMatrix[94, 6] = "F"
 EncounterMatrix[94, 7] = "F"
 EncounterMatrix[94, 8] = "F"
 EncounterMatrix[94, 9] = "F"
-EncounterMatrix[94, 10] = "F"
-EncounterMatrix[94, 11] = "F"
+EncounterMatrix[94, 10]= "F"
+EncounterMatrix[94, 11]= "F"
 
 // 96
 
@@ -1497,8 +1497,8 @@ EncounterMatrix[95, 6] = "F"
 EncounterMatrix[95, 7] = "F"
 EncounterMatrix[95, 8] = "F"
 EncounterMatrix[95, 9] = "F"
-EncounterMatrix[95, 10] = "F"
-EncounterMatrix[95, 11] = "F"
+EncounterMatrix[95, 10]= "F"
+EncounterMatrix[95, 11]= "F"
 
 // 97
 
@@ -1512,8 +1512,8 @@ EncounterMatrix[96, 6] = "F"
 EncounterMatrix[96, 7] = "F"
 EncounterMatrix[96, 8] = "F"
 EncounterMatrix[96, 9] = "F"
-EncounterMatrix[96, 10] = "F"
-EncounterMatrix[96, 11] = "F"
+EncounterMatrix[96, 10]= "F"
+EncounterMatrix[96, 11]= "F"
 
 // 98
 
@@ -1527,8 +1527,8 @@ EncounterMatrix[97, 6] = "F"
 EncounterMatrix[97, 7] = "F"
 EncounterMatrix[97, 8] = "F"
 EncounterMatrix[97, 9] = "F"
-EncounterMatrix[97, 10] = "F"
-EncounterMatrix[97, 11] = "F"
+EncounterMatrix[97, 10]= "F"
+EncounterMatrix[97, 11]= "F"
 
 // 99
 
@@ -1542,8 +1542,8 @@ EncounterMatrix[98, 6] = "F"
 EncounterMatrix[98, 7] = "F"
 EncounterMatrix[98, 8] = "F"
 EncounterMatrix[98, 9] = "F"
-EncounterMatrix[98, 10] = "F"
-EncounterMatrix[98, 11] = "F"
+EncounterMatrix[98, 10]= "F"
+EncounterMatrix[98, 11]= "F"
 
 // 100
 
@@ -1557,8 +1557,8 @@ EncounterMatrix[99, 6] = "F"
 EncounterMatrix[99, 7] = "F"
 EncounterMatrix[99, 8] = "F"
 EncounterMatrix[99, 9] = "F"
-EncounterMatrix[99, 10] = "F"
-EncounterMatrix[99, 11] = "F"
+EncounterMatrix[99, 10]= "F"
+EncounterMatrix[99, 11]= "F"
 
 // 101
 
@@ -1572,8 +1572,8 @@ EncounterMatrix[100, 6] = "F"
 EncounterMatrix[100, 7] = "F"
 EncounterMatrix[100, 8] = "F"
 EncounterMatrix[100, 9] = "F"
-EncounterMatrix[100, 10] = "F"
-EncounterMatrix[100, 11] = "F"
+EncounterMatrix[100, 10]= "F"
+EncounterMatrix[100, 11]= "F"
 
 // 102
 
@@ -1587,8 +1587,8 @@ EncounterMatrix[101, 6] = "F"
 EncounterMatrix[101, 7] = "F"
 EncounterMatrix[101, 8] = "F"
 EncounterMatrix[101, 9] = "F"
-EncounterMatrix[101, 10] = "F"
-EncounterMatrix[101, 11] = "F"
+EncounterMatrix[101, 10]= "F"
+EncounterMatrix[101, 11]= "F"
 
 // 103
 
@@ -1602,8 +1602,8 @@ EncounterMatrix[102, 6] = "F"
 EncounterMatrix[102, 7] = "F"
 EncounterMatrix[102, 8] = "F"
 EncounterMatrix[102, 9] = "F"
-EncounterMatrix[102, 10] = "F"
-EncounterMatrix[102, 11] = "F"
+EncounterMatrix[102, 10]= "F"
+EncounterMatrix[102, 11]= "F"
 
 // 104
 
@@ -1617,8 +1617,8 @@ EncounterMatrix[103, 6] = "F"
 EncounterMatrix[103, 7] = "F"
 EncounterMatrix[103, 8] = "F"
 EncounterMatrix[103, 9] = "F"
-EncounterMatrix[103, 10] = "F"
-EncounterMatrix[103, 11] = "F"
+EncounterMatrix[103, 10]= "F"
+EncounterMatrix[103, 11]= "F"
 
 // 105
 
@@ -1632,8 +1632,8 @@ EncounterMatrix[104, 6] = "F"
 EncounterMatrix[104, 7] = "F"
 EncounterMatrix[104, 8] = "F"
 EncounterMatrix[104, 9] = "F"
-EncounterMatrix[104, 10] = "F"
-EncounterMatrix[104, 11] = "F"
+EncounterMatrix[104, 10]= "F"
+EncounterMatrix[104, 11]= "F"
 
 // 106
 
@@ -1647,8 +1647,8 @@ EncounterMatrix[105, 6] = "F"
 EncounterMatrix[105, 7] = "F"
 EncounterMatrix[105, 8] = "F"
 EncounterMatrix[105, 9] = "F"
-EncounterMatrix[105, 10] = "F"
-EncounterMatrix[105, 11] = "F"
+EncounterMatrix[105, 10]= "F"
+EncounterMatrix[105, 11]= "F"
 
 // 107
 
@@ -1662,8 +1662,8 @@ EncounterMatrix[106, 6] = "F"
 EncounterMatrix[106, 7] = "F"
 EncounterMatrix[106, 8] = "F"
 EncounterMatrix[106, 9] = "F"
-EncounterMatrix[106, 10] = "F"
-EncounterMatrix[106, 11] = "F"
+EncounterMatrix[106, 10]= "F"
+EncounterMatrix[106, 11]= "F"
 
 // 108
 
@@ -1677,8 +1677,8 @@ EncounterMatrix[107, 6] = "F"
 EncounterMatrix[107, 7] = "F"
 EncounterMatrix[107, 8] = "F"
 EncounterMatrix[107, 9] = "F"
-EncounterMatrix[107, 10] = "F"
-EncounterMatrix[107, 11] = "F"
+EncounterMatrix[107, 10]= "F"
+EncounterMatrix[107, 11]= "F"
 
 // 109
 
@@ -1692,8 +1692,8 @@ EncounterMatrix[108, 6] = "F"
 EncounterMatrix[108, 7] = "F"
 EncounterMatrix[108, 8] = "F"
 EncounterMatrix[108, 9] = "F"
-EncounterMatrix[108, 10] = "F"
-EncounterMatrix[108, 11] = "F"
+EncounterMatrix[108, 10]= "F"
+EncounterMatrix[108, 11]= "F"
 
 // 110
 
@@ -1707,8 +1707,8 @@ EncounterMatrix[109, 6] = "F"
 EncounterMatrix[109, 7] = "F"
 EncounterMatrix[109, 8] = "F"
 EncounterMatrix[109, 9] = "F"
-EncounterMatrix[109, 10] = "F"
-EncounterMatrix[109, 11] = "F"
+EncounterMatrix[109, 10]= "F"
+EncounterMatrix[109, 11]= "F"
 
 // 111
 
@@ -1722,8 +1722,8 @@ EncounterMatrix[110, 6] = "F"
 EncounterMatrix[110, 7] = "F"
 EncounterMatrix[110, 8] = "F"
 EncounterMatrix[110, 9] = "F"
-EncounterMatrix[110, 10] = "F"
-EncounterMatrix[110, 11] = "F"
+EncounterMatrix[110, 10]= "F"
+EncounterMatrix[110, 11]= "F"
 
 // 112
 
@@ -1737,8 +1737,8 @@ EncounterMatrix[111, 6] = "F"
 EncounterMatrix[111, 7] = "F"
 EncounterMatrix[111, 8] = "F"
 EncounterMatrix[111, 9] = "F"
-EncounterMatrix[111, 10] = "F"
-EncounterMatrix[111, 11] = "F"
+EncounterMatrix[111, 10]= "F"
+EncounterMatrix[111, 11]= "F"
 
 // 113
 
@@ -1752,8 +1752,8 @@ EncounterMatrix[112, 6] = "F"
 EncounterMatrix[112, 7] = "F"
 EncounterMatrix[112, 8] = "F"
 EncounterMatrix[112, 9] = "F"
-EncounterMatrix[112, 10] = "F"
-EncounterMatrix[112, 11] = "F"
+EncounterMatrix[112, 10]= "F"
+EncounterMatrix[112, 11]= "F"
 
 // 114
 
@@ -1767,8 +1767,8 @@ EncounterMatrix[113, 6] = "F"
 EncounterMatrix[113, 7] = "F"
 EncounterMatrix[113, 8] = "F"
 EncounterMatrix[113, 9] = "F"
-EncounterMatrix[113, 10] = "F"
-EncounterMatrix[113, 11] = "F"
+EncounterMatrix[113, 10]= "F"
+EncounterMatrix[113, 11]= "F"
 
 // 115
 
@@ -1782,8 +1782,8 @@ EncounterMatrix[114, 6] = "F"
 EncounterMatrix[114, 7] = "F"
 EncounterMatrix[114, 8] = "F"
 EncounterMatrix[114, 9] = "F"
-EncounterMatrix[114, 10] = "F"
-EncounterMatrix[114, 11] = "F"
+EncounterMatrix[114, 10]= "F"
+EncounterMatrix[114, 11]= "F"
 
 // 116
 
@@ -1797,8 +1797,8 @@ EncounterMatrix[115, 6] = "F"
 EncounterMatrix[115, 7] = "F"
 EncounterMatrix[115, 8] = "F"
 EncounterMatrix[115, 9] = "F"
-EncounterMatrix[115, 10] = "F"
-EncounterMatrix[115, 11] = "F"
+EncounterMatrix[115, 10]= "F"
+EncounterMatrix[115, 11]= "F"
 
 // 117
 
@@ -1812,8 +1812,8 @@ EncounterMatrix[116, 6] = "F"
 EncounterMatrix[116, 7] = "F"
 EncounterMatrix[116, 8] = "F"
 EncounterMatrix[116, 9] = "F"
-EncounterMatrix[116, 10] = "F"
-EncounterMatrix[116, 11] = "F"
+EncounterMatrix[116, 10]= "F"
+EncounterMatrix[116, 11]= "F"
 
 // 118
 
@@ -1827,8 +1827,8 @@ EncounterMatrix[117, 6] = "F"
 EncounterMatrix[117, 7] = "F"
 EncounterMatrix[117, 8] = "F"
 EncounterMatrix[117, 9] = "F"
-EncounterMatrix[117, 10] = "F"
-EncounterMatrix[117, 11] = "F"
+EncounterMatrix[117, 10]= "F"
+EncounterMatrix[117, 11]= "F"
 
 // 119
 
@@ -1842,8 +1842,8 @@ EncounterMatrix[118, 6] = "F"
 EncounterMatrix[118, 7] = "F"
 EncounterMatrix[118, 8] = "F"
 EncounterMatrix[118, 9] = "F"
-EncounterMatrix[118, 10] = "F"
-EncounterMatrix[118, 11] = "F"
+EncounterMatrix[118, 10]= "F"
+EncounterMatrix[118, 11]= "F"
 
 // 120
 
@@ -1857,8 +1857,8 @@ EncounterMatrix[119, 6] = "F"
 EncounterMatrix[119, 7] = "F"
 EncounterMatrix[119, 8] = "F"
 EncounterMatrix[119, 9] = "F"
-EncounterMatrix[119, 10] = "F"
-EncounterMatrix[119, 11] = "F"
+EncounterMatrix[119, 10]= "F"
+EncounterMatrix[119, 11]= "F"
 
 // 121
 
@@ -1872,8 +1872,8 @@ EncounterMatrix[120, 6] = "F"
 EncounterMatrix[120, 7] = "F"
 EncounterMatrix[120, 8] = "F"
 EncounterMatrix[120, 9] = "F"
-EncounterMatrix[120, 10] = "F"
-EncounterMatrix[120, 11] = "F"
+EncounterMatrix[120, 10]= "F"
+EncounterMatrix[120, 11]= "F"
 
 </string>
           </argument>
