@@ -36,6 +36,12 @@ var storyCount
 var wealth
 var token
 var status
+
+// this is just notes 
+
+// past 84 on the encounter matrix its an unnamed encountr
+
+// there is no 89, 96, 103, 104, 111, 112
 </string>
           </argument>
         </arguments>
@@ -3056,123 +3062,107 @@ EncounterMatrixName[82, 11] = "Hidden City"
 
 // 84
 
-EncounterMatrixName[83, 0] = ""
-EncounterMatrixName[83, 1] = ""
-EncounterMatrixName[83, 2] = ""
-EncounterMatrixName[83, 3] = ""
-EncounterMatrixName[83, 4] = ""
-EncounterMatrixName[83, 5] = ""
-EncounterMatrixName[83, 6] = ""
-EncounterMatrixName[83, 7] = ""
-EncounterMatrixName[83, 8] = ""
-EncounterMatrixName[83, 9] = ""
-EncounterMatrixName[83, 10] = ""
-EncounterMatrixName[83, 11] = ""
+EncounterMatrixName[83, 0] = "Kindly"
+EncounterMatrixName[83, 1] = "Bumbling"
+EncounterMatrixName[83, 2] = "Needy"
+EncounterMatrixName[83, 3] = "Needy"
+EncounterMatrixName[83, 4] = "Disguised"
+EncounterMatrixName[83, 5] = "Trapped"
+EncounterMatrixName[83, 6] = "Mad"
+EncounterMatrixName[83, 7] = "Mad"
+EncounterMatrixName[83, 8] = "Evil"
+EncounterMatrixName[83, 9] = "Vengeful"
+EncounterMatrixName[83, 10] = "Doomed"
+EncounterMatrixName[83, 11] = "Mighty"
 
 // 85
 
-EncounterMatrixName[84, 0] = ""
-EncounterMatrixName[84, 1] = ""
-EncounterMatrixName[84, 2] = ""
-EncounterMatrixName[84, 3] = ""
-EncounterMatrixName[84, 4] = ""
-EncounterMatrixName[84, 5] = ""
-EncounterMatrixName[84, 6] = ""
-EncounterMatrixName[84, 7] = ""
-EncounterMatrixName[84, 8] = ""
-EncounterMatrixName[84, 9] = ""
-EncounterMatrixName[84, 10] = ""
-EncounterMatrixName[84, 11] = ""
+EncounterMatrixName[84, 0] = "Lonely"
+EncounterMatrixName[84, 1] = "Garrulous"
+EncounterMatrixName[84, 2] = "Destitute"
+EncounterMatrixName[84, 3] = "Foolish"
+EncounterMatrixName[84, 4] = "Friendly"
+EncounterMatrixName[84, 5] = "Imprisoned"
+EncounterMatrixName[84, 6] = "Disguised"
+EncounterMatrixName[84, 7] = "Mad"
+EncounterMatrixName[84, 8] = "Vengeful"
+EncounterMatrixName[84, 9] = "Wicked"
+EncounterMatrixName[84, 10] = "Enchanted"
+EncounterMatrixName[84, 11] = "Enchanted"
 
 // 86
 
-EncounterMatrixName[85, 0] = ""
-EncounterMatrixName[85, 1] = ""
-EncounterMatrixName[85, 2] = ""
-EncounterMatrixName[85, 3] = ""
-EncounterMatrixName[85, 4] = ""
-EncounterMatrixName[85, 5] = ""
-EncounterMatrixName[85, 6] = ""
-EncounterMatrixName[85, 7] = ""
-EncounterMatrixName[85, 8] = ""
-EncounterMatrixName[85, 9] = ""
-EncounterMatrixName[85, 10] = ""
-EncounterMatrixName[85, 11] = ""
+EncounterMatrixName[85, 0] = "Friendly"
+EncounterMatrixName[85, 1] = "Friendly"
+EncounterMatrixName[85, 2] = "Destitute"
+EncounterMatrixName[85, 3] = "Impudent"
+EncounterMatrixName[85, 4] = "Ugly"
+EncounterMatrixName[85, 5] = "Disguised"
+EncounterMatrixName[85, 6] = "Crafty"
+EncounterMatrixName[85, 7] = "Dying"
+EncounterMatrixName[85, 8] = "Possessed"
+EncounterMatrixName[85, 9] = "Wicked"
+EncounterMatrixName[85, 10] = "Dangerous"
+EncounterMatrixName[85, 11] = "Powerful"
 
 // 87
 
-EncounterMatrixName[86, 0] = ""
-EncounterMatrixName[86, 1] = ""
-EncounterMatrixName[86, 2] = ""
-EncounterMatrixName[86, 3] = ""
-EncounterMatrixName[86, 4] = ""
-EncounterMatrixName[86, 5] = ""
-EncounterMatrixName[86, 6] = ""
-EncounterMatrixName[86, 7] = ""
-EncounterMatrixName[86, 8] = ""
-EncounterMatrixName[86, 9] = ""
-EncounterMatrixName[86, 10] = ""
-EncounterMatrixName[86, 11] = ""
+EncounterMatrixName[86, 0] = "Friendly"
+EncounterMatrixName[86, 1] = "Foolish"
+EncounterMatrixName[86, 2] = "Destitute"
+EncounterMatrixName[86, 3] = "Handsome"
+EncounterMatrixName[86, 4] = "Disguised"
+EncounterMatrixName[86, 5] = "Wealthy"
+EncounterMatrixName[86, 6] = "Imprisoned"
+EncounterMatrixName[86, 7] = "Mad"
+EncounterMatrixName[86, 8] = "Vengeful"
+EncounterMatrixName[86, 9] = "Vengeful"
+EncounterMatrixName[86, 10] = "Wicked"
+EncounterMatrixName[86, 11] = "Powerful"
 
 // 88
 
-EncounterMatrixName[87, 0] = ""
-EncounterMatrixName[87, 1] = ""
-EncounterMatrixName[87, 2] = ""
-EncounterMatrixName[87, 3] = ""
-EncounterMatrixName[87, 4] = ""
-EncounterMatrixName[87, 5] = ""
-EncounterMatrixName[87, 6] = ""
-EncounterMatrixName[87, 7] = ""
-EncounterMatrixName[87, 8] = ""
-EncounterMatrixName[87, 9] = ""
-EncounterMatrixName[87, 10] = ""
-EncounterMatrixName[87, 11] = ""
-
-// 89
-
-EncounterMatrixName[88, 0] = ""
-EncounterMatrixName[88, 1] = ""
-EncounterMatrixName[88, 2] = ""
-EncounterMatrixName[88, 3] = ""
-EncounterMatrixName[88, 4] = ""
-EncounterMatrixName[88, 5] = ""
-EncounterMatrixName[88, 6] = ""
-EncounterMatrixName[88, 7] = ""
-EncounterMatrixName[88, 8] = ""
-EncounterMatrixName[88, 9] = ""
-EncounterMatrixName[88, 10] = ""
-EncounterMatrixName[88, 11] = ""
+EncounterMatrixName[87, 0] = "Kindly"
+EncounterMatrixName[87, 1] = "Needy"
+EncounterMatrixName[87, 2] = "Bumbling"
+EncounterMatrixName[87, 3] = "Bumbling"
+EncounterMatrixName[87, 4] = "Lovesick"
+EncounterMatrixName[87, 5] = "Disguised"
+EncounterMatrixName[87, 6] = "Crafty"
+EncounterMatrixName[87, 7] = "Vengeful"
+EncounterMatrixName[87, 8] = "Evil"
+EncounterMatrixName[87, 9] = "Powerful"
+EncounterMatrixName[87, 10] = "Mighty"
+EncounterMatrixName[87, 11] = "Mighty"
 
 // 90
-
-EncounterMatrixName[89, 0] = ""
-EncounterMatrixName[89, 1] = ""
-EncounterMatrixName[89, 2] = ""
-EncounterMatrixName[89, 3] = ""
-EncounterMatrixName[89, 4] = ""
-EncounterMatrixName[89, 5] = ""
-EncounterMatrixName[89, 6] = ""
-EncounterMatrixName[89, 7] = ""
-EncounterMatrixName[89, 8] = ""
-EncounterMatrixName[89, 9] = ""
-EncounterMatrixName[89, 10] = ""
-EncounterMatrixName[89, 11] = ""
+EncounterMatrixName[89, 0] = "Friendly"
+EncounterMatrixName[89, 1] = "Foolish"
+EncounterMatrixName[89, 2] = "Garrulous"
+EncounterMatrixName[89, 3] = "Destitute"
+EncounterMatrixName[89, 4] = "False"
+EncounterMatrixName[89, 5] = "Disguised"
+EncounterMatrixName[89, 6] = "Wise"
+EncounterMatrixName[89, 7] = "Imprisoned"
+EncounterMatrixName[89, 8] = "Enchanted"
+EncounterMatrixName[89, 9] = "Wicked"
+EncounterMatrixName[89, 10] = "Mad"
+EncounterMatrixName[89, 11] = "Powerful"
 
 // 91
 
-EncounterMatrixName[90, 0] = ""
-EncounterMatrixName[90, 1] = ""
-EncounterMatrixName[90, 2] = ""
-EncounterMatrixName[90, 3] = ""
-EncounterMatrixName[90, 4] = ""
-EncounterMatrixName[90, 5] = ""
-EncounterMatrixName[90, 6] = ""
-EncounterMatrixName[90, 7] = ""
-EncounterMatrixName[90, 8] = ""
-EncounterMatrixName[90, 9] = ""
-EncounterMatrixName[90, 10] = ""
-EncounterMatrixName[90, 11] = ""
+EncounterMatrixName[90, 0] = "Toothless"
+EncounterMatrixName[90, 1] = "Destitute"
+EncounterMatrixName[90, 2] = "Dying"
+EncounterMatrixName[90, 3] = "Diseased"
+EncounterMatrixName[90, 4] = "Diseased"
+EncounterMatrixName[90, 5] = "Enchanted"
+EncounterMatrixName[90, 6] = "Crafty"
+EncounterMatrixName[90, 7] = "Possessed"
+EncounterMatrixName[90, 8] = "Hypnotic"
+EncounterMatrixName[90, 9] = "Hideous"
+EncounterMatrixName[90, 10] = "Insane"
+EncounterMatrixName[90, 11] = "Dangerous"
 
 // 92
 
@@ -3233,21 +3223,6 @@ EncounterMatrixName[94, 8] = ""
 EncounterMatrixName[94, 9] = ""
 EncounterMatrixName[94, 10] = ""
 EncounterMatrixName[94, 11] = ""
-
-// 96
-
-EncounterMatrixName[95, 0] = ""
-EncounterMatrixName[95, 1] = ""
-EncounterMatrixName[95, 2] = ""
-EncounterMatrixName[95, 3] = ""
-EncounterMatrixName[95, 4] = ""
-EncounterMatrixName[95, 5] = ""
-EncounterMatrixName[95, 6] = ""
-EncounterMatrixName[95, 7] = ""
-EncounterMatrixName[95, 8] = ""
-EncounterMatrixName[95, 9] = ""
-EncounterMatrixName[95, 10] = ""
-EncounterMatrixName[95, 11] = ""
 
 // 97
 
@@ -3339,36 +3314,6 @@ EncounterMatrixName[101, 9] = ""
 EncounterMatrixName[101, 10] = ""
 EncounterMatrixName[101, 11] = ""
 
-// 103
-
-EncounterMatrixName[102, 0] = ""
-EncounterMatrixName[102, 1] = ""
-EncounterMatrixName[102, 2] = ""
-EncounterMatrixName[102, 3] = ""
-EncounterMatrixName[102, 4] = ""
-EncounterMatrixName[102, 5] = ""
-EncounterMatrixName[102, 6] = ""
-EncounterMatrixName[102, 7] = ""
-EncounterMatrixName[102, 8] = ""
-EncounterMatrixName[102, 9] = ""
-EncounterMatrixName[102, 10] = ""
-EncounterMatrixName[102, 11] = ""
-
-// 104
-
-EncounterMatrixName[103, 0] = ""
-EncounterMatrixName[103, 1] = ""
-EncounterMatrixName[103, 2] = ""
-EncounterMatrixName[103, 3] = ""
-EncounterMatrixName[103, 4] = ""
-EncounterMatrixName[103, 5] = ""
-EncounterMatrixName[103, 6] = ""
-EncounterMatrixName[103, 7] = ""
-EncounterMatrixName[103, 8] = ""
-EncounterMatrixName[103, 9] = ""
-EncounterMatrixName[103, 10] = ""
-EncounterMatrixName[103, 11] = ""
-
 // 105
 
 EncounterMatrixName[104, 0] = ""
@@ -3458,36 +3403,6 @@ EncounterMatrixName[109, 8] = ""
 EncounterMatrixName[109, 9] = ""
 EncounterMatrixName[109, 10] = ""
 EncounterMatrixName[109, 11] = ""
-
-// 111
-
-EncounterMatrixName[110, 0] = ""
-EncounterMatrixName[110, 1] = ""
-EncounterMatrixName[110, 2] = ""
-EncounterMatrixName[110, 3] = ""
-EncounterMatrixName[110, 4] = ""
-EncounterMatrixName[110, 5] = ""
-EncounterMatrixName[110, 6] = ""
-EncounterMatrixName[110, 7] = ""
-EncounterMatrixName[110, 8] = ""
-EncounterMatrixName[110, 9] = ""
-EncounterMatrixName[110, 10] = ""
-EncounterMatrixName[110, 11] = ""
-
-// 112
-
-EncounterMatrixName[111, 0] = ""
-EncounterMatrixName[111, 1] = ""
-EncounterMatrixName[111, 2] = ""
-EncounterMatrixName[111, 3] = ""
-EncounterMatrixName[111, 4] = ""
-EncounterMatrixName[111, 5] = ""
-EncounterMatrixName[111, 6] = ""
-EncounterMatrixName[111, 7] = ""
-EncounterMatrixName[111, 8] = ""
-EncounterMatrixName[111, 9] = ""
-EncounterMatrixName[111, 10] = ""
-EncounterMatrixName[111, 11] = ""
 
 // 113
 
