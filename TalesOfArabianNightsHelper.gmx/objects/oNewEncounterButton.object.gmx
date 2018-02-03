@@ -73,9 +73,9 @@ if(main.newEncounter){
     }
     input = getInputNumbersOnly(input)
     if(keyboard_check_pressed(vk_enter) &amp;&amp; input = ""){
+        encounterEntered = false
         main.newEncounter = false
         main.unclickable = false
-        encounterEntered = false
     }
     if(keyboard_check_pressed(vk_enter) &amp;&amp; !encounterEntered){
         number = real(input)
@@ -86,9 +86,6 @@ if(main.newEncounter){
             encounterEntered = true
         }
     }
-}
-else{
-    depth = 0
 }
 </string>
           </argument>
@@ -137,15 +134,18 @@ if(main.newEncounter){
         if (opacity &gt;= 1){opacity = 1} // this looks dumb but its so i dont assign it every frame I only need to do it once
     }
     
-    draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity)
+    
     
 }
 else{
     if(opacity &gt; 0){
         opacity -= 1/room_speed
-        if (opacity &lt;= 0){opacity = 0}
+        if (opacity &lt;= 0){opacity = 0
+                          depth = 0
+                          }
     }
 }
+draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity) 
 if(encounterEntered){
         if(number &lt; 83) draw_text_colour(room_width/2, room_height/2, "You've encountered a " + game.encounterMatrixName[number, dieRoll],-1,-1,-1,-1, opacity)
         else draw_text_colour(room_width/2, room_height/2, "You've encountered a " + game.encounterMatrixName[number, dieRoll] + " type of creature",-1,-1,-1,-1, opacity)
@@ -155,6 +155,7 @@ if(encounterEntered){
 else{
     draw_text_colour(room_width/2, room_height/2, input, -1,-1,-1,-1, opacity)
 }
+
 
 
 
