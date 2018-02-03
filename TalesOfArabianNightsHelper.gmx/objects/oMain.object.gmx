@@ -128,8 +128,12 @@ if (!tokenSpawn){
     tokenSpawn = true
     placeTokenX = tokenInitialX
     placeTokenY = tokenInitialY
+    placeTokenYDiff = room_height/9
+    tokenCount = 0
     while(instance_exists(oToken)){
-        for(i = 19; i &lt; instance_number(oToken); i+=1){placeTokenX += room_width/16}
+        for(i = 19; i &lt; instance_number(oToken); i+=1){placeTokenX += room_width/16
+                                                tokenCount += 1;
+                                                if(tokenCount &gt; 5) {tokenCount = 0; placeTokenX = tokenInitialX; placeTokenY -= placeTokenYDiff;}}
         ID = instance_nearest(placeTokenX,placeTokenY,oToken)
         if(ID.opacity &gt; 0){tokenSpawn = false 
          exit}
@@ -141,16 +145,20 @@ if (!tokenSpawn){
         else{break}
     }
     placeTokenX = tokenInitialX
+    placeTokenY = tokenInitialY
+    tokenCount = 0
     for(i = 0; i &lt; 18; i+=1){
         if(game.token[game.currentPlayer, i]){
             tokenID = instance_create(placeTokenX, placeTokenY, oToken)
             tokenID.opacityLocation = self.id
             tokenID.givenDepth = -150
+            tokenCount+=1
             tokenID.function = i + 1
             exitID = instance_create(placeTokenX + 50, placeTokenY - 50, oExitButton)
             exitID.function = "token" 
             exitID.owner = tokenID
             placeTokenX += room_width/16
+            if(tokenCount &gt; 5) {tokenCount = 0; placeTokenX = tokenInitialX; placeTokenY -= placeTokenYDiff;}
         }
     }
     
