@@ -13,7 +13,7 @@ if keyboard_check_pressed(vk_anykey)
     {
         // enter was pressed and input wasn't empty : do what have to be done here !
     }
-    else if k>=97 and k<=122 or k>=48 and k<=57 or k==192
+    else if k>=96 and k<=105 or k>=48 and k<=57 or k==192
     {
         // 65-90  : upcase letters
         // 122-192 : lowercase letters
