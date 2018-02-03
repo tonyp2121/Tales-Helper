@@ -33,6 +33,8 @@ depth = 10000
 opacity = 0
 input = ""
 number = 0
+encounterEntered = false
+randomize()
 </string>
           </argument>
         </arguments>
@@ -64,14 +66,26 @@ if(!main.unclickable){
     }
 }
 
-if(main.newEncounter = true){
+if(main.newEncounter){
     depth = -100
-    input = getInputNumbersOnly(input)
-    if(keyboard_check(vk_enter)){
-        number = real(input)
-        input = ""
+    if(encounterEntered &amp;&amp; !keyboard_check_pressed(vk_enter) &amp;&amp; keyboard_check_pressed(vk_anykey) &amp;&amp; keyboard_lastkey &gt;=65 and keyboard_lastkey&lt;=90 or keyboard_lastkey&gt;=97 and keyboard_lastkey&lt;=122 or keyboard_lastkey&gt;=48 and keyboard_lastkey&lt;=57 or keyboard_lastkey==192 or keyboard_lastkey==32){
+        encounterEntered = false
     }
-    // from here we can go and actually do the whole lookup thing which means I have to go through the stuff
+    input = getInputNumbersOnly(input)
+    if(encounterEntered &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; input = ""){
+        main.newEncounter = false
+        main.unclickable = false
+        encounterEntered = false
+    }
+    if(keyboard_check_pressed(vk_enter) &amp;&amp; !encounterEntered){
+        number = real(input)
+        number -= 1
+        input = ""
+        if(number &gt;= 0 &amp;&amp;number &lt;= 120 &amp;&amp; number != 88 &amp;&amp; number != 95 &amp;&amp; number != 102 &amp;&amp; number != 103 &amp;&amp; number != 110 &amp;&amp; number != 111){
+            dieRoll = random_range(0,11)
+            encounterEntered = true
+        }
+    }
 }
 else{
     depth = 0
@@ -124,9 +138,24 @@ if(main.newEncounter){
     }
     
     draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity)
+    if(encounterEntered){
+        draw_text_colour(room_width/2, room_height/2, "You've encountered a " + game.encounterMatrixName[number, dieRoll],-1,-1,-1,-1, opacity)
+    draw_text_colour(room_width/2, 5 *room_height/8, "Matrix " + game.encounterMatrix[number, dieRoll],-1,-1,-1,-1, opacity)
+                
+    }
+    else{
+        draw_text_colour(room_width/2, room_height/2, input, -1,-1,-1,-1, opacity)
+    }
+}
+else{
+    if(opacity &gt; 0){
+        opacity -= 1/room_speed
+        if (opacity &lt;= 0){opacity = 0}
+    }
 }
 
-draw_text(room_width/2, room_height/2, input)
+
+
 
 </string>
           </argument>
