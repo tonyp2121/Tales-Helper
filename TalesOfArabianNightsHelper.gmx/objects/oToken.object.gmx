@@ -59,6 +59,8 @@ temp = -1
             <string>image_index = function
 depth = givenDepth
 
+if (main.statusPicker) {depth = -159}
+
 if ((opacity == 0 or opacityLocation.opacity == 0) and currentPlayer =! game.currentPlayer){instance_destroy()}
 if (function == 0 &amp;&amp; !main.unclickable) {
     // if clicked on it should change main value of some name to make a picker thing

@@ -29,7 +29,7 @@
 main = oMain.id
 game = oGameData.id
 owner = 0
-depth = -151
+depth = -159
 </string>
           </argument>
         </arguments>
@@ -52,7 +52,7 @@ depth = -151
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(main.unclickable){exit}
+            <string>if(main.unclickable or main.picker or main.statusPicker){exit}
 if (function = "token"){
     if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
         with (owner){

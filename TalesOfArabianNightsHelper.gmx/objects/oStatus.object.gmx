@@ -28,13 +28,14 @@
             <string>game = oGameData.id
 main = oMain.id
 statusType = 0 // 0 is for adding one while the rest
-givenDepth = -100 
+givenDepth = -160 
 opacityLocation = 0
 currentPlayer = game.currentPlayer
 opacity = 0
 xscale = 1
 yscale = 1
 image_alpha = 0
+
 </string>
           </argument>
         </arguments>
@@ -60,6 +61,7 @@ image_alpha = 0
             <string>image_index = statusType
 depth = givenDepth
 
+if (main.picker) {depth = -159}
 if ((opacity == 0 or opacityLocation.opacity == 0) and currentPlayer =! game.currentPlayer){instance_destroy()}
 if (statusType == 0 &amp;&amp; !main.unclickable) {
     // if clicked on it should change main value of some name to make a picker thing
