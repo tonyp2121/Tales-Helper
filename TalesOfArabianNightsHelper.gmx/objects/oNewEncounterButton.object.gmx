@@ -67,12 +67,12 @@ if(!main.unclickable){
 }
 
 if(main.newEncounter){
-    depth = -100
+    depth = -1000
     if(encounterEntered &amp;&amp; !keyboard_check_pressed(vk_enter) &amp;&amp; keyboard_check_pressed(vk_anykey) &amp;&amp; keyboard_lastkey &gt;=65 and keyboard_lastkey&lt;=90 or keyboard_lastkey&gt;=97 and keyboard_lastkey&lt;=122 or keyboard_lastkey&gt;=48 and keyboard_lastkey&lt;=57 or keyboard_lastkey==192 or keyboard_lastkey==32){
         encounterEntered = false
     }
     input = getInputNumbersOnly(input)
-    if(encounterEntered &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; input = ""){
+    if(keyboard_check_pressed(vk_enter) &amp;&amp; input = ""){
         main.newEncounter = false
         main.unclickable = false
         encounterEntered = false
@@ -138,14 +138,7 @@ if(main.newEncounter){
     }
     
     draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity)
-    if(encounterEntered){
-        draw_text_colour(room_width/2, room_height/2, "You've encountered a " + game.encounterMatrixName[number, dieRoll],-1,-1,-1,-1, opacity)
-    draw_text_colour(room_width/2, 5 *room_height/8, "Matrix " + game.encounterMatrix[number, dieRoll],-1,-1,-1,-1, opacity)
-                
-    }
-    else{
-        draw_text_colour(room_width/2, room_height/2, input, -1,-1,-1,-1, opacity)
-    }
+    
 }
 else{
     if(opacity &gt; 0){
@@ -153,7 +146,15 @@ else{
         if (opacity &lt;= 0){opacity = 0}
     }
 }
-
+if(encounterEntered){
+        if(number &lt; 83) draw_text_colour(room_width/2, room_height/2, "You've encountered a " + game.encounterMatrixName[number, dieRoll],-1,-1,-1,-1, opacity)
+        else draw_text_colour(room_width/2, room_height/2, "You've encountered a " + game.encounterMatrixName[number, dieRoll] + " type of creature",-1,-1,-1,-1, opacity)
+    draw_text_colour(room_width/2, 5 *room_height/8, "Matrix " + game.encounterMatrix[number, dieRoll],-1,-1,-1,-1, opacity)
+                
+    }
+else{
+    draw_text_colour(room_width/2, room_height/2, input, -1,-1,-1,-1, opacity)
+}
 
 
 
