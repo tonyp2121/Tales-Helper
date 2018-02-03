@@ -29,6 +29,7 @@
 game = oGameData.id
 setNames()
 opacity = 0
+depth = 0
 
 // code for initial condition on all players
 
@@ -142,6 +143,7 @@ if (!tokenSpawn){
         if(game.token[game.currentPlayer, i]){
             tokenID = instance_create(placeTokenX, placeTokenY, oToken)
             tokenID.opacityLocation = self.id
+            tokenID.givenDepth = -150
             tokenID.function = i + 1
             exitID = instance_create(placeTokenX + 50, placeTokenY - 50, oExitButton)
             exitID.function = "token" 
@@ -151,6 +153,7 @@ if (!tokenSpawn){
     }
     
     tokenID = instance_create(placeTokenX, placeTokenY, oToken)
+    tokenID.givenDepth = -160
     tokenID.opacityLocation = self.id
     tokenID.function = 0
 }
@@ -186,6 +189,7 @@ if (!statusSpawn){
         if(game.status[game.currentPlayer, i]){
             statusID = instance_create(placeStatusX, placeStatusY, oStatus)
             statusID.opacityLocation = self.id
+            statusID.givenDepth = 0
             statusID.statusType = i + 1
             exitID = instance_create(placeStatusX + 170, placeStatusY - 52, oExitButton)
             exitID.function = "status" 
@@ -201,6 +205,7 @@ if (!statusSpawn){
     
     if(statusCount &lt; 4){
     statusID = instance_create(placeStatusX, placeStatusY, oStatus)
+    statusID.givenDepth = -160
     statusID.opacityLocation = self.id
     statusID.function = 0}
 }
