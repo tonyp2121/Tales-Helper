@@ -39,7 +39,7 @@ var status
 
 // TO DO  
 //    - Add token Mastery
-//    - Add push buttons for tablets
+//    - Add push buttons for tablet support
 //    - Below is optional
 //         - Add responses from matrix
 //         - Add lookup table

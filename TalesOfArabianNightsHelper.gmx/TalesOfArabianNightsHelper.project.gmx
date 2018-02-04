@@ -53,6 +53,7 @@
     <object>objects\oNextPlayerButton</object>
     <object>objects\oNewEncounterButton</object>
     <object>objects\oStatusText</object>
+    <object>objects\oPushButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rBackground</room>
