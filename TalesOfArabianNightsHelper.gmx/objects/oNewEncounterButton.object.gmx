@@ -113,20 +113,6 @@ if(main.newEncounter){
 draw_self()
 draw_text_transformed(x,y, "New Encounter", .75, .75, 0)
 
-// so what we need is an opacity all to its own
-// we need the background to fade in along with the text written and what numbers are 
-//       being entered
-// then we use the get input and make the string, develop a string to int function (not hard at all)
-// then go through and minus 1 to it (cause thats how oGameData works)
-// lookup if the number entered is in range
-// lookup if number entered is above (84 I think) because those will always be like a (trait) (whatever creatures on your card)
-// then go through the rules to quad check and make sure you're following correctly
-// Have a reaction matrix show on screen, then whichever is picked lookup what that reacion is in the reacion matrix
-//       and show the passage chosen.
-// The pasage chose might be more of a pain to implement and might just want to leave that for the players to do since its not much work
-//       on their part
-// then plus 1 or -1 depending on the 
-
 if(main.newEncounter){
     // if new encounter is being pressed we want to bring in the sprite background that goes over everything
     if(opacity &lt; 1) {

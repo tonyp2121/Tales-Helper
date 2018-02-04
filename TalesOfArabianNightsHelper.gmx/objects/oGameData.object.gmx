@@ -37,6 +37,12 @@ var wealth
 var token
 var status
 
+// TO DO  
+//    - Add token Mastery
+//    - Add push buttons for tablets
+//    - Below is optional
+//         - Add responses from matrix
+//         - Add lookup table
 </string>
           </argument>
         </arguments>
