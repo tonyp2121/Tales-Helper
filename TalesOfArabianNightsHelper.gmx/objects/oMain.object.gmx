@@ -297,11 +297,12 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 
 draw_sprite(sDestinyCount, 0, xDestinyPos, yDestinyPos)
-draw_text(xDestinyPos, yDestinyPos, game.destinyCount[game.currentPlayer])
+draw_text_transformed(xDestinyPos, yDestinyPos - room_height/35, "Destiny", .4, .4, 0)
+draw_text_transformed(xDestinyPos, yDestinyPos, game.destinyCount[game.currentPlayer], .8, .8, 0)
 
 draw_sprite(sStoryCount, 0, xStoryPos, yStoryPos)
-draw_text(xStoryPos, yStoryPos, game.storyCount[game.currentPlayer])
-
+draw_text_transformed(xStoryPos, yStoryPos - room_height/35, "Story", .4, .4, 0)
+draw_text_transformed(xStoryPos, yStoryPos, game.storyCount[game.currentPlayer], .8, .8, 0)
 
 draw_text_transformed(xWealthPos, yWealthPos, "Wealth", xWealthScale, yWealthScale, 0)
 draw_sprite_ext(sNameUnderline, 0, xWealthPos - room_width/31.5, yWealthPos + room_height/40, .3, .7, 0, c_white, opacity)
