@@ -21,6 +21,7 @@
     <sprite>sprites\sXbutton</sprite>
     <sprite>sprites\sStatus</sprite>
     <sprite>sprites\sNextPlayer</sprite>
+    <sprite>sprites\sPushButton</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
