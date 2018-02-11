@@ -37,6 +37,17 @@ beginTextLocationX = room_width/2
 beginTextLocationY = 3*room_height/8
 beginInputLocationX = room_width/2  
 beginInputLocationY = room_height*2/3
+
+pushButtonX = room_width * 3 / 10
+pushButtonY = room_height * 7 / 10
+pushButtonXInc = room_width/10
+count = 0
+
+for(i = 2; i &lt; 7; i+=1){
+    pushButton = instance_create(pushButtonX, pushButtonY, oPushButton)
+    pushButton.function = i
+    pushButtonX += pushButtonXInc
+}
 </string>
           </argument>
         </arguments>
@@ -117,11 +128,14 @@ opacity -= 1/2/room_speed
 if opacity &lt; 0 {
     opacity = 0
     instance_create(x,y,oColorPicker)
+    while(instance_exists(oPushButton)){
+        pushButtonID = instance_nearest(x,y,oPushButton)
+        instance_destroy(pushButtonID)}
     instance_destroy()}
 }
-draw_sprite(sBeginButtonBackground, 0, beginInputLocationX, beginInputLocationY+20)
-draw_sprite(sBeginNumberBorder, 0, beginInputLocationX,beginInputLocationY+20)
-draw_text_ext(beginInputLocationX,beginInputLocationY,input,50,1200)
+//draw_sprite(sBeginButtonBackground, 0, beginInputLocationX, beginInputLocationY+20)
+//draw_sprite(sBeginNumberBorder, 0, beginInputLocationX,beginInputLocationY+20)
+//draw_text_ext(beginInputLocationX,beginInputLocationY,input,50,1200)
 </string>
           </argument>
         </arguments>
