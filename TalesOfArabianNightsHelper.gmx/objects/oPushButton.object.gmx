@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>game = oGameData.id
+depth = -12000
 var main
 if (instance_exists(oNewEncounterButton)){
     main = oMain.id
@@ -149,7 +150,13 @@ switch (function)
             break
     case 10:text = "enter"
             if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
-            encounter.encounterEntered = true
+            encounter.number = real(encounter.input)
+            encounter.number -= 1
+            encounter.input = ""
+            if(encounter.number &gt;= 0 &amp;&amp;encounter.number &lt;= 120 &amp;&amp; encounter.number != 88 &amp;&amp; encounter.number != 95 &amp;&amp; encounter.number != 102 &amp;&amp; encounter.number != 103 &amp;&amp; encounter.number != 110 &amp;&amp; encounter.number != 111){
+                encounter.dieRoll = random_range(0,11)
+                encounter.encounterEntered = true
+            }
             }
             break
     case 11:text = ""
