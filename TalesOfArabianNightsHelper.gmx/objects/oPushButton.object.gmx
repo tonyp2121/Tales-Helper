@@ -69,10 +69,12 @@ switch (function)
 {
     case 0: text = "0"
             if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            encounter.input = encounter.input + "0"
             }
             break
     case 1: text = "1"
             if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            encounter.input = encounter.input + "1"
             }
             break
     case 2: text = "2"
@@ -82,7 +84,7 @@ switch (function)
             beginning.entered = true
             }
             else{
-            
+            encounter.input = encounter.input + "2"
             }
             }
             break
@@ -93,7 +95,7 @@ switch (function)
             beginning.entered = true
             }
             else{
-            
+            encounter.input = encounter.input + "3"
             }
             }
             break
@@ -104,7 +106,7 @@ switch (function)
             beginning.entered = true
             }
             else{
-            
+            encounter.input = encounter.input + "4"
             }
             }
             break 
@@ -115,7 +117,7 @@ switch (function)
             beginning.entered = true
             }
             else{
-            
+            encounter.input = encounter.input + "5"
             }
             }
             break
@@ -126,19 +128,41 @@ switch (function)
             beginning.entered = true
             }
             else{
-            
+            encounter.input = encounter.input + "6"
             }
             }
             break
     case 7: text = "7"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            encounter.input = encounter.input + "7"
+            }
             break
     case 8: text = "8"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            encounter.input = encounter.input + "8"
+            }
             break
     case 9: text = "9"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            encounter.input = encounter.input + "9"
+            }
             break
     case 10:text = "enter"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            encounter.encounterEntered = true
+            }
             break
     case 11:text = ""
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            if encounter.input != ""
+            encounter.input = string_copy(encounter.input, 1, string_length(encounter.input)-1 )
+            else
+            {
+            encounter.encounterEntered = false
+            main.newEncounter = false
+            main.unclickable = false
+            }
+            }
             break
 }
 
@@ -173,6 +197,8 @@ image_index = 0
 draw_set_alpha(opacityLocation.opacity)
 image_alpha = opacityLocation.opacity
 draw_self()
+draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
 draw_text_transformed(x,y, text, 1, 1, 0)
 </string>
           </argument>
