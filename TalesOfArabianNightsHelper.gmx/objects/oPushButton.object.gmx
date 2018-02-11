@@ -28,10 +28,14 @@
             <string>game = oGameData.id
 main = oMain.id
 if (object_exists(oNewEncounterButton)){
+    beginningBool = false
     encounter = oNewEncounterButton.id
+    opacityLocation = oNewEncounterButton.id
     }
-if (object_exists(oBeginning)){
+else if (object_exists(oBeginning)){
+    beginningBool = true
     beginning = oBeginning.id
+    opacityLocation = oBeginning.id
     }
 text = ""
 function = -1
@@ -58,19 +62,72 @@ function = -1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch (function)
+            <string>// function
+
+switch (function)
 {
+    case 0: text = "0"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            }
+            break
     case 1: text = "1"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            }
             break
     case 2: text = "2"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            if (beginningBool){
+            beginning.input = 2
+            beginning.entered = true
+            }
+            else{
+            
+            }
+            }
             break
     case 3: text = "3"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            if (beginningBool){
+            beginning.input = 3
+            beginning.entered = true
+            }
+            else{
+            
+            }
+            }
             break
     case 4: text = "4"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            if (beginningBool){
+            beginning.input = 4
+            beginning.entered = true
+            }
+            else{
+            
+            }
+            }
             break 
     case 5: text = "5"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            if (beginningBool){
+            beginning.input = 
+            beginning.entered = true
+            }
+            else{
+            
+            }
+            }
             break
     case 6: text = "6"
+            if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
+            if (beginningBool){
+            beginning.input = 6
+            beginning.entered = true
+            }
+            else{
+            
+            }
+            }
             break
     case 7: text = "7"
             break
@@ -81,7 +138,10 @@ function = -1
     case 10:text = "enter"
             break
     case 11:text = ""
+            image_index = 1
+            break
 }
+
 </string>
           </argument>
         </arguments>
@@ -105,7 +165,7 @@ function = -1
           <argument>
             <kind>1</kind>
             <string>// add opacity thing
-
+draw_set_alpha(opacityLocation.opacity)
 draw_self()
 draw_text_transformed(x,y, text, 1, 1, 0)
 </string>

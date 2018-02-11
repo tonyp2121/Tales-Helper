@@ -31,6 +31,7 @@ game = oGameData.id
 draw_set_colour(c_white)
 input = ""
 inputRecieved = false
+entered = false
 
 beginTextLocationX = room_width/2
 beginTextLocationY = 3*room_height/8
@@ -63,7 +64,7 @@ if string_length(input) &gt;= 2{
     input = string_copy(input, 2,1) 
 }
 // To do add buttons for android or iOS only (maybe just in general actually)
-if keyboard_check_pressed(vk_enter){
+if (keyboard_check_pressed(vk_enter) or entered) and inputRecieved = false{
     if real(input) &gt;= 2 and real(input) &lt;= 6{
         game.numOfPlayers = real(input)
         inputRecieved = true;
