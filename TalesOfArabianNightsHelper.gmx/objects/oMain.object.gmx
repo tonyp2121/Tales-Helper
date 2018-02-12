@@ -241,7 +241,9 @@ if (!statusSpawn){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>opacityChangingSpeed = 1/2/room_speed
+            <string>
+image_alpha = opacity
+opacityChangingSpeed = 1/2/room_speed
 
 if(start){
 opacity += opacityChangingSpeed

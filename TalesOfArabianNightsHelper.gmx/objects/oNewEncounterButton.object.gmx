@@ -57,7 +57,7 @@ randomize()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha = main.opacity
+            <string>
 
 if(!main.unclickable){
     if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
@@ -132,7 +132,7 @@ if(main.newEncounter){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>image_alpha = main.opacity
 draw_self()
 draw_text_transformed(x,y, "New Encounter", .75, .75, 0)
 
@@ -151,6 +151,7 @@ else{
         opacity -= 1/room_speed
         if (opacity &lt;= 0){opacity = 0
                           depth = 0
+                          while (instance_exists(oPushButton)){instance_destroy(instance_nearest(x,y,oPushButton))}
                           }
     }
 }

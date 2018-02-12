@@ -81,7 +81,8 @@ if(!main.unclickable){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>image_alpha = main.opacity
+draw_self()
 draw_text(x,y, "Next Player")
 </string>
           </argument>
