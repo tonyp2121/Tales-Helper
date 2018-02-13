@@ -285,6 +285,7 @@ seaColor = $739cdd
 
 draw_set_alpha(opacity)
 
+image_alpha = opacity
 draw_set_font(fMainText)
 draw_set_halign(fa_left)
 draw_set_valign(fa_bottom)

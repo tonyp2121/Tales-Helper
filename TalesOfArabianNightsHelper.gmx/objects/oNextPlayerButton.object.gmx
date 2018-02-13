@@ -57,6 +57,7 @@ if(!main.unclickable){
     if mouse_check_button_released(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, id){
         main.nextPlayer = true
         main.unclickable = true
+        image_alpha = main.opacity
     }
 }
 </string>
@@ -83,7 +84,10 @@ if(!main.unclickable){
             <kind>1</kind>
             <string>image_alpha = main.opacity
 draw_self()
-draw_text(x,y, "Next Player")
+
+image_alpha = 1
+//draw_text(x,y, "Next Player")
+draw_text_colour(x, y, "Next Player", -1, -1, -1, -1, main.opacity);
 </string>
           </argument>
         </arguments>
