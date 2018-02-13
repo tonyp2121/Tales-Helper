@@ -112,8 +112,8 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 depth = 0
 draw_set_alpha(opacity)
-draw_sprite(sBeginTextBackground, 0, beginTextLocationX,beginTextLocationY)
-draw_sprite(sBeginBorder, 0, beginTextLocationX,beginTextLocationY)
+//draw_sprite(sBeginTextBackground, 0, beginTextLocationX,beginTextLocationY)
+//draw_sprite(sBeginBorder, 0, beginTextLocationX,beginTextLocationY)
 draw_text_ext(beginTextLocationX,beginTextLocationY,
 "Welcome to Tales of Arabian Nights helper.
 #How many players are there?",50,1200)
