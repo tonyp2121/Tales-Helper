@@ -159,7 +159,8 @@ drawTextX = room_width/2
 drawTextY = room_height * 2 / 10
 deawTextYInc = 1/8 * room_height
 draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity) 
-draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity/2) 
+draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity) 
+draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity) 
 if(encounterEntered){
         if(number &lt; 83) draw_text_colour(drawTextX, drawTextY, "You've encountered a " + game.encounterMatrixName[number, dieRoll],-1,-1,-1,-1, opacity)
         else draw_text_colour(drawTextX, drawTextY, "You've encountered a " + game.encounterMatrixName[number, dieRoll] + " type of creature",-1,-1,-1,-1, opacity)

@@ -31,6 +31,7 @@ setNames()
 opacity = 0
 depth = 0
 
+
 // code for initial condition on all players
 
 for (i = 0; i &lt; game.numOfPlayers; i+=1){
@@ -313,60 +314,168 @@ draw_sprite_ext(sNameUnderline, 0, xWealthPos - room_width/31.5, yWealthPos + ro
 if(game.wealth[game.currentPlayer] = 0){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Beggar", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
-    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    
     draw_set_color(bgr2rgb(seaColor))
-    if(game.token[game.currentPlayer, 11])
-        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if(game.token[game.currentPlayer, 11]){
+        if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+        else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0) 
+        else  
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)}
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)    
     else
         draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 1){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Penniless", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
-    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    
     draw_set_color(bgr2rgb(seaColor))
-    if(game.token[game.currentPlayer, 11])
-        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if(game.token[game.currentPlayer, 11]){
+        if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+        else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0) 
+        else  
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)}
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
     else
         draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 2){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Poor", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
-    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+        else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)    
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    
     draw_set_color(bgr2rgb(seaColor))
-    if(game.token[game.currentPlayer, 11])
-        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if(game.token[game.currentPlayer, 11]){
+        if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+        else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0) 
+        else  
+            draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)}
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)    
     else
         draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 3){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Respectable", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
-    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+        
     draw_set_color(bgr2rgb(seaColor))
-    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 4){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Rich", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
-    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+        
     draw_set_color(bgr2rgb(seaColor))
-    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 5){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Princely", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
-    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+        
     draw_set_color(bgr2rgb(seaColor))
-    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "5", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "5", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 6){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Fabulous", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
-    draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(seaColor))
-    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "6", xWealthScale, yWealthScale, 0)
+    if(game.status[game.currentPlayer, 14])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "1", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] &amp;&amp; game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    else if (game.status[game.currentPlayer, 4] || game.status[game.currentPlayer, 6])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "5", xWealthScale, yWealthScale, 0)    
+    else
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "6", xWealthScale, yWealthScale, 0)
     }
 draw_set_color(c_white)
 

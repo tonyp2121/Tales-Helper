@@ -352,11 +352,11 @@ textYinitial+=textYdifference2
 
 // Sultan
 if(game.status[game.currentPlayer, 24]){
-draw_text_transformed(textXinitial, textYinitial, "Sultan - To become Sultan, you must have scored a combines total of 12 Destiny and Story points; otherwise, you receive ", textXScale, textYScale, 0)
+draw_text_transformed(textXinitial, textYinitial, "Sultan - To become Sultan, you must have scored a combined total of 12 Destiny and Story points; otherwise, you receive ", textXScale, textYScale, 0)
 textYinitial+=textYdifference
 draw_text_transformed(textXinitial, textYinitial, textBuffer + "the Vizier status instead. Once you are Sultan, your wealth automatically becomes Fabulous. You can count ", textXScale, textYScale, 0)
 textYinitial+=textYdifference
-draw_text_transformed(textXinitial, textYinitial, textBuffer + "each between (unless you wish to end your move on one of those spaces).city as 1 space when moving, ignoring  ", textXScale, textYScale, 0)
+draw_text_transformed(textXinitial, textYinitial, textBuffer + "each between (unless you wish to end your move on one of those spaces) city as 1 space when moving, ignoring  ", textXScale, textYScale, 0)
 textYinitial+=textYdifference
 draw_text_transformed(textXinitial, textYinitial, textBuffer + "the terrain spaces in-between (unless you want to end your turn there)", textXScale, textYScale, 0)
 textYinitial+=textYdifference2
