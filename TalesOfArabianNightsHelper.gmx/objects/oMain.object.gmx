@@ -315,21 +315,30 @@ if(game.wealth[game.currentPlayer] = 0){
     draw_set_color(bgr2rgb(landColor))
     draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(seaColor))
-    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    if(game.token[game.currentPlayer, 11])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    else
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 1){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Penniless", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
     draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(seaColor))
-    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    if(game.token[game.currentPlayer, 11])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    else
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 2){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Poor", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(landColor))
     draw_text_transformed(xWealthPos - xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "3", xWealthScale, yWealthScale, 0)
     draw_set_color(bgr2rgb(seaColor))
-    draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
+    if(game.token[game.currentPlayer, 11])
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "4", xWealthScale, yWealthScale, 0)
+    else
+        draw_text_transformed(xWealthPos + xWealthMovementPosDiff, yWealthPos + 1.7 * yWealthPosDiff, "2", xWealthScale, yWealthScale, 0)
     }
 else if(game.wealth[game.currentPlayer] = 3){
     draw_text_transformed(xWealthPos, yWealthPos + yWealthPosDiff, "Respectable", xWealthScale, yWealthScale, 0)
