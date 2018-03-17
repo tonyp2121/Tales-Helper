@@ -27,12 +27,15 @@
             <kind>1</kind>
             <string>window_set_fullscreen(true)
 
-//-------------------------------
-//  Depth
-//-------------------------------
-//   -98 token
-//   -99 exit button
-//   -100 
+enum State {normal, aboutToLeave}
+
+currentState = State.normal
+currentStateChanged = false
+
+opacity = 0
+opacityChangingSpeed = 2/room_speed
+
+
 //-------------------------------
 // Things I need to focus on
 //-------------------------------
@@ -75,11 +78,65 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check_pressed(vk_escape)
+            <string>if(currentState == State.normal){
+if keyboard_check_pressed(vk_escape)
 {
-    game_end()
+    currentState = State.aboutToLeave
+    currentStateChanged = true
+}
+}
+else if(currentState == State.aboutToLeave){
+    if keyboard_check_pressed(vk_escape)
+        {
+            game_end()
+        }
+    if keyboard_check_pressed(vk_enter){
+        currentState = State.normal
+        currentStateChanged = true
+    }
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_alpha = opacity
+depth = -11000000
+draw_set_alpha(opacity)
+if(currentState == State.aboutToLeave&amp;&amp; currentStateChanged){
+    opacity += opacityChangingSpeed
+        if opacity &gt; 1{ currentStateChanged = false; opacity = 1}
+    
+}
+if(currentState == State.normal &amp;&amp; currentStateChanged){
+    opacity -= opacityChangingSpeed
+        if opacity &lt; 0{ currentStateChanged = false; opacity = 0}   
+}
+if(opacity &gt; 0){
+draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity) 
+draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity) 
+draw_sprite_ext(sFadeInBackground,0,room_width/2,room_height/2,1,1,0,0,opacity) 
+draw_text_transformed(room_width/2, room_height*7/16, "Press escape again to quit", 1, 1, 0)
+draw_text_transformed(room_width/2, room_height*9/16, "Press enter to return to the game.", 1, 1, 0)
+}
 </string>
           </argument>
         </arguments>

@@ -133,6 +133,7 @@ if(main.newEncounter){
           <argument>
             <kind>1</kind>
             <string>image_alpha = main.opacity
+draw_set_alpha(main.opacity)
 draw_self()
 draw_text_transformed(x,y, "New Encounter", .75, .75, 0)
 
