@@ -115,7 +115,7 @@ draw_set_alpha(opacity)
 //draw_sprite(sBeginTextBackground, 0, beginTextLocationX,beginTextLocationY)
 //draw_sprite(sBeginBorder, 0, beginTextLocationX,beginTextLocationY)
 draw_text_ext(beginTextLocationX,beginTextLocationY,
-"Welcome to Tales of Arabian Nights helper.
+"Welcome to the Tales of Arabian Nights Assistant.
 #How many players are there?",50,1200)
 
 depth = 1
