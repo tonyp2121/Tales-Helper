@@ -115,8 +115,13 @@ draw_set_alpha(opacity)
 //draw_sprite(sBeginTextBackground, 0, beginTextLocationX,beginTextLocationY)
 //draw_sprite(sBeginBorder, 0, beginTextLocationX,beginTextLocationY)
 draw_text_ext(beginTextLocationX,beginTextLocationY,
+<<<<<<< HEAD
 "Welcome to the Tales of Arabian Nights Assistant.
 #How many players are there?",50,1500)
+=======
+"Welcome to Tales of Arabian Nights helper.
+#How many players are there?",50,1200)
+>>>>>>> parent of 483b293... added app logo and changed from helper to assistant
 
 depth = 1
 if(inputRecieved == false){
