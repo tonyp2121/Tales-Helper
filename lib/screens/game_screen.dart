@@ -151,109 +151,206 @@ class _GameScreenState extends State<GameScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF16213E),
-        title: Consumer<GameState>(
-          builder: (context, state, _) {
-            final player = state.currentPlayer;
-            return Row(
-              children: [
-                Container(
-                  width: 16,
-                  height: 16,
-                  decoration: BoxDecoration(
-                    color: player.color,
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: player.color == Colors.black
-                          ? Colors.white54
-                          : Colors.transparent,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Text(
-                  player.name,
-                  style: TextStyle(
-                    color: player.color == Colors.black
-                        ? Colors.white
-                        : player.color == Colors.white
-                            ? Colors.white
-                            : player.color,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Spacer(),
-                Text(
-                  'Player ${state.currentPlayerIndex + 1} of ${state.playerCount}',
-                  style: const TextStyle(
-                    color: Colors.white54,
-                    fontSize: 14,
-                  ),
-                ),
-              ],
-            );
-          },
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh, color: Colors.white54),
-            onPressed: _confirmNewGame,
-            tooltip: 'New Game',
-          ),
-        ],
-      ),
-      body: AnimatedBuilder(
-        animation: _transitionAnimation,
-        builder: (context, child) {
-          return Opacity(
-            opacity: 1.0 - _transitionAnimation.value,
-            child: child,
-          );
-        },
-        child: Consumer<GameState>(
-          builder: (context, state, _) {
-            final player = state.currentPlayer;
-            return SafeArea(
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  if (constraints.maxWidth > 700) {
-                    return _buildWideLayout(state, player);
-                  }
-                  return _buildNarrowLayout(state, player);
-                },
-              ),
-            );
-          },
-        ),
-      ),
-      bottomNavigationBar: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        color: const Color(0xFF16213E),
-        child: SafeArea(
-          child: Row(
-            children: [
-              Expanded(
-                child: ElevatedButton.icon(
-                  onPressed: _openEncounter,
-                  icon: const Icon(Icons.search),
-                  label: const Text('Encounter'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF0F3460),
-                    foregroundColor: Colors.white,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: ElevatedButton.icon(
-                  onPressed: _nextPlayer,
-                  icon: const Icon(Icons.arrow_forward),
-                  label: const Text('Next Player'),
-                ),
-              ),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF0D1B2A),
+              Color(0xFF122035),
+              Color(0xFF0D1B2A),
             ],
           ),
+        ),
+        child: Column(
+          children: [
+            // Custom app bar
+            SafeArea(
+              bottom: false,
+              child: Consumer<GameState>(
+                builder: (context, state, _) {
+                  final player = state.currentPlayer;
+                  return Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 12),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 14,
+                          height: 14,
+                          decoration: BoxDecoration(
+                            color: player.color == Colors.black
+                                ? const Color(0xFF2A2A2A)
+                                : player.color,
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: player.color == Colors.black
+                                  ? Colors.white24
+                                  : player.color.withValues(alpha: 0.6),
+                              width: 1.5,
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: (player.color == Colors.black
+                                        ? Colors.blueGrey
+                                        : player.color)
+                                    .withValues(alpha: 0.3),
+                                blurRadius: 8,
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          player.name,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 17,
+                          ),
+                        ),
+                        const Spacer(),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.06),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            '${state.currentPlayerIndex + 1} / ${state.playerCount}',
+                            style: const TextStyle(
+                              color: Colors.white38,
+                              fontSize: 13,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        GestureDetector(
+                          onTap: _confirmNewGame,
+                          child: Container(
+                            padding: const EdgeInsets.all(6),
+                            decoration: BoxDecoration(
+                              color: Colors.white.withValues(alpha: 0.04),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: const Icon(Icons.refresh_rounded,
+                                color: Colors.white24, size: 18),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+            // Main content
+            Expanded(
+              child: AnimatedBuilder(
+                animation: _transitionAnimation,
+                builder: (context, child) {
+                  return Opacity(
+                    opacity: 1.0 - _transitionAnimation.value,
+                    child: child,
+                  );
+                },
+                child: Consumer<GameState>(
+                  builder: (context, state, _) {
+                    final player = state.currentPlayer;
+                    return LayoutBuilder(
+                      builder: (context, constraints) {
+                        if (constraints.maxWidth > 700) {
+                          return _buildWideLayout(state, player);
+                        }
+                        return _buildNarrowLayout(state, player);
+                      },
+                    );
+                  },
+                ),
+              ),
+            ),
+            // Bottom bar
+            Container(
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+              decoration: BoxDecoration(
+                color: const Color(0xFF0D1B2A),
+                border: Border(
+                  top: BorderSide(
+                    color: Colors.white.withValues(alpha: 0.05),
+                  ),
+                ),
+              ),
+              child: SafeArea(
+                top: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: _buildBottomButton(
+                        icon: Icons.search_rounded,
+                        label: 'Encounter',
+                        onTap: _openEncounter,
+                        isPrimary: false,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: _buildBottomButton(
+                        icon: Icons.arrow_forward_rounded,
+                        label: 'Next Player',
+                        onTap: _nextPlayer,
+                        isPrimary: true,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBottomButton({
+    required IconData icon,
+    required String label,
+    required VoidCallback onTap,
+    required bool isPrimary,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        decoration: BoxDecoration(
+          color: isPrimary
+              ? const Color(0xFFD4A574)
+              : Colors.white.withValues(alpha: 0.06),
+          borderRadius: BorderRadius.circular(12),
+          border: isPrimary
+              ? null
+              : Border.all(color: Colors.white.withValues(alpha: 0.08)),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon,
+                size: 18,
+                color: isPrimary
+                    ? const Color(0xFF0D1B2A)
+                    : Colors.white60),
+            const SizedBox(width: 8),
+            Text(
+              label,
+              style: TextStyle(
+                color: isPrimary
+                    ? const Color(0xFF0D1B2A)
+                    : Colors.white60,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -313,29 +410,62 @@ class _GameScreenState extends State<GameScreen>
         // Tokens section
         Row(
           children: [
+            const Icon(Icons.bolt_rounded,
+                color: Color(0xFFD4A574), size: 18),
+            const SizedBox(width: 6),
             const Text(
-              'Skills',
+              'SKILLS',
               style: TextStyle(
                 color: Color(0xFFD4A574),
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 1.5,
               ),
             ),
             const Spacer(),
-            IconButton(
-              icon: const Icon(Icons.add_circle_outline,
-                  color: Color(0xFFD4A574)),
-              onPressed: _showTokenPicker,
-              tooltip: 'Add Skill',
+            GestureDetector(
+              onTap: _showTokenPicker,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD4A574).withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: const Color(0xFFD4A574).withValues(alpha: 0.3),
+                  ),
+                ),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.add, color: Color(0xFFD4A574), size: 14),
+                    SizedBox(width: 4),
+                    Text('Add',
+                        style:
+                            TextStyle(color: Color(0xFFD4A574), fontSize: 12)),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
+        const SizedBox(height: 12),
         if (player.activeTokenIndices.isEmpty)
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 8),
-            child: Text(
-              'No skills yet. Tap + to add.',
-              style: TextStyle(color: Colors.white38, fontSize: 14),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.02),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: Colors.white.withValues(alpha: 0.04),
+                style: BorderStyle.solid,
+              ),
+            ),
+            child: const Text(
+              'No skills acquired yet',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white24, fontSize: 13),
             ),
           )
         else
@@ -343,48 +473,97 @@ class _GameScreenState extends State<GameScreen>
             spacing: 8,
             runSpacing: 8,
             children: player.activeTokenIndices.map<Widget>((int index) {
-              return Chip(
-                label: Text(
-                  GameConstants.tokenNames[index],
-                  style: const TextStyle(color: Colors.white, fontSize: 12),
+              return Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF1B3A5C),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: const Color(0xFF2E5A8A).withValues(alpha: 0.5),
+                  ),
                 ),
-                backgroundColor: const Color(0xFF0F3460),
-                deleteIcon:
-                    const Icon(Icons.close, size: 16, color: Colors.white54),
-                onDeleted: () {
-                  Provider.of<GameState>(context, listen: false)
-                      .toggleToken(index);
-                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      GameConstants.tokenNames[index],
+                      style:
+                          const TextStyle(color: Colors.white, fontSize: 12),
+                    ),
+                    const SizedBox(width: 6),
+                    GestureDetector(
+                      onTap: () {
+                        Provider.of<GameState>(context, listen: false)
+                            .toggleToken(index);
+                      },
+                      child: const Icon(Icons.close_rounded,
+                          size: 14, color: Colors.white38),
+                    ),
+                  ],
+                ),
               );
             }).toList(),
           ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 24),
         // Statuses section
         Row(
           children: [
+            const Icon(Icons.warning_amber_rounded,
+                color: Color(0xFF9B59B6), size: 18),
+            const SizedBox(width: 6),
             const Text(
-              'Statuses',
+              'STATUSES',
               style: TextStyle(
-                color: Color(0xFFD4A574),
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+                color: Color(0xFF9B59B6),
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 1.5,
               ),
             ),
             const Spacer(),
-            IconButton(
-              icon: const Icon(Icons.add_circle_outline,
-                  color: Color(0xFFD4A574)),
-              onPressed: _showStatusPicker,
-              tooltip: 'Add Status',
+            GestureDetector(
+              onTap: _showStatusPicker,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF9B59B6).withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: const Color(0xFF9B59B6).withValues(alpha: 0.3),
+                  ),
+                ),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.add, color: Color(0xFF9B59B6), size: 14),
+                    SizedBox(width: 4),
+                    Text('Add',
+                        style:
+                            TextStyle(color: Color(0xFF9B59B6), fontSize: 12)),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
+        const SizedBox(height: 12),
         if (player.activeStatusIndices.isEmpty)
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 8),
-            child: Text(
-              'No active statuses. Tap + to add.',
-              style: TextStyle(color: Colors.white38, fontSize: 14),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.02),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: Colors.white.withValues(alpha: 0.04),
+              ),
+            ),
+            child: const Text(
+              'No active statuses',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white24, fontSize: 13),
             ),
           )
         else
@@ -392,15 +571,32 @@ class _GameScreenState extends State<GameScreen>
             spacing: 8,
             runSpacing: 8,
             children: player.activeStatusIndices.map<Widget>((int index) {
-              return ActionChip(
-                label: Text(
-                  GameConstants.statusNames[index],
-                  style: const TextStyle(color: Colors.white, fontSize: 12),
+              return GestureDetector(
+                onTap: () => _showStatusDetails(index),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 12, vertical: 7),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF2D1B4E),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: const Color(0xFF9B59B6).withValues(alpha: 0.4),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(Icons.info_outline_rounded,
+                          size: 13, color: Color(0xFF9B59B6)),
+                      const SizedBox(width: 6),
+                      Text(
+                        GameConstants.statusNames[index],
+                        style: const TextStyle(
+                            color: Colors.white, fontSize: 12),
+                      ),
+                    ],
+                  ),
                 ),
-                backgroundColor: const Color(0xFF533483),
-                avatar:
-                    const Icon(Icons.info_outline, size: 16, color: Colors.white54),
-                onPressed: () => _showStatusDetails(index),
               );
             }).toList(),
           ),

@@ -31,7 +31,7 @@ class _ColorPickerScreenState extends State<ColorPickerScreen>
     );
     _fadeAnimation = CurvedAnimation(
       parent: _fadeController,
-      curve: Curves.easeIn,
+      curve: Curves.easeOut,
     );
     _fadeController.forward();
   }
@@ -52,7 +52,6 @@ class _ColorPickerScreenState extends State<ColorPickerScreen>
     _usedColorIndices.add(colorIndex);
 
     if (_currentPlayerSetup + 1 >= widget.playerCount) {
-      // All players set up
       final gameState = Provider.of<GameState>(context, listen: false);
       gameState.setupPlayers(_players);
       Navigator.of(context).pushReplacement(
@@ -62,7 +61,7 @@ class _ColorPickerScreenState extends State<ColorPickerScreen>
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(opacity: animation, child: child);
           },
-          transitionDuration: const Duration(milliseconds: 500),
+          transitionDuration: const Duration(milliseconds: 600),
         ),
       );
     } else {
@@ -78,98 +77,143 @@ class _ColorPickerScreenState extends State<ColorPickerScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FadeTransition(
-        opacity: _fadeAnimation,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(32.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Player ${_currentPlayerSetup + 1}',
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        color: const Color(0xFFD4A574),
-                        fontWeight: FontWeight.bold,
-                      ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'Choose your color',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        color: Colors.white70,
-                      ),
-                ),
-                const SizedBox(height: 40),
-                Wrap(
-                  spacing: 20,
-                  runSpacing: 20,
-                  alignment: WrapAlignment.center,
-                  children: List.generate(
-                    GameConstants.playerColors.length,
-                    (index) {
-                      final colorInfo = GameConstants.playerColors[index];
-                      final isUsed = _usedColorIndices.contains(index);
-                      return GestureDetector(
-                        onTap: isUsed ? null : () => _selectColor(index),
-                        child: AnimatedOpacity(
-                          duration: const Duration(milliseconds: 300),
-                          opacity: isUsed ? 0.3 : 1.0,
-                          child: Column(
-                            children: [
-                              Container(
-                                width: 80,
-                                height: 80,
-                                decoration: BoxDecoration(
-                                  color: colorInfo.color,
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: colorInfo.color == Colors.black
-                                        ? Colors.white54
-                                        : Colors.transparent,
-                                    width: 2,
-                                  ),
-                                  boxShadow: isUsed
-                                      ? null
-                                      : [
-                                          BoxShadow(
-                                            color: colorInfo.color
-                                                .withValues(alpha: 0.4),
-                                            blurRadius: 12,
-                                            spreadRadius: 2,
-                                          ),
-                                        ],
-                                ),
-                                child: isUsed
-                                    ? const Icon(Icons.check,
-                                        color: Colors.white54, size: 36)
-                                    : null,
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                colorInfo.colorName,
-                                style: TextStyle(
-                                  color: isUsed ? Colors.white30 : Colors.white,
-                                  fontSize: 14,
-                                ),
-                              ),
-                              Text(
-                                colorInfo.characterName,
-                                style: TextStyle(
-                                  color: isUsed
-                                      ? Colors.white24
-                                      : const Color(0xFFD4A574),
-                                  fontSize: 12,
-                                ),
-                              ),
-                            ],
-                          ),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF0D1B2A),
+              Color(0xFF152238),
+              Color(0xFF1B2D4A),
+            ],
+          ),
+        ),
+        child: FadeTransition(
+          opacity: _fadeAnimation,
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Progress dots
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(widget.playerCount, (i) {
+                      return Container(
+                        width: 8,
+                        height: 8,
+                        margin: const EdgeInsets.symmetric(horizontal: 4),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: i <= _currentPlayerSetup
+                              ? const Color(0xFFD4A574)
+                              : const Color(0xFFD4A574).withValues(alpha: 0.2),
                         ),
                       );
-                    },
+                    }),
                   ),
-                ),
-              ],
+                  const SizedBox(height: 32),
+                  Text(
+                    'Player ${_currentPlayerSetup + 1}',
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w300,
+                          letterSpacing: 1,
+                        ),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    'Choose your character',
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: Colors.white38,
+                        ),
+                  ),
+                  const SizedBox(height: 40),
+                  Wrap(
+                    spacing: 24,
+                    runSpacing: 28,
+                    alignment: WrapAlignment.center,
+                    children: List.generate(
+                      GameConstants.playerColors.length,
+                      (index) {
+                        final colorInfo = GameConstants.playerColors[index];
+                        final isUsed = _usedColorIndices.contains(index);
+                        return GestureDetector(
+                          onTap: isUsed ? null : () => _selectColor(index),
+                          child: AnimatedOpacity(
+                            duration: const Duration(milliseconds: 300),
+                            opacity: isUsed ? 0.25 : 1.0,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 72,
+                                  height: 72,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: colorInfo.color == Colors.white
+                                        ? Colors.white
+                                        : colorInfo.color == Colors.black
+                                            ? const Color(0xFF2A2A2A)
+                                            : colorInfo.color,
+                                    border: Border.all(
+                                      color: colorInfo.color == Colors.black
+                                          ? Colors.white24
+                                          : colorInfo.color == Colors.white
+                                              ? Colors.white60
+                                              : colorInfo.color
+                                                  .withValues(alpha: 0.6),
+                                      width: 2,
+                                    ),
+                                    boxShadow: isUsed
+                                        ? null
+                                        : [
+                                            BoxShadow(
+                                              color: (colorInfo.color ==
+                                                          Colors.black
+                                                      ? Colors.blueGrey
+                                                      : colorInfo.color)
+                                                  .withValues(alpha: 0.35),
+                                              blurRadius: 16,
+                                              spreadRadius: 0,
+                                            ),
+                                          ],
+                                  ),
+                                  child: isUsed
+                                      ? const Icon(Icons.check,
+                                          color: Colors.white38, size: 28)
+                                      : null,
+                                ),
+                                const SizedBox(height: 10),
+                                Text(
+                                  colorInfo.characterName,
+                                  style: TextStyle(
+                                    color: isUsed
+                                        ? Colors.white24
+                                        : const Color(0xFFD4A574),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  colorInfo.colorName,
+                                  style: TextStyle(
+                                    color:
+                                        isUsed ? Colors.white12 : Colors.white30,
+                                    fontSize: 11,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

@@ -157,213 +157,405 @@ class _EncounterScreenState extends State<EncounterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Encounter Lookup'),
-        backgroundColor: const Color(0xFF16213E),
-      ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(24.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF0D1B2A),
+              Color(0xFF152238),
+            ],
+          ),
+        ),
+        child: SafeArea(
+          child: Column(
+            children: [
+              // Header
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 16, vertical: 12),
+                child: Row(
                   children: [
-                    if (_step != _EncounterStep.showResult) ...[
-                      Text(
-                        _promptText,
-                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                              color: Colors.white,
-                            ),
-                      ),
-                      if (_step == _EncounterStep.enterCityNumber)
-                        const Padding(
-                          padding: EdgeInsets.only(top: 4),
-                          child: Text(
-                            'Number inside the gem/city icon (0 if none)',
-                            style: TextStyle(color: Colors.white54, fontSize: 13),
-                          ),
-                        ),
-                      const SizedBox(height: 16),
-                      Container(
-                        width: 200,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 24, vertical: 16),
+                    GestureDetector(
+                      onTap: () => Navigator.pop(context),
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF16213E),
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(
-                            color: const Color(0xFFD4A574),
-                            width: 2,
-                          ),
+                          color: Colors.white.withValues(alpha: 0.06),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text(
-                          _inputNumber.isEmpty ? _placeholder : _inputNumber,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            fontSize: 36,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            letterSpacing: 8,
-                          ),
-                        ),
+                        child: const Icon(Icons.arrow_back_rounded,
+                            color: Colors.white60, size: 20),
                       ),
-                      // Show context of what's been entered so far
-                      if (_encounterNum != null) ...[
-                        const SizedBox(height: 12),
+                    ),
+                    const SizedBox(width: 12),
+                    const Text(
+                      'Encounter',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (_step != _EncounterStep.showResult) ...[
+                        // Step indicator
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            _stepDot(0,
+                                active: _step.index >= 0, label: 'Chart'),
+                            _stepLine(active: _step.index >= 1),
+                            _stepDot(1,
+                                active: _step.index >= 1, label: 'Die'),
+                            _stepLine(active: _step.index >= 2),
+                            _stepDot(2,
+                                active: _step.index >= 2, label: 'City'),
+                          ],
+                        ),
+                        const SizedBox(height: 32),
                         Text(
-                          'Encounter #$_encounterNum',
+                          _promptText,
                           style: const TextStyle(
-                              color: Colors.white54, fontSize: 14),
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        if (_step == _EncounterStep.enterCityNumber)
+                          const Padding(
+                            padding: EdgeInsets.only(top: 6),
+                            child: Text(
+                              'Number inside the gem/city icon (0 if none)',
+                              style: TextStyle(
+                                  color: Colors.white38, fontSize: 12),
+                            ),
+                          ),
+                        const SizedBox(height: 24),
+                        Container(
+                          width: 160,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 24, vertical: 18),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.04),
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                              color: const Color(0xFFD4A574)
+                                  .withValues(alpha: 0.4),
+                              width: 1.5,
+                            ),
+                          ),
+                          child: Text(
+                            _inputNumber.isEmpty
+                                ? _placeholder
+                                : _inputNumber,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 38,
+                              fontWeight: FontWeight.w300,
+                              color: _inputNumber.isEmpty
+                                  ? Colors.white24
+                                  : Colors.white,
+                              letterSpacing: 8,
+                            ),
+                          ),
+                        ),
+                        if (_encounterNum != null || _dieRoll != null) ...[
+                          const SizedBox(height: 16),
+                          Wrap(
+                            spacing: 12,
+                            children: [
+                              if (_encounterNum != null)
+                                _contextChip(
+                                    'Chart #$_encounterNum'),
+                              if (_dieRoll != null)
+                                _contextChip('Die: $_dieRoll'),
+                            ],
+                          ),
+                        ],
+                      ],
+                      if (_errorMessage != null) ...[
+                        const SizedBox(height: 12),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 8),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            _errorMessage!,
+                            style: const TextStyle(
+                                color: Colors.redAccent, fontSize: 13),
+                          ),
                         ),
                       ],
-                      if (_dieRoll != null)
-                        Text(
-                          'Die roll: $_dieRoll',
-                          style: const TextStyle(
-                              color: Colors.white54, fontSize: 14),
-                        ),
-                    ],
-                    const SizedBox(height: 16),
-                    if (_errorMessage != null)
-                      Text(
-                        _errorMessage!,
-                        style: const TextStyle(color: Colors.redAccent),
-                      ),
-                    if (_step == _EncounterStep.showResult) ...[
-                      // Calculation breakdown
-                      Card(
-                        color: const Color(0xFF16213E),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                      if (_step == _EncounterStep.showResult) ...[
+                        // Calculation breakdown
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.03),
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                              color: Colors.white.withValues(alpha: 0.06),
+                            ),
+                          ),
                           child: Column(
                             children: [
                               const Text(
-                                'Roll Calculation',
+                                'ROLL BREAKDOWN',
                                 style: TextStyle(
-                                    color: Colors.white54, fontSize: 13),
+                                  color: Colors.white38,
+                                  fontSize: 11,
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
-                              const SizedBox(height: 8),
+                              const SizedBox(height: 12),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.center,
                                 children: [
                                   _rollChip('Die', _dieRoll!),
-                                  const Text(' + ',
-                                      style: TextStyle(
-                                          color: Colors.white54, fontSize: 18)),
+                                  _opText('+'),
                                   _rollChip('City', _cityNumber!),
                                   if (_destinyBonus! > 0) ...[
-                                    const Text(' + ',
-                                        style: TextStyle(
-                                            color: Colors.white54,
-                                            fontSize: 18)),
-                                    _rollChip('Destiny', _destinyBonus!),
+                                    _opText('+'),
+                                    _rollChip(
+                                        'Destiny', _destinyBonus!),
                                   ],
-                                  const Text(' = ',
-                                      style: TextStyle(
-                                          color: Colors.white54, fontSize: 18)),
+                                  _opText('='),
                                   _rollChip('Total', _totalRoll!,
                                       highlight: true),
                                 ],
                               ),
-                              if (_dieRoll! + _cityNumber! + _destinyBonus! > 12)
+                              if (_dieRoll! +
+                                      _cityNumber! +
+                                      _destinyBonus! >
+                                  12)
                                 const Padding(
-                                  padding: EdgeInsets.only(top: 4),
+                                  padding: EdgeInsets.only(top: 8),
                                   child: Text(
-                                    '(capped at 12)',
+                                    'capped at 12',
                                     style: TextStyle(
-                                        color: Colors.white38, fontSize: 12),
+                                        color: Colors.white24,
+                                        fontSize: 11),
                                   ),
                                 ),
                             ],
                           ),
                         ),
-                      ),
-                      const SizedBox(height: 16),
-                      // Result card
-                      Card(
-                        color: const Color(0xFF0F3460),
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
+                        const SizedBox(height: 20),
+                        // Result card
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.all(28),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                const Color(0xFF1B3A5C),
+                                const Color(0xFF0F2640),
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                              color: const Color(0xFFD4A574)
+                                  .withValues(alpha: 0.25),
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0xFFD4A574)
+                                    .withValues(alpha: 0.08),
+                                blurRadius: 24,
+                                spreadRadius: 0,
+                              ),
+                            ],
+                          ),
                           child: Column(
                             children: [
                               Text(
                                 'Encounter #$_encounterNum',
                                 style: const TextStyle(
-                                    color: Colors.white54, fontSize: 13),
+                                    color: Colors.white38,
+                                    fontSize: 12,
+                                    letterSpacing: 0.5),
                               ),
-                              const SizedBox(height: 8),
+                              const SizedBox(height: 12),
                               Text(
                                 _resultName ?? '',
                                 style: const TextStyle(
-                                  color: Color(0xFFD4A574),
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xFFF0D9B5),
+                                  fontSize: 26,
+                                  fontWeight: FontWeight.w400,
+                                  height: 1.2,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
-                              const SizedBox(height: 16),
+                              const SizedBox(height: 20),
                               Container(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 20, vertical: 10),
+                                    horizontal: 24, vertical: 12),
                                 decoration: BoxDecoration(
                                   color: const Color(0xFFD4A574)
-                                      .withValues(alpha: 0.2),
-                                  borderRadius: BorderRadius.circular(8),
+                                      .withValues(alpha: 0.15),
+                                  borderRadius:
+                                      BorderRadius.circular(12),
+                                  border: Border.all(
+                                    color: const Color(0xFFD4A574)
+                                        .withValues(alpha: 0.3),
+                                  ),
                                 ),
                                 child: Text(
                                   'Matrix ${_resultMatrix ?? ''}',
                                   style: const TextStyle(
                                     color: Color(0xFFD4A574),
-                                    fontSize: 22,
-                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w600,
+                                    letterSpacing: 2,
                                   ),
                                 ),
                               ),
                             ],
                           ),
                         ),
-                      ),
+                      ],
                     ],
+                  ),
+                ),
+              ),
+              // Number pad
+              Container(
+                padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF0D1B2A),
+                  border: Border(
+                    top: BorderSide(
+                      color: Colors.white.withValues(alpha: 0.05),
+                    ),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    _buildNumRow(['1', '2', '3']),
+                    const SizedBox(height: 10),
+                    _buildNumRow(['4', '5', '6']),
+                    const SizedBox(height: 10),
+                    _buildNumRow(['7', '8', '9']),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        _buildNumButton('⌫', onTap: _backspace),
+                        const SizedBox(width: 10),
+                        _buildNumButton('0',
+                            onTap: () => _addDigit('0')),
+                        const SizedBox(width: 10),
+                        _buildNumButton(
+                          _step == _EncounterStep.showResult
+                              ? 'NEW'
+                              : '→',
+                          onTap: _step == _EncounterStep.showResult
+                              ? _clear
+                              : _submit,
+                          isAction: true,
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
-            ),
-            // Number pad
-            Container(
-              padding: const EdgeInsets.all(16),
-              color: const Color(0xFF16213E),
-              child: Column(
-                children: [
-                  _buildNumRow(['1', '2', '3']),
-                  const SizedBox(height: 8),
-                  _buildNumRow(['4', '5', '6']),
-                  const SizedBox(height: 8),
-                  _buildNumRow(['7', '8', '9']),
-                  const SizedBox(height: 8),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _buildNumButton('⌫', onTap: _backspace),
-                      const SizedBox(width: 8),
-                      _buildNumButton('0', onTap: () => _addDigit('0')),
-                      const SizedBox(width: 8),
-                      _buildNumButton(
-                        _step == _EncounterStep.showResult ? 'NEW' : '✓',
-                        onTap: _step == _EncounterStep.showResult
-                            ? _clear
-                            : _submit,
-                        isAction: true,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
+    );
+  }
+
+  Widget _stepDot(int index,
+      {required bool active, required String label}) {
+    return Column(
+      children: [
+        Container(
+          width: 28,
+          height: 28,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: active
+                ? const Color(0xFFD4A574).withValues(alpha: 0.2)
+                : Colors.white.withValues(alpha: 0.04),
+            border: Border.all(
+              color: active
+                  ? const Color(0xFFD4A574)
+                  : Colors.white.withValues(alpha: 0.15),
+              width: 1.5,
+            ),
+          ),
+          child: Center(
+            child: Text(
+              '${index + 1}',
+              style: TextStyle(
+                color: active ? const Color(0xFFD4A574) : Colors.white24,
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          label,
+          style: TextStyle(
+            color: active ? Colors.white54 : Colors.white24,
+            fontSize: 10,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _stepLine({required bool active}) {
+    return Container(
+      width: 40,
+      height: 1.5,
+      margin: const EdgeInsets.only(bottom: 16, left: 4, right: 4),
+      color: active
+          ? const Color(0xFFD4A574).withValues(alpha: 0.5)
+          : Colors.white.withValues(alpha: 0.08),
+    );
+  }
+
+  Widget _contextChip(String text) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.06),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(color: Colors.white38, fontSize: 12),
+      ),
+    );
+  }
+
+  Widget _opText(String op) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 6),
+      child: Text(op,
+          style: const TextStyle(color: Colors.white30, fontSize: 16)),
     );
   }
 
@@ -371,25 +563,33 @@ class _EncounterScreenState extends State<EncounterScreen> {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+          width: 40,
+          height: 40,
           decoration: BoxDecoration(
             color: highlight
-                ? const Color(0xFFD4A574).withValues(alpha: 0.3)
-                : const Color(0xFF0F3460),
-            borderRadius: BorderRadius.circular(8),
+                ? const Color(0xFFD4A574).withValues(alpha: 0.2)
+                : Colors.white.withValues(alpha: 0.06),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: highlight
+                  ? const Color(0xFFD4A574).withValues(alpha: 0.5)
+                  : Colors.white.withValues(alpha: 0.1),
+            ),
           ),
-          child: Text(
-            '$value',
-            style: TextStyle(
-              color: highlight ? const Color(0xFFD4A574) : Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+          child: Center(
+            child: Text(
+              '$value',
+              style: TextStyle(
+                color: highlight ? const Color(0xFFD4A574) : Colors.white,
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ),
-        const SizedBox(height: 2),
+        const SizedBox(height: 4),
         Text(label,
-            style: const TextStyle(color: Colors.white38, fontSize: 10)),
+            style: const TextStyle(color: Colors.white30, fontSize: 10)),
       ],
     );
   }
@@ -399,7 +599,7 @@ class _EncounterScreenState extends State<EncounterScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: digits
           .map((d) => Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: _buildNumButton(d, onTap: () => _addDigit(d)),
               ))
           .toList(),
@@ -408,25 +608,28 @@ class _EncounterScreenState extends State<EncounterScreen> {
 
   Widget _buildNumButton(String label,
       {required VoidCallback onTap, bool isAction = false}) {
-    return SizedBox(
-      width: 80,
-      height: 56,
-      child: ElevatedButton(
-        onPressed: onTap,
-        style: ElevatedButton.styleFrom(
-          backgroundColor:
-              isAction ? const Color(0xFFD4A574) : const Color(0xFF0F3460),
-          foregroundColor: isAction ? Colors.black : Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          padding: EdgeInsets.zero,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 72,
+        height: 52,
+        decoration: BoxDecoration(
+          color: isAction
+              ? const Color(0xFFD4A574)
+              : Colors.white.withValues(alpha: 0.06),
+          borderRadius: BorderRadius.circular(12),
+          border: isAction
+              ? null
+              : Border.all(color: Colors.white.withValues(alpha: 0.08)),
         ),
-        child: Text(
-          label,
-          style: TextStyle(
-            fontSize: isAction ? 16 : 22,
-            fontWeight: FontWeight.bold,
+        child: Center(
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: isAction ? 15 : 20,
+              fontWeight: isAction ? FontWeight.w700 : FontWeight.w400,
+              color: isAction ? const Color(0xFF0D1B2A) : Colors.white,
+            ),
           ),
         ),
       ),

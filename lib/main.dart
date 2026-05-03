@@ -26,20 +26,63 @@ class TalesHelperApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
         useMaterial3: true,
-        scaffoldBackgroundColor: const Color(0xFF1A1A2E),
-        cardTheme: const CardThemeData(
-          color: Color(0xFF16213E),
-          elevation: 4,
+        scaffoldBackgroundColor: const Color(0xFF0D1B2A),
+        cardTheme: CardThemeData(
+          color: const Color(0xFF1B2838),
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+            side: BorderSide(
+              color: const Color(0xFFD4A574).withValues(alpha: 0.15),
+            ),
+          ),
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          scrolledUnderElevation: 0,
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFFD4A574),
-            foregroundColor: const Color(0xFF1A1A2E),
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            textStyle: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
+            foregroundColor: const Color(0xFF0D1B2A),
+            padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
             ),
+            textStyle: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 0.5,
+            ),
+          ),
+        ),
+        chipTheme: ChipThemeData(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+        ),
+        dialogTheme: DialogThemeData(
+          backgroundColor: const Color(0xFF1B2838),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+            side: BorderSide(
+              color: const Color(0xFFD4A574).withValues(alpha: 0.2),
+            ),
+          ),
+        ),
+        textTheme: const TextTheme(
+          headlineLarge: TextStyle(
+            fontWeight: FontWeight.w300,
+            letterSpacing: 1.2,
+          ),
+          headlineMedium: TextStyle(
+            fontWeight: FontWeight.w300,
+            letterSpacing: 0.8,
+          ),
+          titleLarge: TextStyle(
+            fontWeight: FontWeight.w500,
+            letterSpacing: 0.3,
           ),
         ),
       ),
